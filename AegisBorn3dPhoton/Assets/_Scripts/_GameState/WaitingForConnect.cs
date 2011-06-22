@@ -13,7 +13,7 @@ public class WaitingForConnect : IGameState
         get { return GameState.WaitingForConnect; }
     }
 
-    public Dictionary<OperationCode, IOperationHandler> Handlers
+    public Dictionary<OperationCode, IOperationHandler> OperationHandlers
     {
         get { throw new NotImplementedException(); }
     }

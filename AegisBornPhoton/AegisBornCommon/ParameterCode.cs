@@ -13,16 +13,6 @@
         DebugMessage = 1,
 
         /// <summary>
-        /// The player's username
-        /// </summary>
-        UserName = 10,
-
-        /// <summary>
-        /// The player's password
-        /// </summary>
-        Password = 11,
-
-        /// <summary>
         /// Client key parameter used to establish secure communication.
         /// </summary>
         ClientKey = 16,
@@ -32,5 +22,14 @@
         /// </summary>
         ServerKey = 17,
 
+        /// <summary>
+        /// The player's username
+        /// </summary>
+        UserName = 70,
+
+        /// <summary>
+        /// The player's password
+        /// </summary>
+        Password = 71,
     }
 }

@@ -14,7 +14,7 @@ public class Disconnected : IGameState
         get { return GameState.Disconnected; }
     }
 
-    public Dictionary<OperationCode, IOperationHandler> Handlers
+    public Dictionary<OperationCode, IOperationHandler> OperationHandlers
     {
         get { throw new NotImplementedException(); }
     }

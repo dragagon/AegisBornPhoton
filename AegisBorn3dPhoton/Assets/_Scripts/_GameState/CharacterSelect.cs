@@ -9,7 +9,7 @@ public class CharacterSelect : IGameState
         get { return GameState.CharacterSelect; }
     }
 
-    public Dictionary<OperationCode, IOperationHandler> Handlers
+    public Dictionary<OperationCode, IOperationHandler> OperationHandlers
     {
         get { throw new NotImplementedException(); }
     }

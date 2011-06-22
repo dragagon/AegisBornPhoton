@@ -6,7 +6,7 @@ using ExitGames.Client.Photon;
 public interface IGameState
 {
 
-    Dictionary<OperationCode, IOperationHandler> Handlers { get; }
+    Dictionary<OperationCode, IOperationHandler> OperationHandlers { get; }
 
     GameState State { get; }
 

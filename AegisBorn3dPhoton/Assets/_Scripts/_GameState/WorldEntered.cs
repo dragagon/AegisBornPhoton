@@ -9,7 +9,7 @@ public class WorldEntered : IGameState
         get { return GameState.WorldEntered; }
     }
 
-    public Dictionary<OperationCode, IOperationHandler> Handlers
+    public Dictionary<OperationCode, IOperationHandler> OperationHandlers
     {
         get { throw new NotImplementedException(); }
     }

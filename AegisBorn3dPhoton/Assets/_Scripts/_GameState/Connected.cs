@@ -8,15 +8,15 @@ public class Connected : IGameState
 
     public static readonly IGameState Instance = new Connected();
 
-    private readonly Dictionary<OperationCode, IOperationHandler> _handlers;
-    public Dictionary<OperationCode, IOperationHandler> Handlers
-    {
-        get { return _handlers; }
-    }
-
     public GameState State
     {
         get { return GameState.Connected; }
+    }
+
+    private readonly Dictionary<OperationCode, IOperationHandler> _handlers;
+    public Dictionary<OperationCode, IOperationHandler> OperationHandlers
+    {
+        get { return _handlers; }
     }
 
     public Connected()

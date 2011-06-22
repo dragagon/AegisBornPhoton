@@ -10,7 +10,7 @@
         /// <summary>
         /// Login to the server
         /// </summary>
-        Login = 10,
+        Login = 100,
 
         /// <summary>
         /// Code for exchanging keys using PhotonPeer.OpExchangeKeysForEncryption
