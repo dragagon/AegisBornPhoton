@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using AegisBornCommon;
 using ExitGames.Client.Photon;
 using System.Collections;
@@ -129,8 +130,10 @@ public class Game : IPhotonPeerListener
 
     public void OnUnexpectedPhotonReturn(int photonReturnCode, OperationCode operationCode, Hashtable hashtable)
     {
-
         _listener.LogError(this, string.Format("opcode: {1} - unexpected return {0}", photonReturnCode, operationCode));
+        var error = (ErrorCode)(int)hashtable[(byte)ParameterCode.ErrorCode];
+        var debug = (string)hashtable[(byte)ParameterCode.DebugMessage];
+        _listener.LogError(this, string.Format("error: {1} - message: {0}", debug, error));
     }
 
     #endregion

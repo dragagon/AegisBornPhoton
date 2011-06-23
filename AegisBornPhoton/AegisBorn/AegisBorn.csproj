@@ -17,7 +17,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\..\Photon\deploy\AegisBorn\</OutputPath>
+    <OutputPath>..\..\..\..\Photon\deploy\AegisBorn\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -32,13 +32,24 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="ExitGamesLibs">
-      <HintPath>..\..\..\Photon\lib\ExitGamesLibs.dll</HintPath>
+      <HintPath>..\..\..\..\Photon\lib\ExitGamesLibs.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="FluentNHibernate">
+      <HintPath>..\..\AegisBornLibs\FluentNHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate">
+      <HintPath>..\..\AegisBornLibs\Required_Bins\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate.ByteCode.Castle">
+      <HintPath>..\..\AegisBornLibs\NHibernate.ByteCode.Castle.dll</HintPath>
     </Reference>
     <Reference Include="Photon.SocketServer">
-      <HintPath>..\..\..\Photon\lib\Photon.SocketServer.dll</HintPath>
+      <HintPath>..\..\..\..\Photon\lib\Photon.SocketServer.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="PhotonHostRuntimeInterfaces">
-      <HintPath>..\..\..\Photon\lib\PhotonHostRuntimeInterfaces.dll</HintPath>
+      <HintPath>..\..\..\..\Photon\lib\PhotonHostRuntimeInterfaces.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="System" />
@@ -52,7 +63,13 @@
   <ItemGroup>
     <Compile Include="AegisBornApplication.cs" />
     <Compile Include="AegisBornPeer.cs" />
+    <Compile Include="Models\Base\AegisBornCharacter.cs" />
+    <Compile Include="Models\Base\AegisBornUserProfile.cs" />
+    <Compile Include="Models\Base\SfGuardUser.cs" />
+    <Compile Include="Models\Map\SfGuardUserMap.cs" />
+    <Compile Include="NHibernateHelper.cs" />
     <Compile Include="Operations\EstablishSecureCommunicationOperation.cs" />
+    <Compile Include="Operations\LoginSecurely.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -60,6 +77,9 @@
       <Project>{6219BCA1-BD90-4C67-B02D-3F11E902892F}</Project>
       <Name>AegisBornCommon</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

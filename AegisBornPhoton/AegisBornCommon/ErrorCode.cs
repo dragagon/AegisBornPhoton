@@ -32,5 +32,9 @@
         /// </summary>
         InvalidOperation, 
 
+        /// <summary>
+        /// The username or password isn't correct, don't let them log in.
+        /// </summary>
+        InvalidUserPass,
     }
 }
