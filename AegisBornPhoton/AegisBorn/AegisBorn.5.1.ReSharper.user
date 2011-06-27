@@ -11,7 +11,6 @@
       <File id="6219BCA1-BD90-4C67-B02D-3F11E902892F/f:OperationCode.cs" caret="277" fromTop="13" />
       <File id="6219BCA1-BD90-4C67-B02D-3F11E902892F/f:ParameterCode.cs" caret="711" fromTop="29" />
       <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Operations/f:EstablishSecureCommunicationOperation.cs" caret="731" fromTop="22" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Operations/f:LoginSecurely.cs" caret="474" fromTop="15" />
       <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/f:AegisBornApplication.cs" caret="249" fromTop="12" />
       <File id="6219BCA1-BD90-4C67-B02D-3F11E902892F/f:EventCode.cs" caret="0" fromTop="0" />
       <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/f:SfGuardUser.cs" caret="369" fromTop="15" />
@@ -19,8 +18,9 @@
       <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/f:AegisBornCharacter.cs" caret="128" fromTop="7" />
       <File id="6219BCA1-BD90-4C67-B02D-3F11E902892F/f:ErrorCode.cs" caret="335" fromTop="16" />
       <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Map/f:SfGuardUserMap.cs" caret="190" fromTop="9" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/f:AegisBornPeer.cs" caret="3805" fromTop="28" />
       <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/f:NHibernateHelper.cs" caret="0" fromTop="0" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Operations/f:LoginSecurely.cs" caret="474" fromTop="15" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/f:AegisBornPeer.cs" caret="3384" fromTop="17" />
     </RecentFiles>
     <RecentEdits>
       <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/f:AegisBornUserProfile.cs" caret="329" fromTop="11" />
