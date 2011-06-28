@@ -3,7 +3,7 @@ using AegisBornCommon;
 
 public static class LoginOperations
 {
-    public static void Login(Game game, string username, string password)
+    public static void Login(PhotonClient game, string username, string password)
     {
         var vartable = new Hashtable
                            {

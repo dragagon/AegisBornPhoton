@@ -1,5 +1,6 @@
 ﻿public enum GameState
 {
+    NilState,
     Disconnected,
     WaitingForConnect,
     Connected,

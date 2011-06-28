@@ -3,50 +3,32 @@ using System.Collections.Generic;
 using AegisBornCommon;
 using ExitGames.Client.Photon;
 
-public class Connected : IGameState
+public class Connected : GameStateController
 {
+    public Connected(GameView view) : base(view)
+    {
+    }
 
-    public static readonly IGameState Instance = new Connected();
-
-    public GameState State
+    public override GameState State
     {
         get { return GameState.Connected; }
     }
 
-    private readonly Dictionary<OperationCode, IOperationHandler> _handlers;
-    public Dictionary<OperationCode, IOperationHandler> OperationHandlers
-    {
-        get { return _handlers; }
-    }
-
-    public Connected()
-    {
-        _handlers = new Dictionary<OperationCode, IOperationHandler>();
-        // Add handlers here
-        var keyHandler = new ExchangeKeysHandler();
-        _handlers.Add(OperationCode.ExchangeKeysForEncryption, keyHandler);
-    }
-
-    public void OnEventReceive(Game gameLogic, EventCode eventCode, Hashtable eventData)
-    {
-        gameLogic.OnUnexpectedEventReceive(eventCode, eventData);
-    }
-
-    public void OnOperationReturn(Game gameLogic, OperationCode operationCode, int returnCode, Hashtable returnValues)
+    public override void OnOperationReturn(PhotonClient gameLogic, OperationCode operationCode, int returnCode, Hashtable returnValues)
     {
         IOperationHandler handler;
 
-        if (_handlers.TryGetValue(operationCode, out handler))
+        if (OperationHandlers.TryGetValue(operationCode, out handler))
         {
             handler.HandleMessage(gameLogic, operationCode, returnCode, returnValues);
         }
         else
         {
-            gameLogic.OnUnexpectedPhotonReturn(returnCode, operationCode, returnValues);
+            OnUnexpectedPhotonReturn(returnCode, operationCode, returnValues);
         }
     }
 
-    public void OnPeerStatusCallback(Game gameLogic, StatusCode returnCode)
+    public override void OnPeerStatusCallback(PhotonClient gameLogic, StatusCode returnCode)
     {
         switch (returnCode)
         {
@@ -56,24 +38,24 @@ public class Connected : IGameState
             case StatusCode.DisconnectByServerUserLimit:
             case StatusCode.TimeoutDisconnect:
                 {
-                    gameLogic.SetDisconnected(returnCode);
+                    GameView.OnDisconnect(this, returnCode);
                     break;
                 }
 
             default:
                 {
-                    gameLogic.OnUnexpectedPhotonReturn((int)returnCode, OperationCode.Nil, null);
+                    OnUnexpectedPhotonReturn((int)returnCode, OperationCode.Nil, null);
                     break;
                 }
         }
     }
 
-    public void OnUpdate(Game gameLogic)
+    public override void OnUpdate(PhotonClient gameLogic)
     {
         gameLogic.Peer.Service();
     }
 
-    public void SendOperation(Game gameLogic, OperationCode operationCode, Hashtable parameter, bool sendReliable, byte channelId, bool encrypt)
+    public override void SendOperation(PhotonClient gameLogic, OperationCode operationCode, Hashtable parameter, bool sendReliable, byte channelId, bool encrypt)
     {
         gameLogic.Peer.OpCustom((byte)operationCode, parameter, sendReliable, channelId, encrypt);
     }

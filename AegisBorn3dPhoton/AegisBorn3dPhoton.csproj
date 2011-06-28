@@ -50,21 +50,20 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\_Scripts\_GameState\CharacterCreate.cs" />
-     <Compile Include="Assets\_Scripts\_GameState\CharacterSelect.cs" />
      <Compile Include="Assets\_Scripts\_GameState\Connected.cs" />
      <Compile Include="Assets\_Scripts\_GameState\Disconnected.cs" />
-     <Compile Include="Assets\_Scripts\_GameState\IGameState.cs" />
+     <Compile Include="Assets\_Scripts\_GameState\GameStateController.cs" />
+     <Compile Include="Assets\_Scripts\_GameState\IGameStateController.cs" />
      <Compile Include="Assets\_Scripts\_GameState\WaitingForConnect.cs" />
-     <Compile Include="Assets\_Scripts\_GameState\WorldEntered.cs" />
      <Compile Include="Assets\_Scripts\_Handlers\Operations\ExchangeKeysHandler.cs" />
      <Compile Include="Assets\_Scripts\_Handlers\Operations\IOperationHandler.cs" />
+     <Compile Include="Assets\_Scripts\_Handlers\Operations\LoginHandler.cs" />
      <Compile Include="Assets\_Scripts\_Operations\LoginOperations.cs" />
-     <Compile Include="Assets\_Scripts\Game.cs" />
+     <Compile Include="Assets\_Scripts\_Views\GameView.cs" />
+     <Compile Include="Assets\_Scripts\_Views\IGameView.cs" />
+     <Compile Include="Assets\_Scripts\_Views\Login.cs" />
      <Compile Include="Assets\_Scripts\GameState.cs" />
-     <Compile Include="Assets\_Scripts\IGameListener.cs" />
-     <Compile Include="Assets\_Scripts\Login.cs" />
-     <Compile Include="Assets\_Scripts\MMOEngine.cs" />
+     <Compile Include="Assets\_Scripts\PhotonClient.cs" />
  <Reference Include="AegisBornCommon">
  <HintPath>Assets\Plugins\AegisBornCommon.dll</HintPath>
  </Reference>

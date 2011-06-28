@@ -9,7 +9,7 @@ public abstract class IOperationHandler
     public delegate void AfterMessageRecieved();
     public AfterMessageRecieved afterMessageRecieved;
 
-    public void HandleMessage(Game gameLogic, OperationCode operationCode, int returnCode, Hashtable returnValues)
+    public void HandleMessage(PhotonClient gameLogic, OperationCode operationCode, int returnCode, Hashtable returnValues)
     {
         if (beforeMessageRecieved != null)
         {
@@ -22,5 +22,5 @@ public abstract class IOperationHandler
         }
     }
 
-    public abstract void OnHandleMessage(Game gameLogic, OperationCode operationCode, int returnCode, Hashtable returnValues);
+    public abstract void OnHandleMessage(PhotonClient gameLogic, OperationCode operationCode, int returnCode, Hashtable returnValues);
 }
