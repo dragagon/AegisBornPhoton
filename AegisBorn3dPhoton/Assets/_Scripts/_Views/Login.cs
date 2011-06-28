@@ -52,7 +52,6 @@ public class Login : GameView
 
     public void AfterKeysExchanged()
     {
-        Debug.Log("Keys exchanged");
         LoginOperations.Login(_engine, _username, _password);
     }
 
@@ -65,7 +64,6 @@ public class Login : GameView
 
     public void AfterLogin()
     {
-        Debug.Log("Login successful.");
-        //Application.LoadLevel("CharacterSelect");
+        Application.LoadLevel("CharacterSelect");
     }
 }

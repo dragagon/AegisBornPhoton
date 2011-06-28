@@ -2,15 +2,18 @@
 using AegisBornCommon;
 using ExitGames.Client.Photon;
 
-public class Connected : GameStateController
+public class CharacterSelectController : GameStateController
 {
-    public Connected(GameView view) : base(view)
+    public CharacterSelectController(GameView view) : base(view)
     {
     }
 
     public override GameState State
     {
-        get { return GameState.Connected; }
+        get
+        {
+            return GameState.CharacterSelect;
+        }
     }
 
     public override void OnOperationReturn(PhotonClient gameLogic, OperationCode operationCode, int returnCode, Hashtable returnValues)

@@ -13,4 +13,9 @@ public static class LoginOperations
 
         game.SendOp(OperationCode.Login, vartable, true, 0, true);
     }
+
+    public static void GetCharacters(PhotonClient game)
+    {
+        game.SendOp(OperationCode.GetCharacters, new Hashtable(), true, 0, false);
+    }
 }

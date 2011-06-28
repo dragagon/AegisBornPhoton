@@ -50,6 +50,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\_Scripts\_GameState\CharacterSelectController.cs" />
      <Compile Include="Assets\_Scripts\_GameState\Connected.cs" />
      <Compile Include="Assets\_Scripts\_GameState\Disconnected.cs" />
      <Compile Include="Assets\_Scripts\_GameState\GameStateController.cs" />
@@ -59,6 +60,7 @@
      <Compile Include="Assets\_Scripts\_Handlers\Operations\IOperationHandler.cs" />
      <Compile Include="Assets\_Scripts\_Handlers\Operations\LoginHandler.cs" />
      <Compile Include="Assets\_Scripts\_Operations\LoginOperations.cs" />
+     <Compile Include="Assets\_Scripts\_Views\CharacterSelect.cs" />
      <Compile Include="Assets\_Scripts\_Views\GameView.cs" />
      <Compile Include="Assets\_Scripts\_Views\IGameView.cs" />
      <Compile Include="Assets\_Scripts\_Views\Login.cs" />
