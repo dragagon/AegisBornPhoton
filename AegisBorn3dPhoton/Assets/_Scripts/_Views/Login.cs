@@ -18,13 +18,6 @@ public class Login : GameView
         _waitingForConnect = new WaitingForConnect(this);
         _connected = new Connected(this);
 
-        IOperationHandler handler = new ExchangeKeysHandler();
-        handler.afterMessageRecieved += AfterKeysExchanged;
-        _connected.OperationHandlers.Add(OperationCode.ExchangeKeysForEncryption, handler);
-
-        handler = new LoginHandler();
-        handler.afterMessageRecieved += AfterLogin;
-        _connected.OperationHandlers.Add(OperationCode.Login, handler);
         SetDisconnected();
     }
 

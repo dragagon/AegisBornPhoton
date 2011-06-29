@@ -42,10 +42,13 @@
   <ItemGroup>
     <Compile Include="ErrorCode.cs" />
     <Compile Include="EventCode.cs" />
+    <Compile Include="Models\AegisBornItem.cs" />
+    <Compile Include="Models\AegisBornCharacter.cs" />
     <Compile Include="OperationCode.cs" />
     <Compile Include="ParameterCode.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

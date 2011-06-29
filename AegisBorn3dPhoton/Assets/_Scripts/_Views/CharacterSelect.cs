@@ -1,3 +1,4 @@
+using AegisBornCommon.Models;
 using UnityEngine;
 using System.Collections;
 
@@ -15,21 +16,6 @@ public class CharacterSelect : GameView
         if (_engine.StateController != null && _engine.State == GameState.Connected)
         {
             _engine.StateController = _characterSelectController;
-            /*
-            CharacterList = new CharacterListHandler();
-            CharacterSelected = new CharacterSelectedHandler();
-
-            // Personal message handlers
-            handlers.Add("characterlist", CharacterList);
-            handlers.Add("characterSelected", CharacterSelected);
-            handlers.Add("error", errorHandler);
-
-            CharacterList.afterMessageRecieved += AfterCharacterList;
-            CharacterSelected.afterMessageRecieved += AfterCharacterSelected;
-
-            // We are ready to get the character list
-            new GetCharactersMessage(smartFox, false).Send();
-            */
             LoginOperations.GetCharacters(_engine);
         }
         else
@@ -40,19 +26,20 @@ public class CharacterSelect : GameView
 
     void OnGUI()
     {
+        GUI.Label(new Rect(10, 225, 400, 100), _engine.State.ToString());
+
         if (_receivedCharacters)
         {
-            /*
             GUI.Box(new Rect(300, 10, 100, 300), "Characters");
 
             int yPos = 50;
 
-            foreach (Character character in CharacterList.characterList)
+            foreach (AegisBornCharacter character in _characterSelectController.Characters)
             {
 
                 if (GUI.Button(new Rect(310, yPos, 80, 50), character.Name))
                 {
-                    new SelectCharacterMessage(smartFox, false, character.ID).Send();
+                    //new SelectCharacterMessage(smartFox, false, character.ID).Send();
                 }
 
                 yPos += 60;
@@ -60,13 +47,13 @@ public class CharacterSelect : GameView
 
             if (GUI.Button(new Rect(100, 165, 100, 25), "New Character") || (Event.current.type == EventType.keyDown && Event.current.character == '\n'))
             {
-                Application.LoadLevel("CharacterCreate");
+                //Application.LoadLevel("CharacterCreate");
             }
-            */
         }
         if (GUI.Button(new Rect(100, 195, 100, 25), "Back"))
         {
             _engine.Disconnect();
+            //LoginOperations.ExitWorld(_engine);
             Application.LoadLevel("Login");
         }
     }

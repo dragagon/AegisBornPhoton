@@ -104,14 +104,20 @@ namespace AegisBorn
 
                         if (String.Equals(hash.Trim(), user.Password.Trim(), StringComparison.OrdinalIgnoreCase))
                         {
-                            return operation.GetOperationResponse(0, "OK");
+                            peer.PublishOperationResponse(operation.GetOperationResponse(0, "OK"));
+
+                            // transfer operation handling to our account which maintains the user/character
+                            var account = new AegisBornAccount(this, user);
+                            peer.SetCurrentOperationHandler(account);
+                            return null;
                         }
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception e)
             {
                 // Do nothing because we are about to throw them out anyway.
+                peer.PublishOperationResponse(new OperationResponse(request, (int)ErrorCode.InvalidUserPass, e.ToString()));
             }
 
             peer.PublishOperationResponse(new OperationResponse(request, (int)ErrorCode.InvalidUserPass, "The Username or Password is incorrect"));

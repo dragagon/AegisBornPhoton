@@ -61,14 +61,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AegisBornAccount.cs" />
     <Compile Include="AegisBornApplication.cs" />
     <Compile Include="AegisBornPeer.cs" />
+    <Compile Include="Events\GameExited.cs" />
     <Compile Include="Models\Base\AegisBornCharacter.cs" />
     <Compile Include="Models\Base\AegisBornUserProfile.cs" />
     <Compile Include="Models\Base\SfGuardUser.cs" />
+    <Compile Include="Models\Map\AegisBornUserProfileMap.cs" />
+    <Compile Include="Models\Map\AegisBornCharacterMap.cs" />
     <Compile Include="Models\Map\SfGuardUserMap.cs" />
     <Compile Include="NHibernateHelper.cs" />
     <Compile Include="Operations\EstablishSecureCommunicationOperation.cs" />
+    <Compile Include="Operations\GetCharactersOperation.cs" />
     <Compile Include="Operations\LoginSecurely.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections;
 
 namespace AegisBorn.Models.Base
 {
@@ -15,5 +12,22 @@ namespace AegisBorn.Models.Base
         public virtual int Level { get; set; }
         public virtual int PositionX { get; set; }
         public virtual int PositionY { get; set; }
+
+        public virtual AegisBornCommon.Models.AegisBornCharacter GetFullPlayer()
+        {
+
+            var character = new AegisBornCommon.Models.AegisBornCharacter
+                                {
+                                    Id = Id,
+                                    Name = Name,
+                                    Sex = Sex,
+                                    Class = Class,
+                                    Level = Level,
+                                    PositionX = PositionX,
+                                    PositionY = PositionY
+                                };
+
+            return character;
+        }
     }
 }

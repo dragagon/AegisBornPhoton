@@ -31,5 +31,15 @@
         /// The player's password
         /// </summary>
         Password = 71,
+
+        /// <summary>
+        /// The number of character slots the player is allowed to have.
+        /// </summary>
+        CharacterSlots,
+
+        /// <summary>
+        /// The Players characters
+        /// </summary>
+        Characters,
     }
 }

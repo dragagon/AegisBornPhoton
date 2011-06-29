@@ -18,4 +18,9 @@ public static class LoginOperations
     {
         game.SendOp(OperationCode.GetCharacters, new Hashtable(), true, 0, false);
     }
+
+    public static void ExitWorld(PhotonClient game)
+    {
+        game.SendOp(OperationCode.ExitGame, new Hashtable(), true, 0, false );
+    }
 }

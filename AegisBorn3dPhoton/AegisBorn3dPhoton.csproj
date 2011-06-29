@@ -57,6 +57,7 @@
      <Compile Include="Assets\_Scripts\_GameState\IGameStateController.cs" />
      <Compile Include="Assets\_Scripts\_GameState\WaitingForConnect.cs" />
      <Compile Include="Assets\_Scripts\_Handlers\Operations\ExchangeKeysHandler.cs" />
+     <Compile Include="Assets\_Scripts\_Handlers\Operations\GetCharactersHandler.cs" />
      <Compile Include="Assets\_Scripts\_Handlers\Operations\IOperationHandler.cs" />
      <Compile Include="Assets\_Scripts\_Handlers\Operations\LoginHandler.cs" />
      <Compile Include="Assets\_Scripts\_Operations\LoginOperations.cs" />

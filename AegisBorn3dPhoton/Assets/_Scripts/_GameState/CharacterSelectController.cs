@@ -1,12 +1,26 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 using AegisBornCommon;
+using AegisBornCommon.Models;
 using ExitGames.Client.Photon;
 
 public class CharacterSelectController : GameStateController
 {
-    public CharacterSelectController(GameView view) : base(view)
+    private int _characterSlots;
+    private List<AegisBornCharacter> _characters;
+
+    private GetCharactersHandler _gcHandler;
+
+    public CharacterSelectController(CharacterSelect view) : base(view)
     {
+        _gcHandler = new GetCharactersHandler();
+        _gcHandler.afterMessageRecieved += AfterCharacterList;
+        _gcHandler.afterMessageRecieved += view.AfterCharacterList;
+        OperationHandlers.Add(OperationCode.GetCharacters, _gcHandler);
     }
+
+    public List<AegisBornCharacter> Characters { get { return _characters; } }
+    public int CharacterSlots { get { return _characterSlots; } }
 
     public override GameState State
     {
@@ -27,6 +41,10 @@ public class CharacterSelectController : GameStateController
         else
         {
             OnUnexpectedPhotonReturn(returnCode, operationCode, returnValues);
+            foreach(DictionaryEntry pair in returnValues)
+            {
+                OnDebugReturn(DebugLevel.ERROR, string.Format("{0} - {1}", pair.Key, pair.Value));
+            }
         }
     }
 
@@ -62,4 +80,9 @@ public class CharacterSelectController : GameStateController
         gameLogic.Peer.OpCustom((byte)operationCode, parameter, sendReliable, channelId, encrypt);
     }
 
+    public void AfterCharacterList()
+    {
+        _characterSlots = _gcHandler.CharacterSlots;
+        _characters = _gcHandler.Characters;
+    }
 }

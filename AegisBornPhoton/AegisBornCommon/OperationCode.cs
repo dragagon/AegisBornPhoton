@@ -8,13 +8,25 @@
         Nil = 0,
 
         /// <summary>
+        /// Code for exchanging keys using PhotonPeer.OpExchangeKeysForEncryption
+        /// </summary>
+        ExchangeKeysForEncryption = 95,
+
+        /// <summary>
         /// Login to the server
         /// </summary>
         Login = 100,
 
         /// <summary>
-        /// Code for exchanging keys using PhotonPeer.OpExchangeKeysForEncryption
+        /// Op Code to leave the game once we are logged in.
         /// </summary>
-        ExchangeKeysForEncryption = 95,
+        ExitGame,
+
+        /// <summary>
+        /// Code for getting characters from the server
+        /// </summary>
+        GetCharacters,
+
+
     }
 }

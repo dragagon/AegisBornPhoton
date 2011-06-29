@@ -4,8 +4,15 @@ using ExitGames.Client.Photon;
 
 public class Connected : GameStateController
 {
-    public Connected(GameView view) : base(view)
+    public Connected(Login view) : base(view)
     {
+        IOperationHandler handler = new ExchangeKeysHandler();
+        handler.afterMessageRecieved += view.AfterKeysExchanged;
+        OperationHandlers.Add(OperationCode.ExchangeKeysForEncryption, handler);
+
+        handler = new LoginHandler();
+        handler.afterMessageRecieved += view.AfterLogin;
+        OperationHandlers.Add(OperationCode.Login, handler);
     }
 
     public override GameState State
