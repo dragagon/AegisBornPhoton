@@ -7,7 +7,6 @@ public class GetCharactersHandler : IOperationHandler
 {
     public List<AegisBornCharacter> Characters;
     public int CharacterSlots;
-    public Hashtable CharacterHash;
 
     #region Overrides of IOperationHandler
 
@@ -18,7 +17,6 @@ public class GetCharactersHandler : IOperationHandler
         var characterList = returnValues[(byte) ParameterCode.Characters] as Hashtable;
         if (characterList != null)
         {
-            CharacterHash = characterList;
             foreach (DictionaryEntry character in characterList)
             {
                 var characterhash = character.Value as Hashtable;
