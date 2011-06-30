@@ -6,5 +6,5 @@
     Connected,
     CharacterSelect,
     CharacterCreate,
-    WorldEntered
+    InGame
 }

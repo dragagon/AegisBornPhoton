@@ -43,6 +43,11 @@
         Characters,
 
         /// <summary>
+        /// an object ID
+        /// </summary>
+        ObjectId,
+
+        /// <summary>
         /// Character Name
         /// </summary>
         CharacterName,

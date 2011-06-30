@@ -35,7 +35,7 @@ public class CharacterSelect : GameView
 
             if (GUI.Button(new Rect(310, yPos, 80, 50), character.Name))
             {
-                //new SelectCharacterMessage(smartFox, false, character.ID).Send();
+                LoginOperations.SelectCharacter(_engine, character.Id);
             }
 
             yPos += 60;
@@ -56,8 +56,7 @@ public class CharacterSelect : GameView
 
     public void AfterCharacterSelected()
     {
-        Debug.Log("going to main game");
-        //Application.LoadLevel("Game");
+        Application.LoadLevel("Game");
     }
 
 }

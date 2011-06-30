@@ -1,7 +1,5 @@
-using System.Collections;
 using UnityEngine;
 using ExitGames.Client.Photon;
-using AegisBornCommon;
 
 public class Login : GameView
 {

@@ -31,5 +31,10 @@
         /// Code for creating a new character
         /// </summary>
         CreateCharacter,
+
+        /// <summary>
+        /// Code for selecting a character from our list
+        /// </summary>
+        SelectCharacter,
     }
 }

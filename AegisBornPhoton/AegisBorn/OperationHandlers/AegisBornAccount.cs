@@ -10,7 +10,7 @@ using Photon.SocketServer;
 using Photon.SocketServer.Rpc;
 using Photon.SocketServer.Rpc.Reflection;
 
-namespace AegisBorn
+namespace AegisBorn.OperationHandlers
 {
     public class AegisBornAccount : IOperationHandler
     {
@@ -144,6 +144,7 @@ namespace AegisBorn
 
                         if(character != null)
                         {
+                            transaction.Commit();
                             return new OperationResponse(request, (int)ErrorCode.InvalidCharacter, "Character name taken.");
                         }
 
@@ -171,6 +172,47 @@ namespace AegisBorn
 
             return operation.GetOperationResponse((int)ErrorCode.Fatal, "Fatal error with database");
         }
+
+        [Operation(OperationCode = (byte)OperationCode.SelectCharacter)]
+        public OperationResponse OperationSelectCharacter(Peer peer, OperationRequest request)
+        {
+            var operation = new SelectCharacterOperation(request);
+            if (!operation.IsValid)
+            {
+                return new OperationResponse(request, (int)ErrorCode.InvalidOperationParameter, operation.GetErrorMessage());
+            }
+
+            try
+            {
+                using (var session = NHibernateHelper.OpenSession())
+                {
+                    using (var transaction = session.BeginTransaction())
+                    {
+                        var character = session.CreateCriteria(typeof(AegisBornCharacter), "abc")
+                            .Add(Restrictions.Eq("abc.Id", operation.CharacterId))
+                            .Add(Restrictions.Eq("abc.UserId", _user))
+                            .UniqueResult<AegisBornCharacter>();
+
+                        transaction.Commit();
+
+                        if (character == null)
+                        {
+                            return new OperationResponse(request, (int)ErrorCode.InvalidCharacter, "That character does not exist");
+                        }
+                        
+                        peer.SetCurrentOperationHandler(new AegisBornPlayer(peer, _user, character));
+                        return operation.GetOperationResponse(0, "OK");
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                // Do nothing because we are about to throw them out anyway.
+                peer.PublishOperationResponse(new OperationResponse(request, (int)ErrorCode.InvalidCharacter, e.ToString()));
+            }
+
+            return operation.GetOperationResponse((int)ErrorCode.Fatal, "Fatal error with database");
+        }        
 
         [Operation(OperationCode = (byte)OperationCode.ExitGame)]
         public OperationResponse OperationExitWorld(Peer peer, OperationRequest request)

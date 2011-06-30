@@ -34,4 +34,13 @@ public static class LoginOperations
                            };
         game.SendOp(OperationCode.CreateCharacter, vartable, true, 0, false);
     }
+
+    public static void SelectCharacter(PhotonClient game, int characterId)
+    {
+        var vartable = new Hashtable
+                           {
+                               {(byte) ParameterCode.ObjectId, characterId},
+                           };
+        game.SendOp(OperationCode.SelectCharacter, vartable, true, 0, false);
+    }
 }
