@@ -7,6 +7,8 @@ public class GetCharactersHandler : IOperationHandler
 {
     public List<AegisBornCharacter> Characters;
     public int CharacterSlots;
+    public Hashtable CharacterHash;
+
     #region Overrides of IOperationHandler
 
     public override void OnHandleMessage(PhotonClient gameLogic, OperationCode operationCode, int returnCode, Hashtable returnValues)
@@ -16,9 +18,10 @@ public class GetCharactersHandler : IOperationHandler
         var characterList = returnValues[(byte) ParameterCode.Characters] as Hashtable;
         if (characterList != null)
         {
-            foreach (var character in characterList)
+            CharacterHash = characterList;
+            foreach (DictionaryEntry character in characterList)
             {
-                var characterhash = character as Hashtable;
+                var characterhash = character.Value as Hashtable;
 
                 if (characterhash != null)
                 {

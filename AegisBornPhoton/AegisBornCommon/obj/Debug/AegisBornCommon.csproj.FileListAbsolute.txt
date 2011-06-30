@@ -13,3 +13,8 @@ C:\development\photon\AegisBorn3dPhoton\Assets\Plugins\AegisBornCommon.pdb
 C:\development\photon\AegisBornPhoton\AegisBornCommon\obj\Debug\ResolveAssemblyReference.cache
 C:\development\photon\AegisBornPhoton\AegisBornCommon\obj\Debug\AegisBornCommon.dll
 C:\development\photon\AegisBornPhoton\AegisBornCommon\obj\Debug\AegisBornCommon.pdb
+D:\development\photon\AegisBorn3dPhoton\Assets\Plugins\AegisBornCommon.dll
+D:\development\photon\AegisBorn3dPhoton\Assets\Plugins\AegisBornCommon.pdb
+D:\development\photon\AegisBornPhoton\AegisBornCommon\obj\Debug\ResolveAssemblyReference.cache
+D:\development\photon\AegisBornPhoton\AegisBornCommon\obj\Debug\AegisBornCommon.dll
+D:\development\photon\AegisBornPhoton\AegisBornCommon\obj\Debug\AegisBornCommon.pdb

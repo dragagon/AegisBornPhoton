@@ -21,3 +21,6 @@ C:\development\photon\AegisBornPhoton\AegisBorn\obj\Debug\AegisBorn.dll
 C:\development\photon\AegisBornPhoton\AegisBorn\obj\Debug\AegisBorn.pdb
 C:\development\photon\deploy\AegisBorn\AegisBorn.dll
 C:\development\photon\deploy\AegisBorn\AegisBorn.pdb
+D:\development\photon\AegisBornPhoton\AegisBorn\obj\Debug\ResolveAssemblyReference.cache
+D:\development\photon\AegisBornPhoton\AegisBorn\obj\Debug\AegisBorn.dll
+D:\development\photon\AegisBornPhoton\AegisBorn\obj\Debug\AegisBorn.pdb
