@@ -27,6 +27,9 @@
         /// </summary>
         GetCharacters,
 
-
+        /// <summary>
+        /// Code for creating a new character
+        /// </summary>
+        CreateCharacter,
     }
 }

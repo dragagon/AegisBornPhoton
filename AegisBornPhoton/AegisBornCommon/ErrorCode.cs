@@ -36,5 +36,10 @@
         /// The username or password isn't correct, don't let them log in.
         /// </summary>
         InvalidUserPass,
+
+        /// <summary>
+        /// Something happened with the character, look in the string.
+        /// </summary>
+        InvalidCharacter,
     }
 }

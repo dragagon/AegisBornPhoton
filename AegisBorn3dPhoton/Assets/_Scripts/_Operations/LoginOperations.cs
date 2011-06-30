@@ -23,4 +23,15 @@ public static class LoginOperations
     {
         game.SendOp(OperationCode.ExitGame, new Hashtable(), true, 0, false );
     }
+
+    public static void CreateCharacter(PhotonClient game, string characterName, string sex, string characterClass)
+    {
+        var vartable = new Hashtable
+                           {
+                               {(byte) ParameterCode.CharacterName, characterName},
+                               {(byte) ParameterCode.CharacterSex, sex},
+                               {(byte) ParameterCode.CharacterClass, characterClass},
+                           };
+        game.SendOp(OperationCode.CreateCharacter, vartable, true, 0, false);
+    }
 }

@@ -41,5 +41,20 @@
         /// The Players characters
         /// </summary>
         Characters,
+
+        /// <summary>
+        /// Character Name
+        /// </summary>
+        CharacterName,
+
+        /// <summary>
+        /// Sex of character
+        /// </summary>
+        CharacterSex,
+
+        /// <summary>
+        /// Character class
+        /// </summary>
+        CharacterClass,
     }
 }

@@ -1,11 +1,9 @@
 using AegisBornCommon.Models;
 using UnityEngine;
-using System.Collections;
 
 public class CharacterSelect : GameView
 {
     private CharacterSelectController _characterSelectController;
-    bool _receivedCharacters = false;
 
     protected override void Awake()
     {
@@ -13,7 +11,7 @@ public class CharacterSelect : GameView
 
         _characterSelectController = new CharacterSelectController(this);
 
-        if (_engine.StateController != null && _engine.State == GameState.Connected)
+        if (_engine.StateController != null && (_engine.State == GameState.Connected || _engine.State == GameState.CharacterCreate))
         {
             _engine.StateController = _characterSelectController;
             LoginOperations.GetCharacters(_engine);
@@ -28,27 +26,25 @@ public class CharacterSelect : GameView
     {
         GUI.Label(new Rect(10, 225, 400, 100), _engine.State.ToString());
 
-        if (_receivedCharacters)
+        GUI.Box(new Rect(300, 10, 100, 300), "Characters");
+
+        int yPos = 50;
+
+        foreach (AegisBornCharacter character in _characterSelectController.Characters)
         {
-            GUI.Box(new Rect(300, 10, 100, 300), "Characters");
 
-            int yPos = 50;
-
-            foreach (AegisBornCharacter character in _characterSelectController.Characters)
+            if (GUI.Button(new Rect(310, yPos, 80, 50), character.Name))
             {
-
-                if (GUI.Button(new Rect(310, yPos, 80, 50), character.Name))
-                {
-                    //new SelectCharacterMessage(smartFox, false, character.ID).Send();
-                }
-
-                yPos += 60;
+                //new SelectCharacterMessage(smartFox, false, character.ID).Send();
             }
 
-            if (GUI.Button(new Rect(100, 165, 100, 25), "New Character") || (Event.current.type == EventType.keyDown && Event.current.character == '\n'))
-            {
-                //Application.LoadLevel("CharacterCreate");
-            }
+            yPos += 60;
+        }
+
+        if (GUI.Button(new Rect(100, 165, 100, 25), "New Character") ||
+            (Event.current.type == EventType.keyDown && Event.current.character == '\n'))
+        {
+            Application.LoadLevel("CharacterCreate");
         }
         if (GUI.Button(new Rect(100, 195, 100, 25), "Back"))
         {
@@ -56,11 +52,6 @@ public class CharacterSelect : GameView
             //LoginOperations.ExitWorld(_engine);
             Application.LoadLevel("Login");
         }
-    }
-
-    public void AfterCharacterList()
-    {
-        _receivedCharacters = true;
     }
 
     public void AfterCharacterSelected()

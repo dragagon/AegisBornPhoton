@@ -1,32 +1,22 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using AegisBornCommon;
-using AegisBornCommon.Models;
 using ExitGames.Client.Photon;
 
-public class CharacterSelectController : GameStateController
+class CharacterCreateController : GameStateController
 {
-    private int _characterSlots;
-    private List<AegisBornCharacter> _characters;
-
-    private GetCharactersHandler _gcHandler;
-
-    public CharacterSelectController(CharacterSelect view) : base(view)
+    private CharacterCreateHandler _ccHandler;
+    public CharacterCreateController(CharacterCreate view) : base(view)
     {
-        _characters = new List<AegisBornCharacter>();
-        _gcHandler = new GetCharactersHandler();
-        _gcHandler.afterMessageRecieved += AfterCharacterList;
-        OperationHandlers.Add(OperationCode.GetCharacters, _gcHandler);
+        _ccHandler = new CharacterCreateHandler();
+        _ccHandler.afterMessageRecieved += view.AfterCreateCharacter;
+        OperationHandlers.Add(OperationCode.CreateCharacter, _ccHandler);
     }
-
-    public List<AegisBornCharacter> Characters { get { return _characters; } }
-    public int CharacterSlots { get { return _characterSlots; } }
 
     public override GameState State
     {
         get
         {
-            return GameState.CharacterSelect;
+            return GameState.CharacterCreate;
         }
     }
 
@@ -41,7 +31,7 @@ public class CharacterSelectController : GameStateController
         else
         {
             OnUnexpectedPhotonReturn(returnCode, operationCode, returnValues);
-            foreach(DictionaryEntry pair in returnValues)
+            foreach (DictionaryEntry pair in returnValues)
             {
                 OnDebugReturn(DebugLevel.ERROR, string.Format("{0} - {1}", pair.Key, pair.Value));
             }
@@ -78,11 +68,5 @@ public class CharacterSelectController : GameStateController
     public override void SendOperation(PhotonClient gameLogic, OperationCode operationCode, Hashtable parameter, bool sendReliable, byte channelId, bool encrypt)
     {
         gameLogic.Peer.OpCustom((byte)operationCode, parameter, sendReliable, channelId, encrypt);
-    }
-
-    public void AfterCharacterList()
-    {
-        _characterSlots = _gcHandler.CharacterSlots;
-        _characters = _gcHandler.Characters;
     }
 }

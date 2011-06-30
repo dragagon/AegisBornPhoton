@@ -25,6 +25,8 @@ namespace AegisBorn
 
         private int _characterSlots;
 
+        private bool _canAddCharacters;
+
         static AegisBornAccount()
         {
             Operations = new OperationMethodInfoCache();
@@ -95,6 +97,8 @@ namespace AegisBorn
                             session.CreateCriteria(typeof (AegisBornCharacter), "abc").Add(Restrictions.Eq(
                                 "abc.UserId", _user)).List<AegisBornCharacter>();
 
+                        _canAddCharacters = _characterSlots > characters.Count;
+
                         operation.Characters = new Hashtable();
                         foreach (var aegisBornCharacter in characters)
                         {
@@ -116,6 +120,57 @@ namespace AegisBorn
             return operation.GetOperationResponse((int)ErrorCode.Fatal, "Fatal error with database");
         }
 
+        [Operation(OperationCode = (byte)OperationCode.CreateCharacter)]
+        public OperationResponse OperationCreateCharacter(Peer peer, OperationRequest request)
+        {
+            var operation = new CreateCharacterOperation(request);
+            if (!operation.IsValid)
+            {
+                return new OperationResponse(request, (int)ErrorCode.InvalidOperationParameter, operation.GetErrorMessage());
+            }
+
+            if(!_canAddCharacters)
+            {
+                return new OperationResponse(request, (int) ErrorCode.InvalidCharacter, "No free Character Slots.");
+            }
+
+            try
+            {
+                using (var session = NHibernateHelper.OpenSession())
+                {
+                    using (var transaction = session.BeginTransaction())
+                    {
+                        var character = session.CreateCriteria(typeof(AegisBornCharacter), "abc").Add(Restrictions.Eq("abc.Name", operation.CharacterName)).UniqueResult<AegisBornCharacter>();
+
+                        if(character != null)
+                        {
+                            return new OperationResponse(request, (int)ErrorCode.InvalidCharacter, "Character name taken.");
+                        }
+
+                        var newChar = new AegisBornCharacter
+                                          {
+                                              Name = operation.CharacterName,
+                                              Sex = operation.CharacterSex,
+                                              Class = operation.CharacterClass,
+                                              Level = 1,
+                                              UserId = _user
+                                          };
+                        session.Save(newChar);
+
+                        transaction.Commit();
+                        
+                        return operation.GetOperationResponse(0, "OK");
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                // Do nothing because we are about to throw them out anyway.
+                peer.PublishOperationResponse(new OperationResponse(request, (int)ErrorCode.InvalidCharacter, e.ToString()));
+            }
+
+            return operation.GetOperationResponse((int)ErrorCode.Fatal, "Fatal error with database");
+        }
 
         [Operation(OperationCode = (byte)OperationCode.ExitGame)]
         public OperationResponse OperationExitWorld(Peer peer, OperationRequest request)
