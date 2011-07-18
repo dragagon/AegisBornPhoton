@@ -2,7 +2,7 @@
 
 namespace AegisBornCommon.Models
 {
-    public abstract class AegisBornCharacter : AegisBornObject
+    public class AegisBornCharacter : AegisBornObject
     {
         public string Sex { get; set; }
         public string Class { get; set; }
