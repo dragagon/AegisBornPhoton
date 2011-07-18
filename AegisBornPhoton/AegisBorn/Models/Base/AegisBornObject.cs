@@ -2,7 +2,6 @@
 {
     public class AegisBornObject : AegisBornCommon.Models.AegisBornObject
     {
-
         public virtual KnownObjectList KnownList { get; set; }
 
         private bool _isVisible;

@@ -255,7 +255,7 @@ namespace AegisBorn.Models.Base
             return retList;
         }
 
-        public List<AegisBornPlayable> getVisiblePlayable(AegisBornObject aegisBornObject)
+        public List<AegisBornPlayable> GetVisiblePlayable(AegisBornObject aegisBornObject)
         {
             AegisBornRegion region = aegisBornObject.WorldRegion;
 
