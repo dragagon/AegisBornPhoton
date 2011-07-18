@@ -61,24 +61,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="OperationHandlers\AegisBornAccount.cs" />
+    <Compile Include="Models\Base\AegisBornObject.cs" />
+    <Compile Include="Models\Base\Actor\AegisBornPlayable.cs" />
+    <Compile Include="Models\Base\Actor\AegisBornPlayer.cs" />
+    <Compile Include="Models\Base\AegisBornRegion.cs" />
+    <Compile Include="Models\Base\AegisBornWorld.cs" />
+    <Compile Include="Models\Base\KnownObjectList.cs" />
+    <Compile Include="OperationHandlers\AegisBornAccountHandler.cs" />
     <Compile Include="AegisBornApplication.cs" />
     <Compile Include="AegisBornPeer.cs" />
     <Compile Include="Events\GameExited.cs" />
-    <Compile Include="Models\Base\AegisBornCharacter.cs" />
+    <Compile Include="Models\Base\Actor\AegisBornCharacter.cs" />
     <Compile Include="Models\Base\AegisBornUserProfile.cs" />
     <Compile Include="Models\Base\SfGuardUser.cs" />
     <Compile Include="Models\Map\AegisBornUserProfileMap.cs" />
     <Compile Include="Models\Map\AegisBornCharacterMap.cs" />
     <Compile Include="Models\Map\SfGuardUserMap.cs" />
     <Compile Include="NHibernateHelper.cs" />
-    <Compile Include="OperationHandlers\AegisBornPlayer.cs" />
+    <Compile Include="OperationHandlers\AegisBornPlayerHandler.cs" />
     <Compile Include="Operations\CreateCharacterOperation.cs" />
     <Compile Include="Operations\EstablishSecureCommunicationOperation.cs" />
     <Compile Include="Operations\GetCharactersOperation.cs" />
     <Compile Include="Operations\LoginSecurely.cs" />
     <Compile Include="Operations\SelectCharacterOperation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Util.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AegisBornCommon\AegisBornCommon.csproj">

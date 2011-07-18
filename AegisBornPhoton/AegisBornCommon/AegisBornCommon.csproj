@@ -42,8 +42,10 @@
   <ItemGroup>
     <Compile Include="ErrorCode.cs" />
     <Compile Include="EventCode.cs" />
-    <Compile Include="Models\AegisBornItem.cs" />
+    <Compile Include="Models\AegisBornObject.cs" />
     <Compile Include="Models\AegisBornCharacter.cs" />
+    <Compile Include="Models\AegisBornPlayable.cs" />
+    <Compile Include="Models\AegisBornPlayer.cs" />
     <Compile Include="OperationCode.cs" />
     <Compile Include="ParameterCode.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

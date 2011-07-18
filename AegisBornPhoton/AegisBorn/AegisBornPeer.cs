@@ -104,7 +104,7 @@ namespace AegisBorn
                             peer.PublishOperationResponse(operation.GetOperationResponse(0, "OK"));
 
                             // transfer operation handling to our account which maintains the user/character
-                            var account = new AegisBornAccount(this, user);
+                            var account = new AegisBornAccountHandler(this, user);
                             peer.SetCurrentOperationHandler(account);
                             return null;
                         }

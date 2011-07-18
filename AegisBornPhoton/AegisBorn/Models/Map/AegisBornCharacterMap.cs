@@ -1,4 +1,4 @@
-﻿using AegisBorn.Models.Base;
+﻿using AegisBorn.Models.Base.Actor;
 using FluentNHibernate.Mapping;
 
 namespace AegisBorn.Models.Map
@@ -12,8 +12,8 @@ namespace AegisBorn.Models.Map
             Map(x => x.Level).Column("level");
             Map(x => x.Class).Column("class");
             Map(x => x.Sex).Column("sex");
-            Map(x => x.PositionX).Column("position_x");
-            Map(x => x.PositionY).Column("position_y");
+            Map(x => x.X).Column("position_x");
+            Map(x => x.Y).Column("position_y");
             References(x => x.UserId).Column("user_id");
             Table("aegis_born_character");
         }
