@@ -8,7 +8,7 @@ namespace AegisBorn
 {
     public class Util
     {
-        public static bool IsInRadius(int radius, AegisBornObject aegisBornObject1, AegisBornObject aegisBornObject2, bool useZ)
+        public static bool IsInRadius(int radius, AegisBornObject aegisBornObject1, AegisBornObject aegisBornObject2, bool use3D)
         {
             if (aegisBornObject1 == null || aegisBornObject2 == null)
             {
@@ -19,9 +19,10 @@ namespace AegisBorn
                 return true;
             }
 
+            // in 3d software packages, Y is up, not Z, so when dealing with planar functions, Y is the odd-ball out.
             var dx = aegisBornObject1.X - aegisBornObject2.X;
-            var dy = aegisBornObject1.Y - aegisBornObject2.Y;
-            var dz = useZ ? aegisBornObject1.Z - aegisBornObject2.Z : 0;
+            var dz = aegisBornObject1.Z - aegisBornObject2.Z;
+            var dy = use3D ? aegisBornObject1.Y - aegisBornObject2.Y : 0;
 
             return dx * dx + dy * dy + dz * dz <= radius * radius;
         }
