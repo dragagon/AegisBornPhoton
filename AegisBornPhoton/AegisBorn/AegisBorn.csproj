@@ -64,8 +64,6 @@
     <Compile Include="Models\Base\AegisBornObject.cs" />
     <Compile Include="Models\Base\Actor\AegisBornPlayable.cs" />
     <Compile Include="Models\Base\Actor\AegisBornPlayer.cs" />
-    <Compile Include="Models\Base\AegisBornRegion.cs" />
-    <Compile Include="Models\Base\AegisBornWorld.cs" />
     <Compile Include="Models\Base\KnownObjectList.cs" />
     <Compile Include="OperationHandlers\AegisBornAccountHandler.cs" />
     <Compile Include="AegisBornApplication.cs" />
