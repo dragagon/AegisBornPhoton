@@ -20,12 +20,13 @@ namespace AegisBorn.OperationHandlers
 
         private readonly SfGuardUser _user;
 
-        private readonly AegisBornCharacter _selectedCharacter;
+        private readonly AegisBornPlayer _selectedCharacter;
 
         public string PlayerName
         {
             get { return _selectedCharacter.Name; }
         }
+
         static AegisBornPlayerHandler()
         {
             Operations = new OperationMethodInfoCache();
@@ -39,11 +40,12 @@ namespace AegisBorn.OperationHandlers
             }
         }
 
-        public AegisBornPlayerHandler(Peer photonPeer, SfGuardUser user, AegisBornCharacter selectedCharacter)
+        public AegisBornPlayerHandler(Peer photonPeer, SfGuardUser user, AegisBornPlayer selectedCharacter)
         {
             _user = user;
             _selectedCharacter = selectedCharacter;
             _peer = photonPeer;
+            _selectedCharacter.Peer = _peer;
             _dispatcher = new OperationDispatcher(Operations, this);
         }
 

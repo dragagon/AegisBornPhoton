@@ -149,7 +149,7 @@ namespace AegisBorn.OperationHandlers
                             return new OperationResponse(request, (int)ErrorCode.InvalidCharacter, "Character name taken.");
                         }
 
-                        var newChar = new AegisBornCharacter
+                        var newChar = new AegisBornPlayer
                                           {
                                               Name = operation.CharacterName,
                                               Sex = operation.CharacterSex,
@@ -189,10 +189,10 @@ namespace AegisBorn.OperationHandlers
                 {
                     using (var transaction = session.BeginTransaction())
                     {
-                        var character = session.CreateCriteria(typeof(AegisBornCharacter), "abc")
+                        var character = session.CreateCriteria(typeof(AegisBornPlayer), "abc")
                             .Add(Restrictions.Eq("abc.Id", operation.CharacterId))
                             .Add(Restrictions.Eq("abc.UserId", _user))
-                            .UniqueResult<AegisBornCharacter>();
+                            .UniqueResult<AegisBornPlayer>();
 
                         transaction.Commit();
 

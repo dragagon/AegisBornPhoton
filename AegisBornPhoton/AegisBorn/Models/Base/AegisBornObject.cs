@@ -1,6 +1,8 @@
-﻿namespace AegisBorn.Models.Base
+﻿using AegisBorn.Models.Base.Actor.Transform;
+
+namespace AegisBorn.Models.Base
 {
-    public class AegisBornObject : IAegisBornObject
+    public abstract class AegisBornObject : IAegisBornObject
     {
         public int Id
         {
@@ -8,8 +10,6 @@
             set { ObjectId = value;  }
         }
         public string Name { get; set; }
-
-
 
         public float X { get; set; }
         public float Y { get; set; }
@@ -20,18 +20,20 @@
         public bool IsVisible
         {
             get { return _isVisible; }
+            set
+            {
+                _isVisible = value;
+                if (!_isVisible)
+                {
+                    //Transform.Region = null;
+                }
+            }
         }
 
         public int InstanceId
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-                throw new System.NotImplementedException();
-            }
+            get;
+            set;
         }
 
         public KnownObjectList KnownObjects
@@ -50,19 +52,16 @@
             get { throw new System.NotImplementedException(); }
         }
 
-        public ObjectTransform Transform
-        {
-            get { throw new System.NotImplementedException(); }
-        }
+        public ObjectTransform Transform { get; private set; }
 
         public void Spawn()
         {
-            throw new System.NotImplementedException();
+            // use our Transform to determine region and set up objects and known list.
         }
 
         public void Spawn(int x, int y, int z)
         {
-            throw new System.NotImplementedException();
+            // Spawn at a specific point instead of where the transform is. We need to update the transform here too.
         }
 
         public void Decay()
@@ -70,9 +69,8 @@
             throw new System.NotImplementedException();
         }
 
-        public void OnSpawn()
+        public virtual void OnSpawn()
         {
-            throw new System.NotImplementedException();
         }
 
         public void RefreshId()
@@ -82,12 +80,18 @@
 
         public void SendInfo(Actor.AegisBornPlayer player)
         {
-            throw new System.NotImplementedException();
         }
 
         public void ToggleVisible()
         {
-            throw new System.NotImplementedException();
+            if(IsVisible)
+            {
+                Decay();
+            }
+            else
+            {
+                Spawn();
+            }
         }
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Photon.SocketServer.Rpc;
 
 namespace AegisBorn.Models.Base.Actor
 {
@@ -10,6 +11,7 @@ namespace AegisBorn.Models.Base.Actor
     /// </summary>
     public class AegisBornPlayer : AegisBornPlayable
     {
+        public Peer Peer { get; set; }
         public void Logout()
         {
             // kick the player out of the game.

@@ -61,6 +61,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\Base\Actor\IAegisBornCharacter.cs" />
+    <Compile Include="Models\Base\Actor\Transform\ObjectTransform.cs" />
     <Compile Include="Models\Base\AegisBornObject.cs" />
     <Compile Include="Models\Base\Actor\AegisBornPlayable.cs" />
     <Compile Include="Models\Base\Actor\AegisBornPlayer.cs" />
