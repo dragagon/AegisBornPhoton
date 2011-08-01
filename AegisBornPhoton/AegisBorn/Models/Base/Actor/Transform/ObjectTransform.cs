@@ -48,5 +48,29 @@ namespace AegisBorn.Models.Base.Actor.Transform
             setPosition(x, y, z);
             _activeObject.IsVisible = false;
         }
+
+        public void setPosition(int x, int y, int z)
+	    {
+            _position.X = x;
+            _position.Y = y;
+            _position.Z = z;
+        }
+
+        public int X
+        {
+            get { return _position.X; }
+            set { _position.X = value; }
+        }
+        public int Y
+        {
+            get { return _position.Y; }
+            set { _position.Y = value; }
+        }
+        public int Z
+        {
+            get { return _position.Z; }
+            set { _position.Z = value; }
+        }
+
     }
 }

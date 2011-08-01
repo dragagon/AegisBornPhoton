@@ -25,47 +25,39 @@
       <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Operations/f:CreateCharacterOperation.cs" caret="574" fromTop="17" />
       <File id="6219BCA1-BD90-4C67-B02D-3F11E902892F/f:OperationCode.cs" caret="450" fromTop="18" />
       <File id="6219BCA1-BD90-4C67-B02D-3F11E902892F/f:ParameterCode.cs" caret="1144" fromTop="30" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/f:AegisBornRegion.cs" caret="778" fromTop="25" />
       <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:OperationHandlers/f:AegisBornAccountHandler.cs" caret="389" fromTop="14" />
       <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/f:AegisBornPeer.cs" caret="4383" fromTop="35" />
       <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Operations/f:SelectCharacterOperation.cs" caret="0" fromTop="0" />
       <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:OperationHandlers/f:AegisBornPlayerHandler.cs" caret="633" fromTop="21" />
       <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/f:AegisBornApplication.cs" caret="459" fromTop="18" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/f:AegisBornWorld.cs" caret="1144" fromTop="0" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/f:AegisBornCharacter.cs" caret="184" fromTop="7" />
       <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/f:AegisBornObject.cs" caret="683" fromTop="23" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/d:Transform/f:ObjectTransform.cs" caret="608" fromTop="0" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/f:AegisBornCharacter.cs" caret="1081" fromTop="6" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/f:IAegisBornCharacter.cs" caret="608" fromTop="16" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/f:CharacterStats.cs" caret="172" fromTop="7" />
     </RecentFiles>
     <RecentEdits>
       <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:OperationHandlers/f:AegisBornPlayerHandler.cs" caret="2335" fromTop="22" />
       <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:OperationHandlers/f:AegisBornPlayerHandler.cs" caret="2695" fromTop="34" />
       <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:OperationHandlers/f:AegisBornPlayerHandler.cs" caret="3361" fromTop="47" />
       <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:OperationHandlers/f:AegisBornPlayerHandler.cs" caret="50" fromTop="2" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/f:AegisBornCharacter.cs" caret="184" fromTop="7" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/f:AegisBornWorld.cs" caret="551" fromTop="19" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/f:AegisBornWorld.cs" caret="1728" fromTop="34" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/f:AegisBornWorld.cs" caret="1728" fromTop="38" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/f:AegisBornWorld.cs" caret="1728" fromTop="32" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/f:AegisBornWorld.cs" caret="1731" fromTop="45" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/f:AegisBornRegion.cs" caret="913" fromTop="25" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/f:AegisBornRegion.cs" caret="916" fromTop="30" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/f:AegisBornRegion.cs" caret="806" fromTop="26" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/f:AegisBornWorld.cs" caret="1577" fromTop="41" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/f:AegisBornWorld.cs" caret="430" fromTop="12" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/f:AegisBornWorld.cs" caret="1103" fromTop="37" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/f:AegisBornWorld.cs" caret="1503" fromTop="45" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/f:AegisBornWorld.cs" caret="1048" fromTop="38" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/f:AegisBornWorld.cs" caret="1240" fromTop="40" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/f:AegisBornWorld.cs" caret="959" fromTop="22" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/f:AegisBornWorld.cs" caret="250" fromTop="10" />
       <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/f:AegisBornApplication.cs" caret="345" fromTop="14" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/f:AegisBornRegion.cs" caret="365" fromTop="12" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/f:AegisBornRegion.cs" caret="571" fromTop="17" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/f:AegisBornRegion.cs" caret="708" fromTop="23" />
       <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:OperationHandlers/f:AegisBornAccountHandler.cs" caret="389" fromTop="14" />
       <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:OperationHandlers/f:AegisBornPlayerHandler.cs" caret="294" fromTop="11" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/f:AegisBornWorld.cs" caret="3872" fromTop="34" />
       <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/f:AegisBornObject.cs" caret="601" fromTop="14" />
       <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/f:AegisBornObject.cs" caret="455" fromTop="13" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/d:Transform/f:ObjectTransform.cs" caret="1229" fromTop="33" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/d:Transform/f:ObjectTransform.cs" caret="1517" fromTop="29" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/d:Transform/f:ObjectTransform.cs" caret="1600" fromTop="32" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/d:Transform/f:ObjectTransform.cs" caret="1727" fromTop="37" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/f:AegisBornCharacter.cs" caret="1654" fromTop="28" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/f:AegisBornCharacter.cs" caret="187" fromTop="4" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/f:AegisBornCharacter.cs" caret="1064" fromTop="15" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/f:AegisBornCharacter.cs" caret="1373" fromTop="18" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/f:IAegisBornCharacter.cs" caret="627" fromTop="17" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/f:AegisBornCharacter.cs" caret="1081" fromTop="11" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/f:IAegisBornCharacter.cs" caret="315" fromTop="11" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/f:CharacterStats.cs" caret="145" fromTop="6" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>
@@ -84,11 +76,11 @@
       <Item value="Operation`0" priority="0" />
       <Item value="OperationCode" priority="0" />
       <Item value="OperationCanceledException`0" priority="0" />
-      <Item value="public" priority="36" />
+      <Item value="public" priority="37" />
       <Item value="OperationResponse`0" priority="0" />
       <Item value="Peer`0" priority="2" />
       <Item value="OperationRequest`0" priority="0" />
-      <Item value="return" priority="16" />
+      <Item value="return" priority="17" />
       <Item value="null" priority="4" />
       <Item value="var" priority="10" />
       <Item value="new" priority="13" />
@@ -98,7 +90,7 @@
       <Item value="OperationResponse" priority="0" />
       <Item value="request" priority="0" />
       <Item value="virtual" priority="11" />
-      <Item value="int" priority="18" />
+      <Item value="int" priority="19" />
       <Item value="string" priority="7" />
       <Item value="SfGuardUser`0" priority="6" />
       <Item value="SfGuardUserMap`0" priority="1" />
@@ -211,6 +203,9 @@
       <Item value="result" priority="1" />
       <Item value="_isVisible" priority="0" />
       <Item value="Item`0" priority="0" />
+      <Item value="_position" priority="2" />
+      <Item value="x" priority="0" />
+      <Item value="value" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@AegisBornCommon.OperationCode">
       <Item value="Login" priority="0" />
@@ -361,6 +356,9 @@
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Collections.Generic.List`1">
       <Item value="Add`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Photon.SocketServer.Mmo.Vector">
+      <Item value="X" priority="2" />
     </ItemStatistics>
   </CompletionStatisticsManager>
 </Configuration>
