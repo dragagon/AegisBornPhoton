@@ -1,7 +1,7 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2008
 
-Project("{84E2170C-3396-2DE4-2191-4AF06650AC10}") = "AegisBorn3dPhoton", "Assembly-CSharp.csproj", "{70BD799D-0D6C-0A40-5F78-C52E2542CAC3}"
+Project("{84E2170C-3396-2DE4-2191-4AF06650AC10}") = "AegisBorn3dPhoton", "Assembly-CSharp-vs.csproj", "{70BD799D-0D6C-0A40-5F78-C52E2542CAC3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

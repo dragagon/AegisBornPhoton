@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using AegisBorn.Models.Base.Actor.Stats;
 
 namespace AegisBorn.Models.Base.Actor
 {
@@ -9,6 +10,8 @@ namespace AegisBorn.Models.Base.Actor
         public int Level { get; set; }
         public string Class { get; set; }
         public string Sex { get; set; }
+
+        public Calculator[] Calculators { get; set; }
 
         public Hashtable GetHashtable()
         {
