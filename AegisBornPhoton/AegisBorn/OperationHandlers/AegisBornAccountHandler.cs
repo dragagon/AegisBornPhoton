@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using AegisBorn.Events;
 using AegisBorn.Models.Base;
 using AegisBorn.Models.Base.Actor;
+using AegisBorn.Models.Base.Actor.Stats;
+using AegisBorn.Models.Persistence;
 using AegisBorn.Operations;
 using AegisBornCommon;
 using NHibernate.Criterion;
@@ -95,8 +97,8 @@ namespace AegisBorn.OperationHandlers
                         operation.CharacterSlots = _characterSlots = user.CharacterSlots;
 
                         var characters =
-                            session.CreateCriteria(typeof (AegisBornCharacter), "abc").Add(Restrictions.Eq(
-                                "abc.UserId", _user)).List<AegisBornCharacter>();
+                            session.CreateCriteria(typeof (AegisBornCharacterDTO), "abc").Add(Restrictions.Eq(
+                                "abc.UserId", _user)).List<AegisBornCharacterDTO>();
 
                         _canAddCharacters = _characterSlots > characters.Count;
 
@@ -104,7 +106,9 @@ namespace AegisBorn.OperationHandlers
                         foreach (var aegisBornCharacter in characters)
                         {
                             //load characters into hash table
-                            operation.Characters.Add(aegisBornCharacter.Id, aegisBornCharacter.GetHashtable());
+                            AegisBornPlayer player = new AegisBornPlayer();
+                            player.CreateFromDTO(aegisBornCharacter);
+                            operation.Characters.Add(aegisBornCharacter.Id, player.GetHashtable());
                         }
                         transaction.Commit();
 
@@ -141,7 +145,7 @@ namespace AegisBorn.OperationHandlers
                 {
                     using (var transaction = session.BeginTransaction())
                     {
-                        var character = session.CreateCriteria(typeof(AegisBornCharacter), "abc").Add(Restrictions.Eq("abc.Name", operation.CharacterName)).UniqueResult<AegisBornCharacter>();
+                        var character = session.CreateCriteria(typeof(AegisBornCharacterDTO), "abc").Add(Restrictions.Eq("abc.Name", operation.CharacterName)).UniqueResult<AegisBornCharacter>();
 
                         if(character != null)
                         {
@@ -155,9 +159,14 @@ namespace AegisBorn.OperationHandlers
                                               Sex = operation.CharacterSex,
                                               Class = operation.CharacterClass,
                                               Level = 1,
-                                              UserId = _user
+                                              UserId = _user,
+                                              X = 0,
+                                              Y = 0,
+                                              Z = 0,
+                                              BaseStats =
+                                                  new BaseStats {STR = 1, AGI = 1, VIT = 1, INT = 1, DEX = 1, LUK = 1}
                                           };
-                        session.Save(newChar);
+                        session.Save(newChar.CreateDTO());
 
                         transaction.Commit();
                         
@@ -189,10 +198,10 @@ namespace AegisBorn.OperationHandlers
                 {
                     using (var transaction = session.BeginTransaction())
                     {
-                        var character = session.CreateCriteria(typeof(AegisBornPlayer), "abc")
+                        var character = session.CreateCriteria(typeof(AegisBornCharacterDTO), "abc")
                             .Add(Restrictions.Eq("abc.Id", operation.CharacterId))
                             .Add(Restrictions.Eq("abc.UserId", _user))
-                            .UniqueResult<AegisBornPlayer>();
+                            .UniqueResult<AegisBornCharacterDTO>();
 
                         transaction.Commit();
 
@@ -200,8 +209,9 @@ namespace AegisBorn.OperationHandlers
                         {
                             return new OperationResponse(request, (int)ErrorCode.InvalidCharacter, "That character does not exist");
                         }
-                        
-                        peer.SetCurrentOperationHandler(new AegisBornPlayerHandler(peer, _user, character));
+                        AegisBornPlayer player = new AegisBornPlayer();
+                        player.CreateFromDTO(character);
+                        peer.SetCurrentOperationHandler(new AegisBornPlayerHandler(peer, _user, player));
                         return operation.GetOperationResponse(0, "OK");
                     }
                 }

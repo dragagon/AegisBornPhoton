@@ -1,10 +1,9 @@
-﻿using AegisBorn.Models.Base.Actor;
-using AegisBorn.Models.Base.Actor.Stats;
+﻿using AegisBorn.Models.Persistence;
 using FluentNHibernate.Mapping;
 
 namespace AegisBorn.Models.Map
 {
-    public class AegisBornCharacterMap : ClassMap<AegisBornCharacter>
+    public class AegisBornCharacterMap : ClassMap<AegisBornCharacterDTO>
     {
         public AegisBornCharacterMap()
         {
@@ -16,12 +15,12 @@ namespace AegisBorn.Models.Map
             Map(x => x.X).Column("position_x");
             Map(x => x.Y).Column("position_y");
             Map(x => x.Z).Column("position_z");
-            Map(x => x.BaseStats[(int)Stats.STR]).Column("str");
-            Map(x => x.BaseStats[(int)Stats.AGI]).Column("agi");
-            Map(x => x.BaseStats[(int)Stats.VIT]).Column("vit");
-            Map(x => x.BaseStats[(int)Stats.INT]).Column("_int");
-            Map(x => x.BaseStats[(int)Stats.DEX]).Column("dex");
-            Map(x => x.BaseStats[(int)Stats.LUK]).Column("luk");
+            Map(x => x.STR).Column("str");
+            Map(x => x.AGI).Column("agi");
+            Map(x => x.VIT).Column("vit");
+            Map(x => x.INT).Column("_int");
+            Map(x => x.DEX).Column("dex");
+            Map(x => x.LUK).Column("luk");
             References(x => x.UserId).Column("user_id");
             Table("aegis_born_character");
         }

@@ -75,7 +75,7 @@ namespace AegisBorn.Models.Base.Actor.Stats
             {
                 if (_character == null)
                     return 1;
-                return (int) CalcStat(Stats.STR, _character.BaseStats[(int)Stats.STR], null);
+                return (int) CalcStat(Stats.STR, _character.BaseStats.STR, null);
             }
         }
 
@@ -85,7 +85,7 @@ namespace AegisBorn.Models.Base.Actor.Stats
             {
                 if (_character == null)
                     return 1;
-                return (int)CalcStat(Stats.AGI, _character.BaseStats[(int)Stats.AGI], null);
+                return (int)CalcStat(Stats.AGI, _character.BaseStats.AGI, null);
             }
         }
 
@@ -95,7 +95,7 @@ namespace AegisBorn.Models.Base.Actor.Stats
             {
                 if (_character == null)
                     return 1;
-                return (int)CalcStat(Stats.VIT, _character.BaseStats[(int)Stats.VIT], null);
+                return (int)CalcStat(Stats.VIT, _character.BaseStats.VIT, null);
             }
         }
 
@@ -105,7 +105,7 @@ namespace AegisBorn.Models.Base.Actor.Stats
             {
                 if (_character == null)
                     return 1;
-                return (int)CalcStat(Stats.INT, _character.BaseStats[(int)Stats.INT], null);
+                return (int)CalcStat(Stats.INT, _character.BaseStats.INT, null);
             }
         }
 
@@ -115,7 +115,7 @@ namespace AegisBorn.Models.Base.Actor.Stats
             {
                 if (_character == null)
                     return 1;
-                return (int)CalcStat(Stats.DEX, _character.BaseStats[(int)Stats.DEX], null);
+                return (int)CalcStat(Stats.DEX, _character.BaseStats.DEX, null);
             }
         }
 
@@ -125,7 +125,7 @@ namespace AegisBorn.Models.Base.Actor.Stats
             {
                 if (_character == null)
                     return 1;
-                return (int)CalcStat(Stats.LUK, _character.BaseStats[(int)Stats.LUK], null);
+                return (int)CalcStat(Stats.LUK, _character.BaseStats.LUK, null);
             }
         }
     }

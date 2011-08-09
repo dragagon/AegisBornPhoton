@@ -62,6 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\Base\Actor\IAegisBornCharacter.cs" />
+    <Compile Include="Models\Base\Actor\Stats\BaseStats.cs" />
     <Compile Include="Models\Base\Actor\Stats\Calculator.cs" />
     <Compile Include="Models\Base\Actor\Stats\CalculatorValue.cs" />
     <Compile Include="Models\Base\Actor\Stats\CharacterStats.cs" />
@@ -73,6 +74,7 @@
     <Compile Include="Models\Base\Actor\AegisBornPlayer.cs" />
     <Compile Include="Models\Base\IAegisBornObject.cs" />
     <Compile Include="Models\Base\KnownObjectList.cs" />
+    <Compile Include="Models\Persistence\AegisBornCharacterDTO.cs" />
     <Compile Include="MultiValueSortedDictionary.cs" />
     <Compile Include="OperationHandlers\AegisBornAccountHandler.cs" />
     <Compile Include="AegisBornApplication.cs" />
@@ -81,9 +83,9 @@
     <Compile Include="Models\Base\Actor\AegisBornCharacter.cs" />
     <Compile Include="Models\Base\AegisBornUserProfile.cs" />
     <Compile Include="Models\Base\SfGuardUser.cs" />
-    <Compile Include="Models\Map\AegisBornUserProfileMap.cs" />
-    <Compile Include="Models\Map\AegisBornCharacterMap.cs" />
-    <Compile Include="Models\Map\SfGuardUserMap.cs" />
+    <Compile Include="Models\Persistence\Map\AegisBornUserProfileMap.cs" />
+    <Compile Include="Models\Persistence\Map\AegisBornCharacterMap.cs" />
+    <Compile Include="Models\Persistence\Map\SfGuardUserMap.cs" />
     <Compile Include="NHibernateHelper.cs" />
     <Compile Include="OperationHandlers\AegisBornPlayerHandler.cs" />
     <Compile Include="Operations\CreateCharacterOperation.cs" />

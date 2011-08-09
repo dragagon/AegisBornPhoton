@@ -9,55 +9,54 @@
   </SettingsComponent>
   <RecentFiles>
     <RecentFiles>
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Operations/f:EstablishSecureCommunicationOperation.cs" caret="731" fromTop="22" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Events/f:GameExited.cs" caret="204" fromTop="13" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/f:SfGuardUser.cs" caret="369" fromTop="15" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Map/f:SfGuardUserMap.cs" caret="131" fromTop="5" />
       <File id="6219BCA1-BD90-4C67-B02D-3F11E902892F/f:EventCode.cs" caret="0" fromTop="0" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Operations/f:LoginSecurely.cs" caret="153" fromTop="6" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Map/f:AegisBornCharacterMap.cs" caret="484" fromTop="14" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Map/f:AegisBornUserProfileMap.cs" caret="443" fromTop="12" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/f:NHibernateHelper.cs" caret="944" fromTop="31" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/f:AegisBornUserProfile.cs" caret="0" fromTop="0" />
-      <File id="6219BCA1-BD90-4C67-B02D-3F11E902892F/d:Models/f:AegisBornCharacter.cs" caret="1005" fromTop="36" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Operations/f:GetCharactersOperation.cs" caret="607" fromTop="20" />
       <File id="6219BCA1-BD90-4C67-B02D-3F11E902892F/f:ErrorCode.cs" caret="493" fromTop="22" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Operations/f:CreateCharacterOperation.cs" caret="574" fromTop="17" />
       <File id="6219BCA1-BD90-4C67-B02D-3F11E902892F/f:OperationCode.cs" caret="450" fromTop="18" />
       <File id="6219BCA1-BD90-4C67-B02D-3F11E902892F/f:ParameterCode.cs" caret="1144" fromTop="30" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:OperationHandlers/f:AegisBornAccountHandler.cs" caret="389" fromTop="14" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/f:AegisBornPeer.cs" caret="4383" fromTop="35" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Operations/f:SelectCharacterOperation.cs" caret="0" fromTop="0" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:OperationHandlers/f:AegisBornPlayerHandler.cs" caret="633" fromTop="21" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/f:AegisBornApplication.cs" caret="459" fromTop="18" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/f:AegisBornObject.cs" caret="683" fromTop="23" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/d:Transform/f:ObjectTransform.cs" caret="608" fromTop="0" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/f:AegisBornCharacter.cs" caret="1081" fromTop="6" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/f:IAegisBornCharacter.cs" caret="608" fromTop="16" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/f:CharacterStats.cs" caret="172" fromTop="7" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/d:Stats/f:CharacterStats.cs" caret="2749" fromTop="102" />
+      <File id="6219BCA1-BD90-4C67-B02D-3F11E902892F/d:Models/f:AegisBornPlayable.cs" caret="0" fromTop="0" />
+      <File id="6219BCA1-BD90-4C67-B02D-3F11E902892F/d:Models/f:AegisBornPlayer.cs" caret="0" fromTop="0" />
+      <File id="6219BCA1-BD90-4C67-B02D-3F11E902892F/d:Models/f:AegisBornCharacter.cs" caret="0" fromTop="0" />
+      <File id="6219BCA1-BD90-4C67-B02D-3F11E902892F/d:Models/f:AegisBornObject.cs" caret="0" fromTop="0" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/d:Stats/f:BaseStats.cs" caret="408" fromTop="15" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/f:AegisBornCharacter.cs" caret="539" fromTop="18" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Persistence/d:Map/f:AegisBornCharacterMap.cs" caret="153" fromTop="5" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/f:AegisBornPeer.cs" caret="927" fromTop="0" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/f:AegisBornPlayer.cs" caret="1560" fromTop="23" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Persistence/f:AegisBornCharacterDTO.cs" caret="637" fromTop="18" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:OperationHandlers/f:AegisBornAccountHandler.cs" caret="6541" fromTop="29" />
     </RecentFiles>
     <RecentEdits>
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:OperationHandlers/f:AegisBornPlayerHandler.cs" caret="2335" fromTop="22" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:OperationHandlers/f:AegisBornPlayerHandler.cs" caret="2695" fromTop="34" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:OperationHandlers/f:AegisBornPlayerHandler.cs" caret="3361" fromTop="47" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:OperationHandlers/f:AegisBornPlayerHandler.cs" caret="50" fromTop="2" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/f:AegisBornApplication.cs" caret="345" fromTop="14" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:OperationHandlers/f:AegisBornAccountHandler.cs" caret="389" fromTop="14" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:OperationHandlers/f:AegisBornPlayerHandler.cs" caret="294" fromTop="11" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/f:AegisBornObject.cs" caret="601" fromTop="14" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/f:AegisBornObject.cs" caret="455" fromTop="13" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/d:Transform/f:ObjectTransform.cs" caret="1229" fromTop="33" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/d:Transform/f:ObjectTransform.cs" caret="1517" fromTop="29" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/d:Transform/f:ObjectTransform.cs" caret="1600" fromTop="32" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/d:Transform/f:ObjectTransform.cs" caret="1727" fromTop="37" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/f:AegisBornCharacter.cs" caret="1654" fromTop="28" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/f:AegisBornCharacter.cs" caret="187" fromTop="4" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/f:AegisBornCharacter.cs" caret="1064" fromTop="15" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/f:AegisBornCharacter.cs" caret="1373" fromTop="18" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/f:IAegisBornCharacter.cs" caret="627" fromTop="17" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/f:AegisBornCharacter.cs" caret="1081" fromTop="11" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/f:IAegisBornCharacter.cs" caret="315" fromTop="11" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/f:CharacterStats.cs" caret="145" fromTop="6" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/d:Stats/f:CharacterStats.cs" caret="3425" fromTop="37" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Persistence/d:Map/f:AegisBornCharacterMap.cs" caret="860" fromTop="23" />
+      <File id="6219BCA1-BD90-4C67-B02D-3F11E902892F/d:Models/f:AegisBornObject.cs" caret="131" fromTop="6" />
+      <File id="6219BCA1-BD90-4C67-B02D-3F11E902892F/d:Models/f:AegisBornCharacter.cs" caret="143" fromTop="6" />
+      <File id="6219BCA1-BD90-4C67-B02D-3F11E902892F/d:Models/f:AegisBornObject.cs" caret="367" fromTop="12" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/f:AegisBornCharacter.cs" caret="549" fromTop="19" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Persistence/d:Map/f:AegisBornCharacterMap.cs" caret="178" fromTop="7" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Persistence/d:Map/f:AegisBornCharacterMap.cs" caret="0" fromTop="0" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Persistence/d:Map/f:AegisBornCharacterMap.cs" caret="857" fromTop="22" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Persistence/f:AegisBornCharacterDTO.cs" caret="926" fromTop="23" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Persistence/f:AegisBornCharacterDTO.cs" caret="846" fromTop="22" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Persistence/f:AegisBornCharacterDTO.cs" caret="867" fromTop="22" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Persistence/f:AegisBornCharacterDTO.cs" caret="922" fromTop="24" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/f:AegisBornCharacter.cs" caret="402" fromTop="12" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/d:Stats/f:BaseStats.cs" caret="403" fromTop="17" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/d:Stats/f:BaseStats.cs" caret="175" fromTop="9" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/d:Stats/f:BaseStats.cs" caret="404" fromTop="15" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/f:AegisBornPlayer.cs" caret="1451" fromTop="38" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/f:AegisBornPlayer.cs" caret="3014" fromTop="40" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/f:AegisBornPlayer.cs" caret="2905" fromTop="38" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/f:AegisBornPlayer.cs" caret="2898" fromTop="38" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/f:AegisBornPlayer.cs" caret="2839" fromTop="37" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/f:AegisBornPlayer.cs" caret="2839" fromTop="37" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/f:AegisBornPlayer.cs" caret="2971" fromTop="40" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:OperationHandlers/f:AegisBornAccountHandler.cs" caret="3659" fromTop="25" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:OperationHandlers/f:AegisBornAccountHandler.cs" caret="5757" fromTop="29" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:OperationHandlers/f:AegisBornAccountHandler.cs" caret="8628" fromTop="29" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:OperationHandlers/f:AegisBornAccountHandler.cs" caret="9024" fromTop="38" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:OperationHandlers/f:AegisBornAccountHandler.cs" caret="4207" fromTop="33" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:OperationHandlers/f:AegisBornAccountHandler.cs" caret="6945" fromTop="41" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>
@@ -76,21 +75,21 @@
       <Item value="Operation`0" priority="0" />
       <Item value="OperationCode" priority="0" />
       <Item value="OperationCanceledException`0" priority="0" />
-      <Item value="public" priority="37" />
+      <Item value="public" priority="74" />
       <Item value="OperationResponse`0" priority="0" />
       <Item value="Peer`0" priority="2" />
       <Item value="OperationRequest`0" priority="0" />
-      <Item value="return" priority="17" />
-      <Item value="null" priority="4" />
+      <Item value="return" priority="29" />
+      <Item value="null" priority="7" />
       <Item value="var" priority="10" />
-      <Item value="new" priority="13" />
+      <Item value="new" priority="20" />
       <Item value="LoginSecurely`0" priority="0" />
-      <Item value="if" priority="8" />
+      <Item value="if" priority="14" />
       <Item value="operation" priority="9" />
       <Item value="OperationResponse" priority="0" />
       <Item value="request" priority="0" />
-      <Item value="virtual" priority="11" />
-      <Item value="int" priority="19" />
+      <Item value="virtual" priority="14" />
+      <Item value="int" priority="30" />
       <Item value="string" priority="7" />
       <Item value="SfGuardUser`0" priority="6" />
       <Item value="SfGuardUserMap`0" priority="1" />
@@ -109,7 +108,7 @@
       <Item value="from" priority="0" />
       <Item value="where" priority="0" />
       <Item value="sf_guard_user" priority="0" />
-      <Item value="typeof" priority="1" />
+      <Item value="typeof" priority="2" />
       <Item value="this" priority="3" />
       <Item value="users" priority="1" />
       <Item value="Table`0" priority="0" />
@@ -118,7 +117,7 @@
       <Item value="SessionFactory" priority="0" />
       <Item value="user" priority="4" />
       <Item value="SHA1CryptoServiceProvider`0" priority="0" />
-      <Item value="byte" priority="0" />
+      <Item value="byte" priority="3" />
       <Item value="sha1" priority="0" />
       <Item value="hash" priority="0" />
       <Item value="try" priority="0" />
@@ -128,11 +127,11 @@
       <Item value="StringComparison`0" priority="0" />
       <Item value="peer" priority="3" />
       <Item value="NHibernateHelper`0" priority="0" />
-      <Item value="private" priority="19" />
+      <Item value="private" priority="27" />
       <Item value="readonly" priority="3" />
       <Item value="_peer" priority="3" />
       <Item value="photonPeer" priority="1" />
-      <Item value="void" priority="4" />
+      <Item value="void" priority="9" />
       <Item value="AegisBornPeer`0" priority="0" />
       <Item value="_user" priority="5" />
       <Item value="AegisBornAccount`0" priority="1" />
@@ -140,19 +139,19 @@
       <Item value="AegisBornUserProfile`0" priority="0" />
       <Item value="Code" priority="2" />
       <Item value="IsOptional" priority="2" />
-      <Item value="AegisBornCharacter`0" priority="8" />
+      <Item value="AegisBornCharacter`0" priority="15" />
       <Item value="_characterSlots" priority="3" />
       <Item value="Restrictions`0" priority="1" />
       <Item value="characters" priority="1" />
-      <Item value="foreach" priority="3" />
-      <Item value="aegisBornCharacter" priority="1" />
+      <Item value="foreach" priority="5" />
+      <Item value="aegisBornCharacter" priority="4" />
       <Item value="ErrorCode`0" priority="0" />
       <Item value="Hashtable`0" priority="3" />
       <Item value="retTable" priority="1" />
       <Item value="Id" priority="3" />
-      <Item value="Sex" priority="5" />
-      <Item value="Class" priority="4" />
-      <Item value="Level" priority="4" />
+      <Item value="Sex" priority="6" />
+      <Item value="Class" priority="5" />
+      <Item value="Level" priority="5" />
       <Item value="PositionX" priority="5" />
       <Item value="PositionY" priority="3" />
       <Item value="object" priority="0" />
@@ -161,20 +160,20 @@
       <Item value="AegisBornItem`0" priority="2" />
       <Item value="override" priority="0" />
       <Item value="AegisBornCommon" priority="0" />
-      <Item value="Models" priority="0" />
-      <Item value="Name" priority="3" />
+      <Item value="Models" priority="1" />
+      <Item value="Name" priority="4" />
       <Item value="Hashtable" priority="0" />
       <Item value="base" priority="1" />
       <Item value="OperationCode`0" priority="0" />
       <Item value="RequestParameterAttribute`0" priority="1" />
-      <Item value="bool" priority="3" />
+      <Item value="bool" priority="5" />
       <Item value="_canAddCharacters" priority="1" />
       <Item value="CreateCharacterOperation`0" priority="0" />
       <Item value="character" priority="0" />
-      <Item value="UserId" priority="0" />
+      <Item value="UserId" priority="1" />
       <Item value="_selectedCharacter" priority="0" />
       <Item value="selectedCharacter" priority="0" />
-      <Item value="AegisBornPlayer`0" priority="0" />
+      <Item value="AegisBornPlayer`0" priority="2" />
       <Item value="Dictionary" priority="2" />
       <Item value="AegisBornWorld`0" priority="2" />
       <Item value="_allPlayers" priority="0" />
@@ -188,7 +187,7 @@
       <Item value="IList" priority="0" />
       <Item value="List&lt;AegisBornRegion&gt;" priority="0" />
       <Item value="aegisBornObject" priority="12" />
-      <Item value="List" priority="2" />
+      <Item value="List" priority="4" />
       <Item value="aegisBornObjects" priority="1" />
       <Item value="in" priority="2" />
       <Item value="aegisBornRegion" priority="1" />
@@ -205,7 +204,60 @@
       <Item value="Item`0" priority="0" />
       <Item value="_position" priority="2" />
       <Item value="x" priority="0" />
-      <Item value="value" priority="0" />
+      <Item value="value" priority="1" />
+      <Item value="CharacterStats`0" priority="1" />
+      <Item value="_character" priority="6" />
+      <Item value="long" priority="1" />
+      <Item value="_exp" priority="0" />
+      <Item value="_level" priority="2" />
+      <Item value="double" priority="3" />
+      <Item value="Stats`0" priority="13" />
+      <Item value="stat" priority="1" />
+      <Item value="initialValue" priority="2" />
+      <Item value="c" priority="4" />
+      <Item value="static" priority="0" />
+      <Item value="StatFunction" priority="0" />
+      <Item value="Calculator`0" priority="3" />
+      <Item value="_functions" priority="4" />
+      <Item value="_emptyFunctions" priority="0" />
+      <Item value="Count`1" priority="0" />
+      <Item value="statFunction" priority="8" />
+      <Item value="Environment`0" priority="0" />
+      <Item value="AppDomainSetup`0" priority="2" />
+      <Item value="Boolean`0" priority="0" />
+      <Item value="calculatorValue" priority="10" />
+      <Item value="Object`0" priority="2" />
+      <Item value="StatFunction`0" priority="0" />
+      <Item value="_stat" priority="0" />
+      <Item value="_order" priority="0" />
+      <Item value="owner" priority="1" />
+      <Item value="abstract" priority="0" />
+      <Item value="CalculatorValue`0" priority="1" />
+      <Item value="CalculatorValue" priority="0" />
+      <Item value="target" priority="0" />
+      <Item value="switch" priority="0" />
+      <Item value="case" priority="7" />
+      <Item value="break" priority="0" />
+      <Item value="CalcStat`0" priority="0" />
+      <Item value="List&lt;Stats&gt;" priority="0" />
+      <Item value="retValue" priority="1" />
+      <Item value="protected" priority="0" />
+      <Item value="Remove`0" priority="0" />
+      <Item value="Enum`0" priority="0" />
+      <Item value="Length" priority="0" />
+      <Item value="aegisBornCharacterDto" priority="11" />
+      <Item value="Z" priority="0" />
+      <Item value="BaseStats" priority="3" />
+      <Item value="AegisBornCharacterDTO`0" priority="1" />
+      <Item value="AegisBornCharacterDTO" priority="0" />
+      <Item value="AegisBornPlayer" priority="1" />
+      <Item value="player" priority="1" />
+      <Item value="STR" priority="0" />
+      <Item value="AGI" priority="0" />
+      <Item value="VIT" priority="0" />
+      <Item value="INT" priority="0" />
+      <Item value="DEX" priority="0" />
+      <Item value="LUK" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@AegisBornCommon.OperationCode">
       <Item value="Login" priority="0" />
@@ -355,10 +407,67 @@
       <Item value="Id" priority="2" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Collections.Generic.List`1">
-      <Item value="Add`0" priority="0" />
+      <Item value="Add`0" priority="1" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:Photon.SocketServer.Mmo.Vector">
       <Item value="X" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:AegisBorn.Models.Base.Actor.Stats.Calculator">
+      <Item value="_functions" priority="0" />
+      <Item value="Size" priority="0" />
+      <Item value="calc`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.SortedList`2">
+      <Item value="Add`0" priority="0" />
+      <Item value="Remove`0" priority="0" />
+      <Item value="IndexOfValue`0" priority="0" />
+      <Item value="RemoveAt`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.KeyValuePair`2">
+      <Item value="Value" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:AegisBorn.Models.Base.Actor.Stats.CalculatorValue">
+      <Item value="Player" priority="0" />
+      <Item value="Target" priority="0" />
+      <Item value="Value" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@AegisBorn.Models.Base.Actor.Stats.Stats">
+      <Item value="Max_HP" priority="0" />
+      <Item value="Max_MP" priority="0" />
+      <Item value="STR" priority="1" />
+      <Item value="AGI" priority="0" />
+      <Item value="VIT" priority="0" />
+      <Item value="INT" priority="0" />
+      <Item value="DEX" priority="0" />
+      <Item value="LUK" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:AegisBorn.Models.Base.Actor.Stats.CharacterStats">
+      <Item value="STR" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Enum">
+      <Item value="GetNames`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:AegisBorn.Models.Persistence.AegisBornCharacterDTO">
+      <Item value="Id" priority="0" />
+      <Item value="Name" priority="0" />
+      <Item value="Level" priority="0" />
+      <Item value="Class" priority="0" />
+      <Item value="Sex" priority="0" />
+      <Item value="X" priority="0" />
+      <Item value="Y" priority="0" />
+      <Item value="Z" priority="0" />
+      <Item value="STR" priority="0" />
+      <Item value="AGI" priority="0" />
+      <Item value="UserId" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:AegisBorn.Models.Base.Actor.AegisBornPlayer">
+      <Item value="Id" priority="0" />
+      <Item value="CreateDTO`0" priority="0" />
+      <Item value="CreateFromDTO`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:AegisBorn.Models.Base.Actor.Stats.BaseStats">
+      <Item value="STR" priority="0" />
+      <Item value="AGI" priority="0" />
     </ItemStatistics>
   </CompletionStatisticsManager>
 </Configuration>

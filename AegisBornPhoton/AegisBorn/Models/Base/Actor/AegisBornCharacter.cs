@@ -7,10 +7,10 @@ namespace AegisBorn.Models.Base.Actor
 {
     public abstract class AegisBornCharacter : AegisBornObject, IAegisBornCharacter
     {
-        public virtual SfGuardUser UserId { get; set; }
-        public virtual int Level { get; set; }
-        public virtual string Class { get; set; }
-        public virtual string Sex { get; set; }
+        public SfGuardUser UserId { get; set; }
+        public int Level { get; set; }
+        public string Class { get; set; }
+        public string Sex { get; set; }
 
         public Calculator[] Calculators { get; set; }
 
@@ -39,6 +39,6 @@ namespace AegisBorn.Models.Base.Actor
 
         public CharacterStats Stats{ get; set; }
 
-        public virtual int[] BaseStats { get; set; }
+        public BaseStats BaseStats { get; set; }
     }
 }
