@@ -11,6 +11,20 @@ namespace AegisBorn.Models.Base.Actor
     /// </summary>
     public class AegisBornPlayer : AegisBornPlayable
     {
+        private int[] _baseStats = new int[Enum.GetNames(typeof (Stats.Stats)).Length];
+
+        public override int[] BaseStats
+        {
+            get
+            {
+                return _baseStats;
+            }
+            set
+            {
+                _baseStats = value;
+            }
+        }
+
         public Peer Peer { get; set; }
         public void Logout()
         {

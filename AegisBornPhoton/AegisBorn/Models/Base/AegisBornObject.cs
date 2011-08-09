@@ -4,16 +4,16 @@ namespace AegisBorn.Models.Base
 {
     public abstract class AegisBornObject : IAegisBornObject
     {
-        public int Id
+        public virtual int Id
         {
             get { return ObjectId; }
             set { ObjectId = value;  }
         }
-        public string Name { get; set; }
+        public virtual string Name { get; set; }
 
-        public float X { get; set; }
-        public float Y { get; set; }
-        public float Z { get; set; }
+        public virtual float X { get; set; }
+        public virtual float Y { get; set; }
+        public virtual float Z { get; set; }
 
         private bool _isVisible;
 
@@ -43,9 +43,7 @@ namespace AegisBorn.Models.Base
 
         public int ObjectId
         {
-            get { throw new System.NotImplementedException(); }
-            private set { throw new System.NotImplementedException(); }
-        }
+            get; private set; }
 
         public int DbId
         {

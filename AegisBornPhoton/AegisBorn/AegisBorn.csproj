@@ -61,14 +61,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\Base\Actor\CharacterStats.cs" />
     <Compile Include="Models\Base\Actor\IAegisBornCharacter.cs" />
+    <Compile Include="Models\Base\Actor\Stats\Calculator.cs" />
+    <Compile Include="Models\Base\Actor\Stats\CalculatorValue.cs" />
+    <Compile Include="Models\Base\Actor\Stats\CharacterStats.cs" />
+    <Compile Include="Models\Base\Actor\Stats\StatFunction.cs" />
+    <Compile Include="Models\Base\Actor\Stats\Stats.cs" />
     <Compile Include="Models\Base\Actor\Transform\ObjectTransform.cs" />
     <Compile Include="Models\Base\AegisBornObject.cs" />
     <Compile Include="Models\Base\Actor\AegisBornPlayable.cs" />
     <Compile Include="Models\Base\Actor\AegisBornPlayer.cs" />
     <Compile Include="Models\Base\IAegisBornObject.cs" />
     <Compile Include="Models\Base\KnownObjectList.cs" />
+    <Compile Include="MultiValueSortedDictionary.cs" />
     <Compile Include="OperationHandlers\AegisBornAccountHandler.cs" />
     <Compile Include="AegisBornApplication.cs" />
     <Compile Include="AegisBornPeer.cs" />
@@ -98,9 +103,7 @@
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Models\Base\Actor\Stats\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

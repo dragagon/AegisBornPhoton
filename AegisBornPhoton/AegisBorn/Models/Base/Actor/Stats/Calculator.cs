@@ -2,14 +2,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using KoderHack.Collections;
 
 namespace AegisBorn.Models.Base.Actor.Stats
 {
     public class Calculator
     {
-        private static SortedList<int, StatFunction> _emptyFunctions = new SortedList<int, StatFunction>(0);
+        private static MultiValueSortedDictionary<int, StatFunction> _emptyFunctions = new MultiValueSortedDictionary<int, StatFunction>();
 
-        private SortedList<int, StatFunction> _functions;
+        private MultiValueSortedDictionary<int, StatFunction> _functions;
 
         public Calculator()
         {
@@ -33,7 +34,7 @@ namespace AegisBorn.Models.Base.Actor.Stats
 
         private void Remove(StatFunction statFunction)
         {
-            _functions.RemoveAt(_functions.IndexOfValue(statFunction));
+            _functions.Remove(new KeyValuePair<int, StatFunction>(statFunction.Order, statFunction));
         }
 
         public void Calc(CalculatorValue calculatorValue)

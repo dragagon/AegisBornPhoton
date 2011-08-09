@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using AegisBorn.Models.Base.Actor.Stats;
 
@@ -7,9 +8,9 @@ namespace AegisBorn.Models.Base.Actor
     public abstract class AegisBornCharacter : AegisBornObject, IAegisBornCharacter
     {
         public virtual SfGuardUser UserId { get; set; }
-        public int Level { get; set; }
-        public string Class { get; set; }
-        public string Sex { get; set; }
+        public virtual int Level { get; set; }
+        public virtual string Class { get; set; }
+        public virtual string Sex { get; set; }
 
         public Calculator[] Calculators { get; set; }
 
@@ -34,28 +35,10 @@ namespace AegisBorn.Models.Base.Actor
 
         public AegisBornCharacter Target { get; set; }
 
-        public List<AegisBornCharacter> AttackerList
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-                throw new System.NotImplementedException();
-            }
-        }
+        public List<AegisBornCharacter> AttackerList { get; set; }
 
-        public CharacterStats Stats
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-                throw new System.NotImplementedException();
-            }
-        }
+        public CharacterStats Stats{ get; set; }
+
+        public virtual int[] BaseStats { get; set; }
     }
 }

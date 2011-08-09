@@ -7,7 +7,7 @@ namespace AegisBorn.Models.Base.Actor.Stats
 {
     public class CharacterStats
     {
-        private AegisBornCharacter _character;
+        private readonly AegisBornCharacter _character;
         private long _exp;
         private byte _level;
 
@@ -48,6 +48,7 @@ namespace AegisBorn.Models.Base.Actor.Stats
 
             c.Calc(calculatorValue);
 
+            // Ensure certain stats do not drop below 1 no matter what debuffs are applied
             if(calculatorValue.Value <= 0)
             {
                 switch (stat)
@@ -74,7 +75,57 @@ namespace AegisBorn.Models.Base.Actor.Stats
             {
                 if (_character == null)
                     return 1;
-                return (int) CalcStat(Stats.STR, _character.BaseStats.STR, null);
+                return (int) CalcStat(Stats.STR, _character.BaseStats[(int)Stats.STR], null);
+            }
+        }
+
+        public int AGI
+        {
+            get
+            {
+                if (_character == null)
+                    return 1;
+                return (int)CalcStat(Stats.AGI, _character.BaseStats[(int)Stats.AGI], null);
+            }
+        }
+
+        public int VIT
+        {
+            get
+            {
+                if (_character == null)
+                    return 1;
+                return (int)CalcStat(Stats.VIT, _character.BaseStats[(int)Stats.VIT], null);
+            }
+        }
+
+        public int INT
+        {
+            get
+            {
+                if (_character == null)
+                    return 1;
+                return (int)CalcStat(Stats.INT, _character.BaseStats[(int)Stats.INT], null);
+            }
+        }
+
+        public int DEX
+        {
+            get
+            {
+                if (_character == null)
+                    return 1;
+                return (int)CalcStat(Stats.DEX, _character.BaseStats[(int)Stats.DEX], null);
+            }
+        }
+
+        public int LUK
+        {
+            get
+            {
+                if (_character == null)
+                    return 1;
+                return (int)CalcStat(Stats.LUK, _character.BaseStats[(int)Stats.LUK], null);
             }
         }
     }
