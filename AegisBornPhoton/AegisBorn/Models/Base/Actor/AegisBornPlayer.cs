@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using AegisBorn.Models.Base.Actor.Stats;
 using AegisBorn.Models.Persistence;
 using Photon.SocketServer.Rpc;
 
@@ -30,12 +31,15 @@ namespace AegisBorn.Models.Base.Actor
             X = aegisBornCharacterDto.X;
             Y = aegisBornCharacterDto.Y;
             Z = aegisBornCharacterDto.Z;
-            BaseStats.STR = aegisBornCharacterDto.STR;
-            BaseStats.AGI = aegisBornCharacterDto.AGI;
-            BaseStats.VIT = aegisBornCharacterDto.VIT;
-            BaseStats.INT = aegisBornCharacterDto.INT;
-            BaseStats.DEX = aegisBornCharacterDto.DEX;
-            BaseStats.LUK = aegisBornCharacterDto.LUK;
+            BaseStats = new BaseStats
+                            {
+                                STR = aegisBornCharacterDto.STR,
+                                AGI = aegisBornCharacterDto.AGI,
+                                VIT = aegisBornCharacterDto.VIT,
+                                INT = aegisBornCharacterDto.INT,
+                                DEX = aegisBornCharacterDto.DEX,
+                                LUK = aegisBornCharacterDto.LUK
+                            };
             UserId = aegisBornCharacterDto.UserId;
         }
 

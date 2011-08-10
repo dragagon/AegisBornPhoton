@@ -23,7 +23,6 @@ public class Connected : GameStateController
     public override void OnOperationReturn(PhotonClient gameLogic, OperationCode operationCode, int returnCode, Hashtable returnValues)
     {
         IOperationHandler handler;
-
         if (OperationHandlers.TryGetValue(operationCode, out handler))
         {
             handler.HandleMessage(gameLogic, operationCode, returnCode, returnValues);
