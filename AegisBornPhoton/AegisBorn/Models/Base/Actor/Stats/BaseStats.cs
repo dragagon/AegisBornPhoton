@@ -1,17 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
+using System.Xml.Serialization;
 
 namespace AegisBorn.Models.Base.Actor.Stats
 {
     public class BaseStats
     {
-        public int STR { get; set; }
-        public int AGI { get; set; }
-        public int VIT { get; set; }
-        public int INT { get; set; }
-        public int DEX { get; set; }
-        public int LUK { get; set; }
+        private int[] _values = new int[Enum.GetNames(typeof(Stats)).Length];
+
+        public int[] Values { get { return _values; } set { _values = value; } }
     }
 }

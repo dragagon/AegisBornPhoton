@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
+using System.Xml.Serialization;
 using AegisBorn.Models.Base.Actor.Stats;
 using AegisBorn.Models.Persistence;
 using Photon.SocketServer.Rpc;
@@ -31,20 +33,21 @@ namespace AegisBorn.Models.Base.Actor
             X = aegisBornCharacterDto.X;
             Y = aegisBornCharacterDto.Y;
             Z = aegisBornCharacterDto.Z;
-            BaseStats = new BaseStats
-                            {
-                                STR = aegisBornCharacterDto.STR,
-                                AGI = aegisBornCharacterDto.AGI,
-                                VIT = aegisBornCharacterDto.VIT,
-                                INT = aegisBornCharacterDto.INT,
-                                DEX = aegisBornCharacterDto.DEX,
-                                LUK = aegisBornCharacterDto.LUK
-                            };
+
+            XmlSerializer mySerializer = new XmlSerializer(typeof(BaseStats));
+            StringReader inStream = new StringReader(aegisBornCharacterDto.BaseStats);
+
+            BaseStats = (BaseStats)mySerializer.Deserialize(inStream);
+
             UserId = aegisBornCharacterDto.UserId;
         }
 
         public AegisBornCharacterDTO CreateDTO()
         {
+
+            XmlSerializer mySerializer = new XmlSerializer(typeof(BaseStats));
+            StringWriter outStream = new StringWriter();
+            mySerializer.Serialize(outStream, BaseStats);
             AegisBornCharacterDTO aegisBornCharacterDto = new AegisBornCharacterDTO
                                                               {
                                                                   Id = Id,
@@ -55,12 +58,8 @@ namespace AegisBorn.Models.Base.Actor
                                                                   X = X,
                                                                   Y = Y,
                                                                   Z = Z,
-                                                                  STR = BaseStats.STR,
-                                                                  AGI = BaseStats.AGI,
-                                                                  VIT = BaseStats.VIT,
-                                                                  INT = BaseStats.INT,
-                                                                  DEX = BaseStats.DEX,
-                                                                  LUK = BaseStats.LUK,
+                                                                  // Change this to be a string that will be serialized/deserialized
+                                                                  BaseStats = outStream.ToString(),
                                                                   UserId = UserId,
                                                               };
             return aegisBornCharacterDto;

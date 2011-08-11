@@ -49,6 +49,7 @@ namespace AegisBorn.Models.Base.Actor.Stats
             c.Calc(calculatorValue);
 
             // Ensure certain stats do not drop below 1 no matter what debuffs are applied
+            // Find a better way to do this than to switch on a list of Stats.
             if(calculatorValue.Value <= 0)
             {
                 switch (stat)
@@ -69,64 +70,13 @@ namespace AegisBorn.Models.Base.Actor.Stats
             return calculatorValue.Value;
         }
 
-        public int STR
+        public int GetValue(Stats stat, int defaultValue, AegisBornCharacter aegisBornCharacter)
         {
-            get
+            if(_character == null)
             {
-                if (_character == null)
-                    return 1;
-                return (int) CalcStat(Stats.STR, _character.BaseStats.STR, null);
+                return defaultValue;
             }
-        }
-
-        public int AGI
-        {
-            get
-            {
-                if (_character == null)
-                    return 1;
-                return (int)CalcStat(Stats.AGI, _character.BaseStats.AGI, null);
-            }
-        }
-
-        public int VIT
-        {
-            get
-            {
-                if (_character == null)
-                    return 1;
-                return (int)CalcStat(Stats.VIT, _character.BaseStats.VIT, null);
-            }
-        }
-
-        public int INT
-        {
-            get
-            {
-                if (_character == null)
-                    return 1;
-                return (int)CalcStat(Stats.INT, _character.BaseStats.INT, null);
-            }
-        }
-
-        public int DEX
-        {
-            get
-            {
-                if (_character == null)
-                    return 1;
-                return (int)CalcStat(Stats.DEX, _character.BaseStats.DEX, null);
-            }
-        }
-
-        public int LUK
-        {
-            get
-            {
-                if (_character == null)
-                    return 1;
-                return (int)CalcStat(Stats.LUK, _character.BaseStats.LUK, null);
-            }
+            return (int)CalcStat(stat, _character.BaseStats.Values[(int)stat], aegisBornCharacter);
         }
     }
 }

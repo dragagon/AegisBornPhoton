@@ -15,12 +15,7 @@ namespace AegisBorn.Models.Map
             Map(x => x.X).Column("position_x");
             Map(x => x.Y).Column("position_y");
             Map(x => x.Z).Column("position_z");
-            Map(x => x.STR).Column("str");
-            Map(x => x.AGI).Column("agi");
-            Map(x => x.VIT).Column("vit");
-            Map(x => x.INT).Column("_int");
-            Map(x => x.DEX).Column("dex");
-            Map(x => x.LUK).Column("luk");
+            Map(x => x.BaseStats).Column("base_stats");
             References(x => x.UserId).Column("user_id");
             Table("aegis_born_character");
         }

@@ -164,8 +164,16 @@ namespace AegisBorn.OperationHandlers
                                               Y = 0,
                                               Z = 0,
                                               BaseStats =
-                                                  new BaseStats {STR = 1, AGI = 1, VIT = 1, INT = 1, DEX = 1, LUK = 1}
+                                                  new BaseStats(),
                                           };
+
+                        // Update to be loaded from a template, loaded from user selection, or randomly generated.
+                        newChar.BaseStats.Values[(int)Stats.STR] = 1;
+                        newChar.BaseStats.Values[(int)Stats.AGI] = 1;
+                        newChar.BaseStats.Values[(int)Stats.VIT] = 1;
+                        newChar.BaseStats.Values[(int)Stats.INT] = 1;
+                        newChar.BaseStats.Values[(int)Stats.DEX] = 1;
+                        newChar.BaseStats.Values[(int)Stats.LUK] = 1;
                         session.Save(newChar.CreateDTO());
 
                         transaction.Commit();
@@ -209,7 +217,7 @@ namespace AegisBorn.OperationHandlers
                         {
                             return new OperationResponse(request, (int)ErrorCode.InvalidCharacter, "That character does not exist");
                         }
-                        AegisBornPlayer player = new AegisBornPlayer();
+                        var player = new AegisBornPlayer();
                         player.CreateFromDTO(character);
                         peer.SetCurrentOperationHandler(new AegisBornPlayerHandler(peer, _user, player));
                         return operation.GetOperationResponse(0, "OK");

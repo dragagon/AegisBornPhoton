@@ -16,12 +16,7 @@ namespace AegisBorn.Models.Persistence
         public virtual float X { get; set; }
         public virtual float Y { get; set; }
         public virtual float Z { get; set; }
-        public virtual int STR { get; set; }
-        public virtual int AGI { get; set; }
-        public virtual int VIT { get; set; }
-        public virtual int INT { get; set; }
-        public virtual int DEX { get; set; }
-        public virtual int LUK { get; set; }
+        public virtual String BaseStats { get; set; }
         public virtual SfGuardUser UserId { get; set; }
     }
 }

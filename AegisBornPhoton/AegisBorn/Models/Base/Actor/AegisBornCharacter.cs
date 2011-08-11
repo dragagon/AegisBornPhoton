@@ -32,7 +32,6 @@ namespace AegisBorn.Models.Base.Actor
             return character.GetHashtable();
         }
 
-
         public AegisBornCharacter Target { get; set; }
 
         public List<AegisBornCharacter> AttackerList { get; set; }
