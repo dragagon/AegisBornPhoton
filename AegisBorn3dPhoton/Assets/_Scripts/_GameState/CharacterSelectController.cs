@@ -38,10 +38,6 @@ public class CharacterSelectController : GameStateController
     public override void OnOperationReturn(PhotonClient gameLogic, OperationCode operationCode, int returnCode, Hashtable returnValues)
     {
         IOperationHandler handler;
-        foreach (DictionaryEntry pair in returnValues)
-        {
-            GameView.LogDebug(this, string.Format("{0} - {1}", pair.Key, pair.Value));
-        }
         if (OperationHandlers.TryGetValue(operationCode, out handler))
         {
             handler.HandleMessage(gameLogic, operationCode, returnCode, returnValues);

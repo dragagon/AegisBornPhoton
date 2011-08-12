@@ -27,17 +27,13 @@ namespace AegisBorn.Models.Base.Actor
         {
             Id = aegisBornCharacterDto.Id;
             Name = aegisBornCharacterDto.Name;
-            Level = aegisBornCharacterDto.Level;
+            Stats.Level = aegisBornCharacterDto.Level;
             Class = aegisBornCharacterDto.Class;
             Sex = aegisBornCharacterDto.Sex;
             X = aegisBornCharacterDto.X;
             Y = aegisBornCharacterDto.Y;
             Z = aegisBornCharacterDto.Z;
-
-            XmlSerializer mySerializer = new XmlSerializer(typeof(BaseStats));
-            StringReader inStream = new StringReader(aegisBornCharacterDto.BaseStats);
-
-            BaseStats = (BaseStats)mySerializer.Deserialize(inStream);
+            Stats.BaseStatsXML = aegisBornCharacterDto.BaseStats;
 
             UserId = aegisBornCharacterDto.UserId;
         }
@@ -45,21 +41,18 @@ namespace AegisBorn.Models.Base.Actor
         public AegisBornCharacterDTO CreateDTO()
         {
 
-            XmlSerializer mySerializer = new XmlSerializer(typeof(BaseStats));
-            StringWriter outStream = new StringWriter();
-            mySerializer.Serialize(outStream, BaseStats);
             AegisBornCharacterDTO aegisBornCharacterDto = new AegisBornCharacterDTO
                                                               {
                                                                   Id = Id,
                                                                   Name = Name,
-                                                                  Level = Level,
+                                                                  Level = Stats.Level,
                                                                   Class = Class,
                                                                   Sex = Sex,
                                                                   X = X,
                                                                   Y = Y,
                                                                   Z = Z,
                                                                   // Change this to be a string that will be serialized/deserialized
-                                                                  BaseStats = outStream.ToString(),
+                                                                  BaseStats = Stats.BaseStatsXML,
                                                                   UserId = UserId,
                                                               };
             return aegisBornCharacterDto;

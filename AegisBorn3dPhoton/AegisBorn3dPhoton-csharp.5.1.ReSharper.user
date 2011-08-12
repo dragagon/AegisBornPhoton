@@ -9,8 +9,12 @@
   <RecentFiles>
     <RecentFiles>
       <File id="70BD799D-0D6C-0A40-5F78-C52E2542CAC3/d:Assets/d:_Scripts/f:PhotonClient.cs" caret="878" fromTop="28" />
+      <File id="70BD799D-0D6C-0A40-5F78-C52E2542CAC3/d:Assets/d:_Scripts/d:_GameState/f:CharacterSelectController.cs" caret="1396" fromTop="40" />
     </RecentFiles>
-    <RecentEdits />
+    <RecentEdits>
+      <File id="70BD799D-0D6C-0A40-5F78-C52E2542CAC3/d:Assets/d:_Scripts/d:_GameState/f:CharacterSelectController.cs" caret="1396" fromTop="16" />
+      <File id="70BD799D-0D6C-0A40-5F78-C52E2542CAC3/d:Assets/d:_Scripts/d:_GameState/f:CharacterSelectController.cs" caret="1396" fromTop="16" />
+    </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>
     <NAntPath value="" />

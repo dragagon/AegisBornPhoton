@@ -1,7 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using System.IO;
+using System.Xml.Serialization;
 
 namespace AegisBorn.Models.Base.Actor.Stats
 {
@@ -9,11 +8,12 @@ namespace AegisBorn.Models.Base.Actor.Stats
     {
         private readonly AegisBornCharacter _character;
         private long _exp;
-        private byte _level;
+        private int _level;
 
         public CharacterStats(AegisBornCharacter aegisBornCharacter)
         {
             _character = aegisBornCharacter;
+            BaseStats = new BaseStats();
         }
 
         public AegisBornCharacter Character { get { return _character; } }
@@ -24,10 +24,16 @@ namespace AegisBorn.Models.Base.Actor.Stats
             set { _exp = value; }
         }
 
-        public byte Level
+        public int Level
         {
             get { return _level; }
             set { _level = value; }
+        }
+
+        public void NewCharacter()
+        {
+            Level = 1;
+            Exp = 0;
         }
 
         public double CalcStat(Stats stat, double initialValue, AegisBornCharacter target)
@@ -50,33 +56,43 @@ namespace AegisBorn.Models.Base.Actor.Stats
 
             // Ensure certain stats do not drop below 1 no matter what debuffs are applied
             // Find a better way to do this than to switch on a list of Stats.
-            if(calculatorValue.Value <= 0)
+            if(calculatorValue.Value <= 0 && StatsUtil.NonNegativeStatList.Contains(stat))
             {
-                switch (stat)
-                {
-                    case Stats.Max_HP:
-                    case Stats.Max_MP:
-                    case Stats.STR:
-                    case Stats.AGI:
-                    case Stats.VIT:
-                    case Stats.INT:
-                    case Stats.DEX:
-                    case Stats.LUK:
-                        calculatorValue.Value = 1;
-                        break;
-                }
+                calculatorValue.Value = 1;
             }
 
             return calculatorValue.Value;
         }
 
-        public int GetValue(Stats stat, int defaultValue, AegisBornCharacter aegisBornCharacter)
+        public int GetValue(Stats stat)
         {
-            if(_character == null)
-            {
-                return defaultValue;
-            }
-            return (int)CalcStat(stat, _character.BaseStats.Values[(int)stat], aegisBornCharacter);
+            return GetValue(stat, null);
         }
+
+        public int GetValue(Stats stat, AegisBornCharacter aegisBornCharacter)
+        {
+            return (int)CalcStat(stat, BaseStats.GetValue(stat), aegisBornCharacter);
+        }
+
+        private BaseStats BaseStats { get; set; }
+
+        public String BaseStatsXML
+        {
+            get
+            {
+                XmlSerializer mySerializer = new XmlSerializer(typeof(BaseStats));
+                StringWriter outStream = new StringWriter();
+                mySerializer.Serialize(outStream, BaseStats);
+                return outStream.ToString();
+            }
+            set
+            {
+                String tempStr = value;
+                XmlSerializer mySerializer = new XmlSerializer(typeof(BaseStats));
+                StringReader inStream = new StringReader(tempStr);
+                BaseStats = (BaseStats)mySerializer.Deserialize(inStream);
+            }
+        }
+
     }
 }

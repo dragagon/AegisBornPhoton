@@ -158,22 +158,16 @@ namespace AegisBorn.OperationHandlers
                                               Name = operation.CharacterName,
                                               Sex = operation.CharacterSex,
                                               Class = operation.CharacterClass,
-                                              Level = 1,
                                               UserId = _user,
                                               X = 0,
                                               Y = 0,
                                               Z = 0,
-                                              BaseStats =
-                                                  new BaseStats(),
                                           };
 
                         // Update to be loaded from a template, loaded from user selection, or randomly generated.
-                        newChar.BaseStats.Values[(int)Stats.STR] = 1;
-                        newChar.BaseStats.Values[(int)Stats.AGI] = 1;
-                        newChar.BaseStats.Values[(int)Stats.VIT] = 1;
-                        newChar.BaseStats.Values[(int)Stats.INT] = 1;
-                        newChar.BaseStats.Values[(int)Stats.DEX] = 1;
-                        newChar.BaseStats.Values[(int)Stats.LUK] = 1;
+                        // newChar.Stats.NewCharacter(class);
+                        // newChar.Stats.NewCharacter(new Dictionary<Stats, int> { {Stats.STR, 1},  {Stats.VIT, 1},}
+                        newChar.Stats.NewCharacter();
                         session.Save(newChar.CreateDTO());
 
                         transaction.Commit();
