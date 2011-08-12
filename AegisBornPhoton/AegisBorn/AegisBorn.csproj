@@ -31,12 +31,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ExitGames.Logging.Log4Net">
+      <HintPath>..\..\..\..\Photon\lib\ExitGames.Logging.Log4Net.dll</HintPath>
+    </Reference>
     <Reference Include="ExitGamesLibs">
       <HintPath>..\..\..\..\Photon\lib\ExitGamesLibs.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="FluentNHibernate">
       <HintPath>..\..\AegisBornLibs\FluentNHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\..\..\..\Photon\lib\log4net.dll</HintPath>
     </Reference>
     <Reference Include="NHibernate">
       <HintPath>..\..\AegisBornLibs\Required_Bins\NHibernate.dll</HintPath>
@@ -63,10 +69,23 @@
   <ItemGroup>
     <Compile Include="Models\Base\Actor\IAegisBornCharacter.cs" />
     <Compile Include="Models\Base\Actor\Stats\BaseStats.cs" />
-    <Compile Include="Models\Base\Actor\Stats\Calculator.cs" />
-    <Compile Include="Models\Base\Actor\Stats\CalculatorValue.cs" />
+    <Compile Include="Models\Base\Actor\Stats\Calculators\Calculator.cs" />
+    <Compile Include="Models\Base\Actor\Stats\Calculators\CalculatorValue.cs" />
+    <Compile Include="Models\Base\Actor\Stats\Calculators\Formulas.cs" />
+    <Compile Include="Models\Base\Actor\Stats\Calculators\Functions\StatFunctionMod.cs" />
+    <Compile Include="Models\Base\Actor\Stats\Calculators\Functions\StatFunctionDiv.cs" />
+    <Compile Include="Models\Base\Actor\Stats\Calculators\Functions\StatFunctionMul.cs" />
+    <Compile Include="Models\Base\Actor\Stats\Calculators\Functions\StatFunctionSub.cs" />
+    <Compile Include="Models\Base\Actor\Stats\Calculators\Statements\Statement.cs" />
+    <Compile Include="Models\Base\Actor\Stats\Calculators\Statements\StatementConstant.cs" />
+    <Compile Include="Models\Base\Actor\Stats\Calculators\Statements\StatementFunctions.cs" />
+    <Compile Include="Models\Base\Actor\Stats\Calculators\Statements\StatementPlayerData.cs" />
+    <Compile Include="Models\Base\Actor\Stats\Calculators\Statements\StatementRandom.cs" />
+    <Compile Include="Models\Base\Actor\Stats\Calculators\Statements\StatementStats.cs" />
+    <Compile Include="Models\Base\Actor\Stats\Calculators\Functions\StatFunctionAdd.cs" />
+    <Compile Include="Models\Base\Actor\Stats\Calculators\Functions\StatFunctionSet.cs" />
     <Compile Include="Models\Base\Actor\Stats\CharacterStats.cs" />
-    <Compile Include="Models\Base\Actor\Stats\StatFunction.cs" />
+    <Compile Include="Models\Base\Actor\Stats\Calculators\Functions\StatFunction.cs" />
     <Compile Include="Models\Base\Actor\Transform\ObjectTransform.cs" />
     <Compile Include="Models\Base\AegisBornObject.cs" />
     <Compile Include="Models\Base\Actor\AegisBornPlayable.cs" />
@@ -104,7 +123,11 @@
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="log4net.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

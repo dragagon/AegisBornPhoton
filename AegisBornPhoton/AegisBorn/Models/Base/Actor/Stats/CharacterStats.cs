@@ -1,6 +1,8 @@
 ﻿using System;
 using System.IO;
 using System.Xml.Serialization;
+using AegisBorn.Models.Base.Actor.Stats.Calculators;
+using AegisBorn.Models.Base.Actor.Stats.Calculators.Functions;
 
 namespace AegisBorn.Models.Base.Actor.Stats
 {
@@ -14,7 +16,16 @@ namespace AegisBorn.Models.Base.Actor.Stats
         {
             _character = aegisBornCharacter;
             BaseStats = new BaseStats();
+
+            if(aegisBornCharacter is AegisBornPlayer)
+            {
+                Calculators = new Calculator[Enum.GetNames(typeof(Stats)).Length];
+                
+                Formulas.AddCalculatorsToNewCharacter(this);
+            }
         }
+
+        public Calculator[] Calculators { get; set; }
 
         public AegisBornCharacter Character { get { return _character; } }
 
@@ -43,7 +54,7 @@ namespace AegisBorn.Models.Base.Actor.Stats
                 return initialValue;
             }
 
-            Calculator c = _character.Calculators[(int)stat];
+            Calculator c = Calculators[(int)stat];
 
             if(c.Size == 0)
             {
@@ -92,6 +103,21 @@ namespace AegisBorn.Models.Base.Actor.Stats
                 StringReader inStream = new StringReader(tempStr);
                 BaseStats = (BaseStats)mySerializer.Deserialize(inStream);
             }
+        }
+
+        public void AddStatFunction(StatFunction statFunction)
+        {
+            if (statFunction == null)
+                return;
+
+            int stat = (int) statFunction.Stat;
+
+            if(Calculators[stat] == null)
+            {
+                Calculators[stat] = new Calculator();
+            }
+
+            Calculators[stat].Add(statFunction);
         }
 
     }

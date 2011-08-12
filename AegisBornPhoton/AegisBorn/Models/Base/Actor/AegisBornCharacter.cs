@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Xml.Serialization;
 using AegisBorn.Models.Base.Actor.Stats;
+using AegisBorn.Models.Base.Actor.Stats.Calculators;
 
 namespace AegisBorn.Models.Base.Actor
 {
@@ -12,8 +13,6 @@ namespace AegisBorn.Models.Base.Actor
         public SfGuardUser UserId { get; set; }
         public string Class { get; set; }
         public string Sex { get; set; }
-
-        public Calculator[] Calculators { get; set; }
 
         protected AegisBornCharacter()
         {

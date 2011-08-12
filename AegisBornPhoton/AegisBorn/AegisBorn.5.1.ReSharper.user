@@ -13,50 +13,61 @@
       <File id="6219BCA1-BD90-4C67-B02D-3F11E902892F/f:ErrorCode.cs" caret="493" fromTop="22" />
       <File id="6219BCA1-BD90-4C67-B02D-3F11E902892F/f:OperationCode.cs" caret="450" fromTop="18" />
       <File id="6219BCA1-BD90-4C67-B02D-3F11E902892F/f:ParameterCode.cs" caret="1144" fromTop="30" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/d:Stats/f:CharacterStats.cs" caret="2749" fromTop="102" />
       <File id="6219BCA1-BD90-4C67-B02D-3F11E902892F/d:Models/f:AegisBornPlayable.cs" caret="0" fromTop="0" />
       <File id="6219BCA1-BD90-4C67-B02D-3F11E902892F/d:Models/f:AegisBornPlayer.cs" caret="0" fromTop="0" />
       <File id="6219BCA1-BD90-4C67-B02D-3F11E902892F/d:Models/f:AegisBornCharacter.cs" caret="0" fromTop="0" />
       <File id="6219BCA1-BD90-4C67-B02D-3F11E902892F/d:Models/f:AegisBornObject.cs" caret="0" fromTop="0" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/d:Stats/f:BaseStats.cs" caret="408" fromTop="15" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/f:AegisBornCharacter.cs" caret="539" fromTop="18" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Persistence/d:Map/f:AegisBornCharacterMap.cs" caret="153" fromTop="5" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/f:AegisBornPeer.cs" caret="927" fromTop="0" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/f:AegisBornPlayer.cs" caret="1560" fromTop="23" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Persistence/f:AegisBornCharacterDTO.cs" caret="637" fromTop="18" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:OperationHandlers/f:AegisBornAccountHandler.cs" caret="6541" fromTop="29" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/d:Stats/d:Calculators/f:CalculatorValue.cs" caret="0" fromTop="0" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/d:Stats/d:Calculators/d:Statements/f:Statement.cs" caret="158" fromTop="5" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/d:Stats/d:Calculators/d:Statements/f:StatementStats.cs" caret="285" fromTop="11" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/d:Stats/d:Calculators/d:Statements/f:StatementRandom.cs" caret="790" fromTop="26" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/d:Stats/d:Calculators/d:Statements/f:StatementPlayerData.cs" caret="826" fromTop="25" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/f:AegisBornCharacter.cs" caret="495" fromTop="16" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/d:Stats/d:Calculators/f:Calculator.cs" caret="329" fromTop="10" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/d:Stats/d:Calculators/d:Functions/f:StatFunctionSub.cs" caret="222" fromTop="6" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/d:Stats/d:Calculators/d:Functions/f:StatFunctionMul.cs" caret="222" fromTop="6" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/d:Stats/d:Calculators/d:Functions/f:StatFunctionMod.cs" caret="222" fromTop="6" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/d:Stats/d:Calculators/d:Functions/f:StatFunctionDiv.cs" caret="222" fromTop="6" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/d:Stats/f:BaseStats.cs" caret="511" fromTop="18" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/d:Stats/d:Calculators/d:Statements/f:StatementFunctions.cs" caret="674" fromTop="23" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/d:Stats/d:Calculators/d:Statements/f:StatementConstant.cs" caret="0" fromTop="0" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/d:Stats/d:Calculators/d:Functions/f:StatFunctionSet.cs" caret="0" fromTop="0" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/d:Stats/d:Calculators/d:Functions/f:StatFunction.cs" caret="0" fromTop="0" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/d:Stats/d:Calculators/d:Functions/f:StatFunctionAdd.cs" caret="672" fromTop="22" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/d:Stats/d:Calculators/f:Formulas.cs" caret="339" fromTop="9" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/d:Stats/f:CharacterStats.cs" caret="807" fromTop="23" />
     </RecentFiles>
     <RecentEdits>
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/d:Stats/f:CharacterStats.cs" caret="3425" fromTop="37" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Persistence/d:Map/f:AegisBornCharacterMap.cs" caret="860" fromTop="23" />
-      <File id="6219BCA1-BD90-4C67-B02D-3F11E902892F/d:Models/f:AegisBornObject.cs" caret="131" fromTop="6" />
-      <File id="6219BCA1-BD90-4C67-B02D-3F11E902892F/d:Models/f:AegisBornCharacter.cs" caret="143" fromTop="6" />
-      <File id="6219BCA1-BD90-4C67-B02D-3F11E902892F/d:Models/f:AegisBornObject.cs" caret="367" fromTop="12" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/f:AegisBornCharacter.cs" caret="549" fromTop="19" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Persistence/d:Map/f:AegisBornCharacterMap.cs" caret="178" fromTop="7" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Persistence/d:Map/f:AegisBornCharacterMap.cs" caret="0" fromTop="0" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Persistence/d:Map/f:AegisBornCharacterMap.cs" caret="857" fromTop="22" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Persistence/f:AegisBornCharacterDTO.cs" caret="926" fromTop="23" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Persistence/f:AegisBornCharacterDTO.cs" caret="846" fromTop="22" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Persistence/f:AegisBornCharacterDTO.cs" caret="867" fromTop="22" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Persistence/f:AegisBornCharacterDTO.cs" caret="922" fromTop="24" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/f:AegisBornCharacter.cs" caret="402" fromTop="12" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/d:Stats/f:BaseStats.cs" caret="403" fromTop="17" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/d:Stats/f:BaseStats.cs" caret="175" fromTop="9" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/d:Stats/f:BaseStats.cs" caret="404" fromTop="15" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/f:AegisBornPlayer.cs" caret="1451" fromTop="38" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/f:AegisBornPlayer.cs" caret="3014" fromTop="40" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/f:AegisBornPlayer.cs" caret="2905" fromTop="38" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/f:AegisBornPlayer.cs" caret="2898" fromTop="38" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/f:AegisBornPlayer.cs" caret="2839" fromTop="37" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/f:AegisBornPlayer.cs" caret="2839" fromTop="37" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/f:AegisBornPlayer.cs" caret="2971" fromTop="40" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:OperationHandlers/f:AegisBornAccountHandler.cs" caret="3659" fromTop="25" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:OperationHandlers/f:AegisBornAccountHandler.cs" caret="5757" fromTop="29" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:OperationHandlers/f:AegisBornAccountHandler.cs" caret="8628" fromTop="29" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:OperationHandlers/f:AegisBornAccountHandler.cs" caret="9024" fromTop="38" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:OperationHandlers/f:AegisBornAccountHandler.cs" caret="4207" fromTop="33" />
-      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:OperationHandlers/f:AegisBornAccountHandler.cs" caret="6945" fromTop="41" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/d:Stats/d:Calculators/d:Functions/f:StatFunctionSub.cs" caret="683" fromTop="22" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/d:Stats/d:Calculators/d:Functions/f:StatFunctionSub.cs" caret="321" fromTop="10" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/d:Stats/d:Calculators/d:Functions/f:StatFunctionMul.cs" caret="363" fromTop="12" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/d:Stats/d:Calculators/d:Functions/f:StatFunctionMul.cs" caret="683" fromTop="22" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/d:Stats/d:Calculators/d:Functions/f:StatFunctionDiv.cs" caret="363" fromTop="12" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/d:Stats/d:Calculators/d:Functions/f:StatFunctionDiv.cs" caret="683" fromTop="22" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/d:Stats/d:Calculators/d:Functions/f:StatFunctionMod.cs" caret="363" fromTop="12" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/d:Stats/d:Calculators/d:Functions/f:StatFunctionMod.cs" caret="683" fromTop="22" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/d:Stats/d:Calculators/d:Functions/f:StatFunction.cs" caret="82" fromTop="2" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/d:Stats/d:Calculators/d:Functions/f:StatFunctionAdd.cs" caret="222" fromTop="6" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/d:Stats/d:Calculators/d:Functions/f:StatFunctionDiv.cs" caret="222" fromTop="6" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/d:Stats/d:Calculators/d:Functions/f:StatFunctionMod.cs" caret="222" fromTop="6" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/d:Stats/d:Calculators/d:Functions/f:StatFunctionMul.cs" caret="222" fromTop="6" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/d:Stats/d:Calculators/d:Functions/f:StatFunctionSet.cs" caret="222" fromTop="6" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/d:Stats/d:Calculators/d:Functions/f:StatFunctionSub.cs" caret="222" fromTop="6" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/d:Stats/d:Calculators/f:Calculator.cs" caret="329" fromTop="10" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/d:Stats/d:Calculators/d:Statements/f:StatementFunctions.cs" caret="317" fromTop="11" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/d:Stats/d:Calculators/f:Formulas.cs" caret="1483" fromTop="32" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/d:Stats/d:Calculators/f:Formulas.cs" caret="1483" fromTop="18" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/d:Stats/d:Calculators/f:Formulas.cs" caret="1483" fromTop="32" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/d:Stats/d:Calculators/f:Formulas.cs" caret="1483" fromTop="22" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/d:Stats/d:Calculators/f:Formulas.cs" caret="1483" fromTop="37" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/d:Stats/d:Calculators/f:Formulas.cs" caret="1483" fromTop="11" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/d:Stats/d:Calculators/f:Formulas.cs" caret="1483" fromTop="34" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/d:Stats/d:Calculators/f:Formulas.cs" caret="856" fromTop="17" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/d:Stats/f:CharacterStats.cs" caret="3619" fromTop="46" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/d:Stats/f:CharacterStats.cs" caret="3272" fromTop="34" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/d:Stats/d:Calculators/f:Formulas.cs" caret="623" fromTop="18" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/d:Stats/d:Calculators/f:Formulas.cs" caret="339" fromTop="9" />
+      <File id="8F04E739-D580-4A32-9917-C1FB69F7514F/d:Models/d:Base/d:Actor/d:Stats/f:CharacterStats.cs" caret="791" fromTop="22" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>
@@ -75,21 +86,21 @@
       <Item value="Operation`0" priority="0" />
       <Item value="OperationCode" priority="0" />
       <Item value="OperationCanceledException`0" priority="0" />
-      <Item value="public" priority="74" />
+      <Item value="public" priority="94" />
       <Item value="OperationResponse`0" priority="0" />
       <Item value="Peer`0" priority="2" />
       <Item value="OperationRequest`0" priority="0" />
-      <Item value="return" priority="29" />
-      <Item value="null" priority="7" />
+      <Item value="return" priority="45" />
+      <Item value="null" priority="11" />
       <Item value="var" priority="10" />
-      <Item value="new" priority="20" />
+      <Item value="new" priority="36" />
       <Item value="LoginSecurely`0" priority="0" />
-      <Item value="if" priority="14" />
+      <Item value="if" priority="22" />
       <Item value="operation" priority="9" />
       <Item value="OperationResponse" priority="0" />
       <Item value="request" priority="0" />
       <Item value="virtual" priority="14" />
-      <Item value="int" priority="30" />
+      <Item value="int" priority="44" />
       <Item value="string" priority="7" />
       <Item value="SfGuardUser`0" priority="6" />
       <Item value="SfGuardUserMap`0" priority="1" />
@@ -108,7 +119,7 @@
       <Item value="from" priority="0" />
       <Item value="where" priority="0" />
       <Item value="sf_guard_user" priority="0" />
-      <Item value="typeof" priority="2" />
+      <Item value="typeof" priority="3" />
       <Item value="this" priority="3" />
       <Item value="users" priority="1" />
       <Item value="Table`0" priority="0" />
@@ -127,11 +138,11 @@
       <Item value="StringComparison`0" priority="0" />
       <Item value="peer" priority="3" />
       <Item value="NHibernateHelper`0" priority="0" />
-      <Item value="private" priority="27" />
-      <Item value="readonly" priority="3" />
+      <Item value="private" priority="35" />
+      <Item value="readonly" priority="8" />
       <Item value="_peer" priority="3" />
       <Item value="photonPeer" priority="1" />
-      <Item value="void" priority="9" />
+      <Item value="void" priority="13" />
       <Item value="AegisBornPeer`0" priority="0" />
       <Item value="_user" priority="5" />
       <Item value="AegisBornAccount`0" priority="1" />
@@ -139,12 +150,12 @@
       <Item value="AegisBornUserProfile`0" priority="0" />
       <Item value="Code" priority="2" />
       <Item value="IsOptional" priority="2" />
-      <Item value="AegisBornCharacter`0" priority="15" />
+      <Item value="AegisBornCharacter`0" priority="16" />
       <Item value="_characterSlots" priority="3" />
       <Item value="Restrictions`0" priority="1" />
       <Item value="characters" priority="1" />
-      <Item value="foreach" priority="5" />
-      <Item value="aegisBornCharacter" priority="4" />
+      <Item value="foreach" priority="6" />
+      <Item value="aegisBornCharacter" priority="6" />
       <Item value="ErrorCode`0" priority="0" />
       <Item value="Hashtable`0" priority="3" />
       <Item value="retTable" priority="1" />
@@ -163,17 +174,17 @@
       <Item value="Models" priority="1" />
       <Item value="Name" priority="4" />
       <Item value="Hashtable" priority="0" />
-      <Item value="base" priority="1" />
+      <Item value="base" priority="3" />
       <Item value="OperationCode`0" priority="0" />
       <Item value="RequestParameterAttribute`0" priority="1" />
-      <Item value="bool" priority="5" />
+      <Item value="bool" priority="7" />
       <Item value="_canAddCharacters" priority="1" />
       <Item value="CreateCharacterOperation`0" priority="0" />
       <Item value="character" priority="0" />
       <Item value="UserId" priority="1" />
       <Item value="_selectedCharacter" priority="0" />
       <Item value="selectedCharacter" priority="0" />
-      <Item value="AegisBornPlayer`0" priority="2" />
+      <Item value="AegisBornPlayer`0" priority="3" />
       <Item value="Dictionary" priority="2" />
       <Item value="AegisBornWorld`0" priority="2" />
       <Item value="_allPlayers" priority="0" />
@@ -187,9 +198,9 @@
       <Item value="IList" priority="0" />
       <Item value="List&lt;AegisBornRegion&gt;" priority="0" />
       <Item value="aegisBornObject" priority="12" />
-      <Item value="List" priority="4" />
+      <Item value="List" priority="5" />
       <Item value="aegisBornObjects" priority="1" />
-      <Item value="in" priority="2" />
+      <Item value="in" priority="3" />
       <Item value="aegisBornRegion" priority="1" />
       <Item value="visibles" priority="1" />
       <Item value="abo" priority="0" />
@@ -204,60 +215,112 @@
       <Item value="Item`0" priority="0" />
       <Item value="_position" priority="2" />
       <Item value="x" priority="0" />
-      <Item value="value" priority="1" />
-      <Item value="CharacterStats`0" priority="1" />
-      <Item value="_character" priority="6" />
+      <Item value="value" priority="4" />
+      <Item value="CharacterStats`0" priority="2" />
+      <Item value="_character" priority="8" />
       <Item value="long" priority="1" />
       <Item value="_exp" priority="0" />
       <Item value="_level" priority="2" />
-      <Item value="double" priority="3" />
-      <Item value="Stats`0" priority="13" />
-      <Item value="stat" priority="1" />
+      <Item value="double" priority="13" />
+      <Item value="Stats`0" priority="26" />
+      <Item value="stat" priority="5" />
       <Item value="initialValue" priority="2" />
       <Item value="c" priority="4" />
-      <Item value="static" priority="0" />
+      <Item value="static" priority="3" />
       <Item value="StatFunction" priority="0" />
-      <Item value="Calculator`0" priority="3" />
+      <Item value="Calculator`0" priority="7" />
       <Item value="_functions" priority="4" />
       <Item value="_emptyFunctions" priority="0" />
       <Item value="Count`1" priority="0" />
-      <Item value="statFunction" priority="8" />
-      <Item value="Environment`0" priority="0" />
+      <Item value="statFunction" priority="14" />
+      <Item value="Environment`0" priority="2" />
       <Item value="AppDomainSetup`0" priority="2" />
-      <Item value="Boolean`0" priority="0" />
-      <Item value="calculatorValue" priority="10" />
-      <Item value="Object`0" priority="2" />
-      <Item value="StatFunction`0" priority="0" />
-      <Item value="_stat" priority="0" />
+      <Item value="Boolean`0" priority="1" />
+      <Item value="calculatorValue" priority="31" />
+      <Item value="Object`0" priority="3" />
+      <Item value="StatFunction`0" priority="5" />
+      <Item value="_stat" priority="3" />
       <Item value="_order" priority="0" />
-      <Item value="owner" priority="1" />
-      <Item value="abstract" priority="0" />
-      <Item value="CalculatorValue`0" priority="1" />
+      <Item value="owner" priority="2" />
+      <Item value="abstract" priority="1" />
+      <Item value="CalculatorValue`0" priority="2" />
       <Item value="CalculatorValue" priority="0" />
       <Item value="target" priority="0" />
-      <Item value="switch" priority="0" />
-      <Item value="case" priority="7" />
+      <Item value="switch" priority="1" />
+      <Item value="case" priority="9" />
       <Item value="break" priority="0" />
       <Item value="CalcStat`0" priority="0" />
       <Item value="List&lt;Stats&gt;" priority="0" />
-      <Item value="retValue" priority="1" />
+      <Item value="retValue" priority="2" />
       <Item value="protected" priority="0" />
       <Item value="Remove`0" priority="0" />
-      <Item value="Enum`0" priority="0" />
-      <Item value="Length" priority="0" />
+      <Item value="Enum`0" priority="2" />
+      <Item value="Length" priority="2" />
       <Item value="aegisBornCharacterDto" priority="11" />
       <Item value="Z" priority="0" />
-      <Item value="BaseStats" priority="3" />
+      <Item value="BaseStats" priority="6" />
       <Item value="AegisBornCharacterDTO`0" priority="1" />
       <Item value="AegisBornCharacterDTO" priority="0" />
       <Item value="AegisBornPlayer" priority="1" />
       <Item value="player" priority="1" />
-      <Item value="STR" priority="0" />
+      <Item value="STR" priority="2" />
       <Item value="AGI" priority="0" />
       <Item value="VIT" priority="0" />
       <Item value="INT" priority="0" />
       <Item value="DEX" priority="0" />
       <Item value="LUK" priority="0" />
+      <Item value="_values" priority="3" />
+      <Item value="BaseStats`0" priority="1" />
+      <Item value="String`0" priority="0" />
+      <Item value="StringReader" priority="0" />
+      <Item value="serializedXML" priority="0" />
+      <Item value="mySerializer" priority="1" />
+      <Item value="inStream" priority="0" />
+      <Item value="StringWriter`0" priority="0" />
+      <Item value="StringWriter" priority="0" />
+      <Item value="outStream" priority="1" />
+      <Item value="StatFunctionAdd`0" priority="1" />
+      <Item value="order" priority="0" />
+      <Item value="_lambda" priority="1" />
+      <Item value="lambda" priority="0" />
+      <Item value="statement" priority="0" />
+      <Item value="using" priority="0" />
+      <Item value="Statement" priority="0" />
+      <Item value="Statement`0" priority="2" />
+      <Item value="StatementConstant`0" priority="2" />
+      <Item value="_value" priority="1" />
+      <Item value="StatementStats`0" priority="0" />
+      <Item value="StatementFunctions`0" priority="2" />
+      <Item value="StatFunctions" priority="2" />
+      <Item value="List&lt;StatFunction&gt;" priority="1" />
+      <Item value="preValue" priority="0" />
+      <Item value="StatementRandom`0" priority="0" />
+      <Item value="_max" priority="1" />
+      <Item value="max" priority="0" />
+      <Item value="linear" priority="0" />
+      <Item value="_linear" priority="0" />
+      <Item value="Math`0" priority="2" />
+      <Item value="Random`0" priority="1" />
+      <Item value="nextGaussian`0" priority="0" />
+      <Item value="enum" priority="0" />
+      <Item value="PlayerData`0" priority="3" />
+      <Item value="StatementPlayerData`0" priority="0" />
+      <Item value="Statements" priority="0" />
+      <Item value="_statement" priority="0" />
+      <Item value="Calculator" priority="1" />
+      <Item value="StatFunctionSet`0" priority="1" />
+      <Item value="Max_HP" priority="0" />
+      <Item value="StatFunctionMul`0" priority="0" />
+      <Item value="PlayerLevel" priority="0" />
+      <Item value="MaxHPFunction`0" priority="1" />
+      <Item value="_instance" priority="2" />
+      <Item value="MaxHPFunction" priority="0" />
+      <Item value="levelMult" priority="0" />
+      <Item value="vitDiv" priority="0" />
+      <Item value="is" priority="0" />
+      <Item value="stats" priority="0" />
+      <Item value="Calculators" priority="0" />
+      <Item value="Formulas`0" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@AegisBornCommon.OperationCode">
       <Item value="Login" priority="0" />
@@ -432,20 +495,24 @@
       <Item value="Value" priority="3" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@AegisBorn.Models.Base.Actor.Stats.Stats">
-      <Item value="Max_HP" priority="0" />
+      <Item value="Max_HP" priority="3" />
       <Item value="Max_MP" priority="0" />
       <Item value="STR" priority="1" />
       <Item value="AGI" priority="0" />
-      <Item value="VIT" priority="0" />
+      <Item value="VIT" priority="1" />
       <Item value="INT" priority="0" />
       <Item value="DEX" priority="0" />
       <Item value="LUK" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:AegisBorn.Models.Base.Actor.Stats.CharacterStats">
       <Item value="STR" priority="0" />
+      <Item value="GetValue`0" priority="2" />
+      <Item value="Level" priority="2" />
+      <Item value="Calculators" priority="0" />
+      <Item value="AddStatFunction`0" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.Enum">
-      <Item value="GetNames`0" priority="0" />
+      <Item value="GetNames`0" priority="2" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:AegisBorn.Models.Persistence.AegisBornCharacterDTO">
       <Item value="Id" priority="0" />
@@ -459,6 +526,7 @@
       <Item value="STR" priority="0" />
       <Item value="AGI" priority="0" />
       <Item value="UserId" priority="0" />
+      <Item value="BaseStats" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:AegisBorn.Models.Base.Actor.AegisBornPlayer">
       <Item value="Id" priority="0" />
@@ -468,6 +536,51 @@
     <ItemStatistics item="Qualified:AegisBorn.Models.Base.Actor.Stats.BaseStats">
       <Item value="STR" priority="0" />
       <Item value="AGI" priority="0" />
+      <Item value="SetValue`0" priority="0" />
+      <Item value="GetValue`0" priority="0" />
+      <Item value="Values" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Xml.Serialization.XmlSerializer">
+      <Item value="Deserialize`0" priority="0" />
+      <Item value="Serialize`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.IO.StringWriter">
+      <Item value="ToString`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:AegisBorn.Models.Base.Actor.AegisBornCharacter">
+      <Item value="BaseStats" priority="0" />
+      <Item value="Stats" priority="5" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:AegisBorn.Models.Base.Actor.Stats.Calculators.CalculatorValue">
+      <Item value="Value" priority="7" />
+      <Item value="Player" priority="5" />
+      <Item value="Target" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:AegisBorn.Models.Base.Actor.Stats.Calculators.StatFunction">
+      <Item value="Calc`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:AegisBorn.Models.Base.Actor.Stats.Calculators.Statements.Statement">
+      <Item value="Calc`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Random">
+      <Item value="NextDouble`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@AegisBorn.Models.Base.Actor.Stats.Calculators.Statements.PlayerData">
+      <Item value="PlayerLevel" priority="0" />
+      <Item value="TargetLevel" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:AegisBorn.Models.Base.Actor.Stats.Calculators.Statements.StatementFunctions">
+      <Item value="StatFunctions" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:AegisBorn.Models.Base.Actor.Stats.Calculators.Functions.StatFunction">
+      <Item value="Stat" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:AegisBorn.Models.Base.Actor.Stats.Calculators.Calculator">
+      <Item value="Add`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@AegisBorn.Models.Base.Actor.Stats.Calculators.Formulas">
+      <Item value="MaxHPFunction`0" priority="0" />
+      <Item value="AddCalculatorsToNewCharacter`0" priority="0" />
     </ItemStatistics>
   </CompletionStatisticsManager>
 </Configuration>

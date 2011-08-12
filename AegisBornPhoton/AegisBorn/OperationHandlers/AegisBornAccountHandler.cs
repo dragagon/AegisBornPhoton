@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using AegisBorn.Events;
 using AegisBorn.Models.Base;
 using AegisBorn.Models.Base.Actor;
@@ -12,11 +13,16 @@ using NHibernate.Criterion;
 using Photon.SocketServer;
 using Photon.SocketServer.Rpc;
 using Photon.SocketServer.Rpc.Reflection;
+using ExitGames.Logging;
 
 namespace AegisBorn.OperationHandlers
 {
     public class AegisBornAccountHandler : IOperationHandler
     {
+        /// <summary>
+        /// The logger.
+        /// </summary>
+        private static readonly ILogger Log = LogManager.GetCurrentClassLogger();
 
         private static readonly OperationMethodInfoCache Operations = new OperationMethodInfoCache();
 
@@ -118,6 +124,7 @@ namespace AegisBorn.OperationHandlers
             }
             catch (Exception e)
             {
+                Log.Error(e.Message);
                 // Do nothing because we are about to throw them out anyway.
                 peer.PublishOperationResponse(new OperationResponse(request, (int)ErrorCode.InvalidUserPass, e.ToString()));
             }
@@ -168,6 +175,8 @@ namespace AegisBorn.OperationHandlers
                         // newChar.Stats.NewCharacter(class);
                         // newChar.Stats.NewCharacter(new Dictionary<Stats, int> { {Stats.STR, 1},  {Stats.VIT, 1},}
                         newChar.Stats.NewCharacter();
+
+                        Log.Info(newChar.Stats.GetValue(Stats.Max_HP));
                         session.Save(newChar.CreateDTO());
 
                         transaction.Commit();
@@ -178,6 +187,8 @@ namespace AegisBorn.OperationHandlers
             }
             catch (Exception e)
             {
+                Log.Error(e.Message);
+
                 // Do nothing because we are about to throw them out anyway.
                 peer.PublishOperationResponse(new OperationResponse(request, (int)ErrorCode.InvalidCharacter, e.ToString()));
             }
@@ -220,6 +231,7 @@ namespace AegisBorn.OperationHandlers
             }
             catch (Exception e)
             {
+                Log.Error(e.Message);
                 // Do nothing because we are about to throw them out anyway.
                 peer.PublishOperationResponse(new OperationResponse(request, (int)ErrorCode.InvalidCharacter, e.ToString()));
             }

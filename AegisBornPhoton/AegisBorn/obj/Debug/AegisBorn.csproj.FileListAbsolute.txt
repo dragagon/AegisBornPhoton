@@ -24,3 +24,4 @@ D:\Photon\deploy\AegisBorn\AegisBorn.pdb
 D:\development\photon\AegisBornPhoton\AegisBorn\obj\Debug\ResolveAssemblyReference.cache
 D:\development\photon\AegisBornPhoton\AegisBorn\obj\Debug\AegisBorn.dll
 D:\development\photon\AegisBornPhoton\AegisBorn\obj\Debug\AegisBorn.pdb
+C:\Photon\deploy\AegisBorn\log4net.config
