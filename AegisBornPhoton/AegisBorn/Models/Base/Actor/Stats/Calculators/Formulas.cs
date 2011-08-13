@@ -4,19 +4,23 @@ using System.Linq;
 using System.Text;
 using AegisBorn.Models.Base.Actor.Stats.Calculators.Functions;
 using AegisBorn.Models.Base.Actor.Stats.Calculators.Statements;
+using ExitGames.Logging;
 
 namespace AegisBorn.Models.Base.Actor.Stats.Calculators
 {
     public class Formulas
     {
+        private static readonly ILogger Log = LogManager.GetCurrentClassLogger();
 
         public static void AddCalculatorsToNewCharacter(CharacterStats stats)
         {
+            Log.Debug("Adding calculators");
             stats.AddStatFunction(MaxHPFunction.Instance);
         }
 
         public class MaxHPFunction : StatFunction
         {
+
             private static MaxHPFunction _instance;
 
             public static StatFunction Instance
@@ -36,7 +40,6 @@ namespace AegisBorn.Models.Base.Actor.Stats.Calculators
             {
                 double levelMult = 5 * (calculatorValue.Player == null ? 1 : calculatorValue.Player.Stats.Level);
                 double vitDiv = (calculatorValue.Player == null ? 1 : calculatorValue.Player.Stats.GetValue(Stats.VIT)) / 10.0;
-
                 calculatorValue.Value += 40 + levelMult + vitDiv;
             }
 

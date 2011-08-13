@@ -1,8 +1,10 @@
 ﻿using System;
 using System.IO;
+using System.Linq;
 using System.Xml.Serialization;
 using AegisBorn.Models.Base.Actor.Stats.Calculators;
 using AegisBorn.Models.Base.Actor.Stats.Calculators.Functions;
+using ExitGames.Logging;
 
 namespace AegisBorn.Models.Base.Actor.Stats
 {
@@ -19,11 +21,18 @@ namespace AegisBorn.Models.Base.Actor.Stats
 
             if(aegisBornCharacter is AegisBornPlayer)
             {
-                Calculators = new Calculator[Enum.GetNames(typeof(Stats)).Length];
-                
+                // Slick way of quickly creating an array of auto-initialized Calculators, one for each Stat.
+                Calculators = new Calculator[Enum.GetNames(typeof (Stats)).Length];
+                for (int i = 0; i < Calculators.Length; i++ )
+                {
+                    Calculators[i] = new Calculator();
+                }
+
                 Formulas.AddCalculatorsToNewCharacter(this);
             }
         }
+
+        private static readonly ILogger Log = LogManager.GetCurrentClassLogger();
 
         public Calculator[] Calculators { get; set; }
 
@@ -53,7 +62,6 @@ namespace AegisBorn.Models.Base.Actor.Stats
             {
                 return initialValue;
             }
-
             Calculator c = Calculators[(int)stat];
 
             if(c.Size == 0)
@@ -66,7 +74,7 @@ namespace AegisBorn.Models.Base.Actor.Stats
             c.Calc(calculatorValue);
 
             // Ensure certain stats do not drop below 1 no matter what debuffs are applied
-            // Find a better way to do this than to switch on a list of Stats.
+            // Find a better way to do this than to switch on a list of Stats.);
             if(calculatorValue.Value <= 0 && StatsUtil.NonNegativeStatList.Contains(stat))
             {
                 calculatorValue.Value = 1;
@@ -82,7 +90,7 @@ namespace AegisBorn.Models.Base.Actor.Stats
 
         public int GetValue(Stats stat, AegisBornCharacter aegisBornCharacter)
         {
-            return (int)CalcStat(stat, BaseStats.GetValue(stat), aegisBornCharacter);
+            return (int) CalcStat(stat, BaseStats.GetValue(stat), aegisBornCharacter);;
         }
 
         private BaseStats BaseStats { get; set; }
@@ -112,6 +120,7 @@ namespace AegisBorn.Models.Base.Actor.Stats
 
             int stat = (int) statFunction.Stat;
 
+            Log.Debug("Adding calculator to stat - " + statFunction.Stat);
             if(Calculators[stat] == null)
             {
                 Calculators[stat] = new Calculator();

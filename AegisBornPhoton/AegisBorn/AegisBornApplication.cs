@@ -27,7 +27,7 @@ namespace AegisBorn
         protected override void Setup()
         {
             LogManager.SetLoggerFactory(ExitGames.Logging.Log4Net.Log4NetLoggerFactory.Instance);
-            var configFileInfo = new FileInfo(Path.Combine(this.BinaryPath, "log4net.config"));
+            var configFileInfo = new FileInfo("log4net.config");
             XmlConfigurator.ConfigureAndWatch(configFileInfo);
 
             ErrorHandler.UnexpectedException += ErrorHandler_OnUnexpectedException;

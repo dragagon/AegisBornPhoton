@@ -171,6 +171,7 @@ namespace AegisBorn.OperationHandlers
                                               Z = 0,
                                           };
 
+                        Log.Debug("Created Character");
                         // Update to be loaded from a template, loaded from user selection, or randomly generated.
                         // newChar.Stats.NewCharacter(class);
                         // newChar.Stats.NewCharacter(new Dictionary<Stats, int> { {Stats.STR, 1},  {Stats.VIT, 1},}

@@ -4,11 +4,14 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Xml.Serialization;
+using ExitGames.Logging;
 
 namespace AegisBorn.Models.Base.Actor.Stats
 {
     public class BaseStats
     {
+        private static readonly ILogger Log = LogManager.GetCurrentClassLogger();
+
         private int[] _values = new int[StatsUtil.BaseStatList.Count];
 
         /// <summary>

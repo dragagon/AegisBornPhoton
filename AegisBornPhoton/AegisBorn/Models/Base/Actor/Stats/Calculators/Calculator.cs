@@ -29,6 +29,10 @@ namespace AegisBorn.Models.Base.Actor.Stats.Calculators
 
         public void Add(StatFunction statFunction)
         {
+            if(_functions == _emptyFunctions)
+            {
+                _functions = new MultiValueSortedDictionary<int, StatFunction>();
+            }
             _functions.Add(statFunction.Order, statFunction);
         }
 
