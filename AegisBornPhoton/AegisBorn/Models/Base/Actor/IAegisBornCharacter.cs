@@ -10,7 +10,7 @@ namespace AegisBorn.Models.Base.Actor
     {
         AegisBornCharacter Target { get; set; }
         List<AegisBornCharacter> AttackerList { get; set; }
-        CharacterStats Stats { get; set; }
+        CharacterStats Stats { get; }
         //CharacterStatus Status { get; set; }
         //List<AegisBornSkill> Skills { get; set; }
         //List<AegisBornEffect> Effects { get; set; }

@@ -11,6 +11,5 @@ namespace AegisBorn.Models.Base.Actor
     public abstract class AegisBornPlayable : AegisBornCharacter
     {
         private AegisBornCharacter _lockedTarget;
-
     }
 }

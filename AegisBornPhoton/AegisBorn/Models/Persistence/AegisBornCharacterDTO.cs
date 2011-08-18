@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using AegisBorn.Models.Base;
 
 namespace AegisBorn.Models.Persistence
 {

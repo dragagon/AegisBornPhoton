@@ -9,20 +9,7 @@ namespace AegisBorn.Models.Base
 {
     public interface IAegisBornObject
     {
-        int InstanceId { get; set; }
-        bool IsVisible { get; }
-        KnownObjectList KnownObjects { get; }
+        int Id { get; set; }
         string Name { get; set; }
-        int ObjectId { get; }
-        int DbId { get; }
-        ObjectTransform Transform { get; }
-
-        void Spawn();
-        void Spawn(int x, int y, int z);
-        void Decay();
-        void OnSpawn();
-        void RefreshId();
-        void SendInfo(AegisBornPlayer player);
-        void ToggleVisible();
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using AegisBorn.Events;
 using AegisBorn.Models.Base;
 using AegisBorn.Models.Base.Actor;
+using AegisBorn.Models.Persistence;
 using AegisBornCommon;
 using Photon.SocketServer;
 using Photon.SocketServer.Rpc;

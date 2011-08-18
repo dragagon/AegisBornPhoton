@@ -86,6 +86,8 @@
     <Compile Include="Models\Base\Actor\Stats\Calculators\Functions\StatFunctionSet.cs" />
     <Compile Include="Models\Base\Actor\Stats\CharacterStats.cs" />
     <Compile Include="Models\Base\Actor\Stats\Calculators\Functions\StatFunction.cs" />
+    <Compile Include="Models\Base\Actor\Stats\PlayableStats.cs" />
+    <Compile Include="Models\Base\Actor\Stats\PlayerStats.cs" />
     <Compile Include="Models\Base\Actor\Transform\ObjectTransform.cs" />
     <Compile Include="Models\Base\AegisBornObject.cs" />
     <Compile Include="Models\Base\Actor\AegisBornPlayable.cs" />
@@ -99,8 +101,8 @@
     <Compile Include="AegisBornPeer.cs" />
     <Compile Include="Events\GameExited.cs" />
     <Compile Include="Models\Base\Actor\AegisBornCharacter.cs" />
-    <Compile Include="Models\Base\AegisBornUserProfile.cs" />
-    <Compile Include="Models\Base\SfGuardUser.cs" />
+    <Compile Include="Models\Persistence\AegisBornUserProfile.cs" />
+    <Compile Include="Models\Persistence\SfGuardUser.cs" />
     <Compile Include="Models\Persistence\Map\AegisBornUserProfileMap.cs" />
     <Compile Include="Models\Persistence\Map\AegisBornCharacterMap.cs" />
     <Compile Include="Models\Persistence\Map\SfGuardUserMap.cs" />

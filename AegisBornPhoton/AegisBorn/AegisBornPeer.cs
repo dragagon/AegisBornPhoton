@@ -1,6 +1,7 @@
 ﻿using System.Security.Cryptography;
 using System.Text;
 using AegisBorn.Models.Base;
+using AegisBorn.Models.Persistence;
 using AegisBorn.OperationHandlers;
 using AegisBornCommon;
 using NHibernate.Criterion;

@@ -1,4 +1,5 @@
 ﻿using AegisBorn.Models.Base;
+using AegisBorn.Models.Persistence;
 using FluentNHibernate.Mapping;
 
 namespace AegisBorn.Models.Map

@@ -5,6 +5,7 @@ using System.IO;
 using System.Xml.Serialization;
 using AegisBorn.Models.Base.Actor.Stats;
 using AegisBorn.Models.Base.Actor.Stats.Calculators;
+using AegisBorn.Models.Persistence;
 
 namespace AegisBorn.Models.Base.Actor
 {
@@ -13,11 +14,6 @@ namespace AegisBorn.Models.Base.Actor
         public SfGuardUser UserId { get; set; }
         public string Class { get; set; }
         public string Sex { get; set; }
-
-        protected AegisBornCharacter()
-        {
-            Stats = new CharacterStats(this);
-        }
 
         public Hashtable GetHashtable()
         {
@@ -41,6 +37,6 @@ namespace AegisBorn.Models.Base.Actor
 
         public List<AegisBornCharacter> AttackerList { get; set; }
 
-        public CharacterStats Stats{ get; set; }
+        public abstract CharacterStats Stats{ get; }
     }
 }

@@ -21,9 +21,9 @@ namespace AegisBorn.Models.Base.Actor.Transform
             _activeObject = aegisBornObject;
         }
 
-        public void setXYZ(int x, int y, int z)
+        public void SetXYZ(int x, int y, int z)
         {
-            setPosition(x, y, z);
+            SetPosition(x, y, z);
 
             try
             {
@@ -34,22 +34,22 @@ namespace AegisBorn.Models.Base.Actor.Transform
             }
             catch (Exception)
             {
-                badCoords();
+                BadCoords();
             }
         }
 
-        protected virtual void badCoords()
+        protected virtual void BadCoords()
         {
 
         }
 
-        public void setXYZInvisible(int x, int y, int z)
+        public void SetXYZInvisible(int x, int y, int z)
         {
-            setPosition(x, y, z);
-            _activeObject.IsVisible = false;
+            SetPosition(x, y, z);
+            //_activeObject.IsVisible = false;
         }
 
-        public void setPosition(int x, int y, int z)
+        public void SetPosition(int x, int y, int z)
 	    {
             _position.X = x;
             _position.Y = y;

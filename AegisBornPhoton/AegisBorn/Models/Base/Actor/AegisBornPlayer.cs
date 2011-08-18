@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Xml.Serialization;
 using AegisBorn.Models.Base.Actor.Stats;
 using AegisBorn.Models.Persistence;
 using Photon.SocketServer.Rpc;
@@ -59,5 +54,19 @@ namespace AegisBorn.Models.Base.Actor
 
         }
 
-   }
+        public AegisBornPlayer()
+        {
+            _stats = new PlayerStats(this);
+        }
+
+        #region Overrides of AegisBornCharacter
+
+        private readonly PlayerStats _stats;
+        public override CharacterStats Stats
+        {
+            get { return _stats; }
+        }
+
+        #endregion
+    }
 }

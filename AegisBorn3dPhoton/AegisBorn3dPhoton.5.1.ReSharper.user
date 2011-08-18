@@ -9,11 +9,7 @@
   </SettingsComponent>
   <RecentFiles>
     <RecentFiles>
-      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/d:_Views/f:IGameView.cs" caret="0" fromTop="0" />
-      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/d:_Handlers/d:Operations/f:SelectCharacterHandler.cs" caret="0" fromTop="0" />
-      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/d:_Views/f:CharacterSelect.cs" caret="1749" fromTop="33" />
-      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/d:_Views/f:InGame.cs" caret="137" fromTop="6" />
-      <File id="8D3E5801-A9CD-295E-4C38-021573A6970C/d:Assets/d:_Scripts/d:_GameState/f:InGameController.cs" caret="1378" fromTop="41" />
+      <File id="70BD799D-0D6C-0A40-5F78-C52E2542CAC3/d:Assets/d:_Scripts/d:_Views/f:Login.cs" caret="779" fromTop="27" />
     </RecentFiles>
     <RecentEdits />
   </RecentFiles>
