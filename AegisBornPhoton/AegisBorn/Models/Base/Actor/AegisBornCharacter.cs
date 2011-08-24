@@ -38,5 +38,10 @@ namespace AegisBorn.Models.Base.Actor
         public List<AegisBornCharacter> AttackerList { get; set; }
 
         public abstract CharacterStats Stats{ get; }
+
+        public void IncreaseStat(Stats.Stats stat, int value)
+        {
+            Stats.IncreaseStat(stat, value);
+        }
     }
 }

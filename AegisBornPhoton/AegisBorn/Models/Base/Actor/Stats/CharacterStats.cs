@@ -8,35 +8,21 @@ using ExitGames.Logging;
 
 namespace AegisBorn.Models.Base.Actor.Stats
 {
-    public class CharacterStats
+    public abstract class CharacterStats
     {
-        private readonly AegisBornCharacter _character;
         private long _exp;
         private int _level;
 
-        public CharacterStats(AegisBornCharacter aegisBornCharacter)
+        protected CharacterStats()
         {
-            _character = aegisBornCharacter;
             BaseStats = new BaseStats();
-
-            if(aegisBornCharacter is AegisBornPlayer)
-            {
-                // Slick way of quickly creating an array of auto-initialized Calculators, one for each Stat.
-                Calculators = new Calculator[Enum.GetNames(typeof (Stats)).Length];
-                for (int i = 0; i < Calculators.Length; i++ )
-                {
-                    Calculators[i] = new Calculator();
-                }
-
-                Formulas.AddCalculatorsToNewCharacter(this);
-            }
         }
 
         private static readonly ILogger Log = LogManager.GetCurrentClassLogger();
 
         public Calculator[] Calculators { get; set; }
 
-        public AegisBornCharacter Character { get { return _character; } }
+        public abstract AegisBornCharacter Character { get; }
 
         public long Exp
         {
@@ -58,7 +44,7 @@ namespace AegisBorn.Models.Base.Actor.Stats
 
         public double CalcStat(Stats stat, double initialValue, AegisBornCharacter target)
         {
-            if(_character == null)
+            if (Character == null)
             {
                 return initialValue;
             }
@@ -69,7 +55,7 @@ namespace AegisBorn.Models.Base.Actor.Stats
                 return initialValue;
             }
 
-            var calculatorValue = new CalculatorValue {Player = _character, Target = target, Value = initialValue};
+            var calculatorValue = new CalculatorValue { Player = Character, Target = target, Value = initialValue };
 
             c.Calc(calculatorValue);
 
@@ -129,5 +115,9 @@ namespace AegisBorn.Models.Base.Actor.Stats
             Calculators[stat].Add(statFunction);
         }
 
+        public void IncreaseStat(Stats stat, int value)
+        {
+            BaseStats.IncreaseBaseStat(stat, value);
+        }
     }
 }
