@@ -1,17 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using log4net.Core;
+using System.IO;
+using ExitGames.Logging.Log4Net;
+using log4net;
+using log4net.Config;
 
 namespace CJRGaming.MMO.Server
 {
     using ExitGames.Logging;
-    using ExitGames.Logging.Log4Net;
-
-    using log4net;
-    using log4net.Config;
-
     using Photon.SocketServer;
     using Photon.SocketServer.ServerToServer;
 
@@ -21,7 +16,7 @@ namespace CJRGaming.MMO.Server
     {
         #region Constants and Fields
 
-        private static readonly ILogger log = LogManager.GetCurrentClassLogger();
+        private static readonly ILogger Log = LogManager.GetCurrentClassLogger();
 
         #endregion
 
@@ -34,7 +29,11 @@ namespace CJRGaming.MMO.Server
 
         protected override void Setup()
         {
-            throw new NotImplementedException();
+            LogManager.SetLoggerFactory(Log4NetLoggerFactory.Instance);
+            GlobalContext.Properties["LogFileName"] = "MS" + this.ApplicationName;
+            XmlConfigurator.ConfigureAndWatch(new FileInfo(Path.Combine(this.BinaryPath, "log4net.config")));
+
+            Initialize();
         }
 
         protected override void TearDown()
@@ -48,21 +47,29 @@ namespace CJRGaming.MMO.Server
         protected override void OnNodeConnected(byte nodeId, int port)
         {
             // at this point the node is connected and can be routed to
-            if (log.IsDebugEnabled)
+            if (Log.IsDebugEnabled)
             {
-                log.DebugFormat("Node {0} connected on port {1}", nodeId, port);
+                Log.DebugFormat("Node {0} connected on port {1}", nodeId, port);
             }
         }
 
         protected override void OnNodeDisconnected(byte nodeId, int port)
         {
             // at this point the node is disconnected and can NOT be routed to
-            if (log.IsDebugEnabled)
+            if (Log.IsDebugEnabled)
             {
-                log.DebugFormat("Node {0} disconnected from port {1}", nodeId, port);
+                Log.DebugFormat("Node {0} disconnected from port {1}", nodeId, port);
             }
         }
 
         #endregion
+
+        /// <summary>
+        /// Initialize our server
+        /// </summary>
+        public void Initialize()
+        {
+            
+        }
     }
 }
