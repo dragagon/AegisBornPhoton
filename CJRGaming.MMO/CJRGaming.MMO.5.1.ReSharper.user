@@ -1,0 +1,39 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/f:MasterServer.cs" caret="842" fromTop="22" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/f:MasterServer.cs" caret="152" fromTop="7" />
+      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/f:MasterServer.cs" caret="267" fromTop="13" />
+      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/f:MasterServer.cs" caret="606" fromTop="26" />
+      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/f:MasterServer.cs" caret="438" fromTop="19" />
+      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/f:MasterServer.cs" caret="1362" fromTop="34" />
+      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/f:MasterServer.cs" caret="1695" fromTop="43" />
+      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/f:MasterServer.cs" caret="973" fromTop="32" />
+    </RecentEdits>
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="NodeResolverBase`0" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+</Configuration>

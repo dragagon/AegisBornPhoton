@@ -1,5 +1,0 @@
-R# version: 5.1.3000.12
-assembly AegisBornCommon, Version=1.0.0.0, Culture=neutral
-  file D:\development\photon\AegisBorn3dPhoton\Assets\Plugins\AegisBornCommon.dll mtime 8/9/2011 11:29:09 PM
-referenced assembly mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
-  file C:\Windows\Microsoft.NET\Framework\v2.0.50727\mscorlib.dll mtime 6/10/2009 9:23:06 PM

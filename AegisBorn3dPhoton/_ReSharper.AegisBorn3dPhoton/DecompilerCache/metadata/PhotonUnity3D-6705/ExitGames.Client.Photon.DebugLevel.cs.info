@@ -1,7 +1,0 @@
-R# version: 5.1.3000.12
-assembly PhotonUnity3D, Version=6.1.0.0, Culture=neutral
-  file C:\development\photon\AegisBorn3dPhoton\Assets\Plugins\PhotonUnity3D.dll mtime 6/22/2011 7:58:05 PM
-referenced assembly mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
-  file C:\Windows\Microsoft.NET\Framework\v2.0.50727\mscorlib.dll mtime 2/7/2011 11:35:26 PM
-referenced assembly System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
-  file C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.dll mtime 6/10/2009 9:23:18 PM
