@@ -8,8 +8,9 @@
   </SettingsComponent>
   <RecentFiles>
     <RecentFiles>
-      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:MasterServer/f:MasterServer.cs" caret="151" fromTop="6" />
-      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:MasterServer/f:IncommingSubServerPeer.cs" caret="761" fromTop="0" />
+      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:MasterServer/f:IncomingSubServerPeer.cs" caret="2102" fromTop="33" />
+      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:MasterServer/f:MasterServer.cs" caret="2639" fromTop="24" />
+      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:MasterServer/f:SubServerCollection.cs" caret="2946" fromTop="25" />
     </RecentFiles>
     <RecentEdits>
       <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:MasterServer/f:MasterServer.cs" caret="280" fromTop="13" />
@@ -19,12 +20,20 @@
       <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:MasterServer/f:MasterServer.cs" caret="986" fromTop="32" />
       <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:MasterServer/f:MasterServer.cs" caret="716" fromTop="20" />
       <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:MasterServer/f:MasterServer.cs" caret="151" fromTop="6" />
-      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:MasterServer/f:IncommingSubServerPeer.cs" caret="908" fromTop="14" />
-      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:MasterServer/f:IncommingSubServerPeer.cs" caret="301" fromTop="11" />
-      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:MasterServer/f:IncommingSubServerPeer.cs" caret="1241" fromTop="31" />
-      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:MasterServer/f:IncommingSubServerPeer.cs" caret="1392" fromTop="27" />
-      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:MasterServer/f:IncommingSubServerPeer.cs" caret="542" fromTop="21" />
-      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:MasterServer/f:IncommingSubServerPeer.cs" caret="761" fromTop="30" />
+      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:MasterServer/f:SubServerCollection.cs" caret="1491" fromTop="25" />
+      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:MasterServer/f:SubServerCollection.cs" caret="1491" fromTop="21" />
+      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:MasterServer/f:SubServerCollection.cs" caret="1491" fromTop="30" />
+      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:MasterServer/f:SubServerCollection.cs" caret="2063" fromTop="39" />
+      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:MasterServer/f:SubServerCollection.cs" caret="1491" fromTop="47" />
+      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:MasterServer/f:SubServerCollection.cs" caret="4201" fromTop="45" />
+      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:MasterServer/f:SubServerCollection.cs" caret="3722" fromTop="38" />
+      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:MasterServer/f:SubServerCollection.cs" caret="1325" fromTop="24" />
+      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:MasterServer/f:SubServerCollection.cs" caret="1249" fromTop="20" />
+      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:MasterServer/f:SubServerCollection.cs" caret="1104" fromTop="15" />
+      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:MasterServer/f:SubServerCollection.cs" caret="1489" fromTop="28" />
+      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:MasterServer/f:SubServerCollection.cs" caret="2063" fromTop="27" />
+      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:MasterServer/f:SubServerCollection.cs" caret="2512" fromTop="37" />
+      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:MasterServer/f:SubServerCollection.cs" caret="2946" fromTop="25" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>
@@ -41,6 +50,24 @@
   <CompletionStatisticsManager>
     <ItemStatistics item="Default">
       <Item value="NodeResolverBase`0" priority="0" />
+      <Item value="if" priority="3" />
+      <Item value="id" priority="1" />
+      <Item value="ChatServer" priority="3" />
+      <Item value="null" priority="2" />
+      <Item value="LoginServer" priority="1" />
+      <Item value="public" priority="0" />
+      <Item value="void" priority="0" />
+      <Item value="ResetServers`0" priority="0" />
+      <Item value="SubServerCollection`0" priority="0" />
+      <Item value="IncomingSubServerPeer`0" priority="0" />
+      <Item value="peer" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CJRGaming.MMO.Server.MasterServer.IncomingSubServerPeer">
+      <Item value="ServerId" priority="1" />
+      <Item value="Type" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@CJRGaming.MMO.Server.MasterServer.SubServerType">
+      <Item value="Chat" priority="0" />
     </ItemStatistics>
   </CompletionStatisticsManager>
 </Configuration>

@@ -1,0 +1,15 @@
+C:\development\photon\CJRGaming.MMO\CJRGaming.MMO.Server\bin\Debug\CJRGaming.MMO.Server.dll
+C:\development\photon\CJRGaming.MMO\CJRGaming.MMO.Server\bin\Debug\CJRGaming.MMO.Server.pdb
+C:\development\photon\CJRGaming.MMO\CJRGaming.MMO.Server\bin\Debug\ExitGames.Logging.Log4Net.dll
+C:\development\photon\CJRGaming.MMO\CJRGaming.MMO.Server\bin\Debug\ExitGamesLibs.dll
+C:\development\photon\CJRGaming.MMO\CJRGaming.MMO.Server\bin\Debug\log4net.dll
+C:\development\photon\CJRGaming.MMO\CJRGaming.MMO.Server\bin\Debug\Photon.SocketServer.dll
+C:\development\photon\CJRGaming.MMO\CJRGaming.MMO.Server\bin\Debug\ExitGames.Logging.Log4Net.pdb
+C:\development\photon\CJRGaming.MMO\CJRGaming.MMO.Server\bin\Debug\ExitGames.Logging.Log4Net.xml
+C:\development\photon\CJRGaming.MMO\CJRGaming.MMO.Server\bin\Debug\ExitGamesLibs.pdb
+C:\development\photon\CJRGaming.MMO\CJRGaming.MMO.Server\bin\Debug\ExitGamesLibs.xml
+C:\development\photon\CJRGaming.MMO\CJRGaming.MMO.Server\bin\Debug\Photon.SocketServer.pdb
+C:\development\photon\CJRGaming.MMO\CJRGaming.MMO.Server\bin\Debug\Photon.SocketServer.xml
+C:\development\photon\CJRGaming.MMO\CJRGaming.MMO.Server\obj\Debug\ResolveAssemblyReference.cache
+C:\development\photon\CJRGaming.MMO\CJRGaming.MMO.Server\obj\Debug\CJRGaming.MMO.Server.dll
+C:\development\photon\CJRGaming.MMO\CJRGaming.MMO.Server\obj\Debug\CJRGaming.MMO.Server.pdb
