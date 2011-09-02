@@ -4,7 +4,7 @@ using ExitGames.Logging.Log4Net;
 using log4net;
 using log4net.Config;
 
-namespace CJRGaming.MMO.Server
+namespace CJRGaming.MMO.Server.MasterServer
 {
     using ExitGames.Logging;
     using Photon.SocketServer;
