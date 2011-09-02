@@ -14,6 +14,8 @@ namespace CJRGaming.MMO.Server.MasterServer
 
     public class MasterServer : NodeResolverBase
     {
+        public SubServerCollection SubServers { get; protected set; }
+
         #region Constants and Fields
 
         private static readonly ILogger Log = LogManager.GetCurrentClassLogger();
@@ -24,14 +26,24 @@ namespace CJRGaming.MMO.Server.MasterServer
 
         protected override PeerBase CreatePeer(InitRequest initRequest)
         {
-            throw new NotImplementedException();
+            if (IsGameServerPeer(initRequest))
+            {
+                if (Log.IsDebugEnabled)
+                {
+                    Log.DebugFormat("Received init request from sub server");
+                }
+
+                return new IncomingSubServerPeer(initRequest, this);
+            }
+            
+            throw new ArgumentException("This is not a sub server, probably a client. Fix later.");
         }
 
         protected override void Setup()
         {
             LogManager.SetLoggerFactory(Log4NetLoggerFactory.Instance);
-            GlobalContext.Properties["LogFileName"] = "MS" + this.ApplicationName;
-            XmlConfigurator.ConfigureAndWatch(new FileInfo(Path.Combine(this.BinaryPath, "log4net.config")));
+            GlobalContext.Properties["LogFileName"] = "MS" + ApplicationName;
+            XmlConfigurator.ConfigureAndWatch(new FileInfo(Path.Combine(BinaryPath, "log4net.config")));
 
             Initialize();
         }
@@ -69,7 +81,13 @@ namespace CJRGaming.MMO.Server.MasterServer
         /// </summary>
         public void Initialize()
         {
-            
+            SubServers = new SubServerCollection();
         }
+
+        protected virtual bool IsGameServerPeer(InitRequest initRequest)
+        {
+            return initRequest.LocalPort == MasterServerSettings.Default.IncomingSubServerPort;
+        }
+
     }
 }
