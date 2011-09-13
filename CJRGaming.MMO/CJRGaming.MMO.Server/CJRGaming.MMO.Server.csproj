@@ -69,14 +69,24 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Server2Server\Operations\OperationCodes.cs" />
     <Compile Include="Server2Server\Operations\RegisterSubServer.cs" />
+    <Compile Include="SubServer\OutgoingMasterServerPeer.cs" />
+    <Compile Include="SubServer\SubServer.cs" />
+    <Compile Include="SubServer\SubServerSettings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>SubServerSettings.settings</DependentUpon>
+    </Compile>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="SubServer\" />
-  </ItemGroup>
-  <ItemGroup>
+    <None Include="app.config" />
     <None Include="MasterServer\MasterServerSettings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>MasterServerSettings1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="SubServer\SubServerSettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>SubServerSettings.Designer.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
