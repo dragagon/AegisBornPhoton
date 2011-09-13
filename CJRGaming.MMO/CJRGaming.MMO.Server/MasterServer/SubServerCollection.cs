@@ -81,6 +81,7 @@ namespace CJRGaming.MMO.Server.MasterServer
 
         public void ResetServers()
         {
+            // if the server is something other than a full chat server - find a full chat server if one exists.
             if(ChatServer != null && ChatServer.Type != SubServerType.Chat)
             {
                 IncomingSubServerPeer peer =
