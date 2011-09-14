@@ -5,6 +5,7 @@ using System.Linq;
 using System.Net;
 using System.Text;
 using System.Threading;
+using CJRGaming.MMO.Server.MasterServer;
 using ExitGames.Logging;
 using ExitGames.Logging.Log4Net;
 using log4net;
@@ -31,19 +32,9 @@ namespace CJRGaming.MMO.Server.SubServer
 
         private Timer _retry;
 
+        private SubServerType _serverType;
+
         #endregion
-
-        public SubServer()
-        {
-            IPAddress address = IPAddress.Parse(SubServerSettings.Default.MasterIPAddress);
-            int port = SubServerSettings.Default.OutgoingMasterServerPeerPort;
-            MasterEndPoint = new IPEndPoint(address, port);
-
-            GamingTcpPort = SubServerSettings.Default.GamingTcpPort;
-            GamingUdpPort = SubServerSettings.Default.GamingUdpPort;
-            ConnectRetryIntervalSeconds = SubServerSettings.Default.ConnectReytryInterval;
-            PublicIpAddress = IPAddress.Parse(SubServerSettings.Default.PublicIPAddress);
-        }
 
         #region Properties
 
@@ -79,11 +70,25 @@ namespace CJRGaming.MMO.Server.SubServer
             }
         }
 
+        public SubServerType ServerType { get { return _serverType; } protected set { _serverType = value; } }
+
         public IPAddress PublicIpAddress { get; protected set; }
 
         protected int ConnectRetryIntervalSeconds { get; set; }
 
         #endregion
+
+        public SubServer()
+        {
+            IPAddress address = IPAddress.Parse(SubServerSettings.Default.MasterIPAddress);
+            int port = SubServerSettings.Default.OutgoingMasterServerPeerPort;
+            MasterEndPoint = new IPEndPoint(address, port);
+
+            GamingTcpPort = SubServerSettings.Default.GamingTcpPort;
+            GamingUdpPort = SubServerSettings.Default.GamingUdpPort;
+            ConnectRetryIntervalSeconds = SubServerSettings.Default.ConnectReytryInterval;
+            PublicIpAddress = IPAddress.Parse(SubServerSettings.Default.PublicIPAddress);
+        }
 
         protected virtual void InitLogging()
         {

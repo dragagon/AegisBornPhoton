@@ -17,7 +17,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>..\..\..\..\Photon\deploy\AegisBorn\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -80,6 +80,9 @@
   <ItemGroup />
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="log4net.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="MasterServer\MasterServerSettings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>MasterServerSettings1.Designer.cs</LastGenOutput>

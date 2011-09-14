@@ -40,7 +40,29 @@ namespace CJRGaming.MMO.Server.MasterServer
 
         protected override void OnOperationRequest(OperationRequest operationRequest, SendParameters sendParameters)
         {
-            throw new NotImplementedException();
+            if (Log.IsDebugEnabled)
+            {
+                Log.DebugFormat("OnOperationRequest: pid={0}, op={1}", ConnectionId, operationRequest.OperationCode);
+            }
+
+            OperationResponse response;
+
+            switch ((OperationCode)operationRequest.OperationCode)
+            {
+                default:
+                    response = new OperationResponse(operationRequest.OperationCode) { ReturnCode = -1, DebugMessage = "Unknown operation code" };
+                    break;
+
+                case OperationCode.RegisterGameServer:
+                    {
+                        response = ServerId.HasValue
+                                       ? new OperationResponse(operationRequest.OperationCode) { ReturnCode = -1, DebugMessage = "already registered" }
+                                       : HandleRegisterGameServerRequest(operationRequest);
+                        break;
+                    }
+            }
+
+            SendOperationResponse(response, sendParameters);
         }
 
         protected override void OnDisconnect()
@@ -77,7 +99,7 @@ namespace CJRGaming.MMO.Server.MasterServer
 
         protected virtual OperationResponse HandleRegisterGameServerRequest(OperationRequest request)
         {
-            var registerRequest = new RegisterSubServer(this.Protocol, request);
+            var registerRequest = new RegisterSubServer(Protocol, request);
             if (registerRequest.IsValid == false)
             {
                 string msg = registerRequest.GetErrorMessage();
@@ -112,7 +134,7 @@ namespace CJRGaming.MMO.Server.MasterServer
             ServerId = registerRequest.ServerId;
             Type = (SubServerType) registerRequest.ServerType;
 
-            this._server.SubServers.OnConnect(this);
+            _server.SubServers.OnConnect(this);
 
             return new OperationResponse(request.OperationCode);
         }

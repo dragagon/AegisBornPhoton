@@ -13,3 +13,10 @@ C:\development\photon\CJRGaming.MMO\CJRGaming.MMO.Server\bin\Debug\Photon.Socket
 C:\development\photon\CJRGaming.MMO\CJRGaming.MMO.Server\obj\Debug\ResolveAssemblyReference.cache
 C:\development\photon\CJRGaming.MMO\CJRGaming.MMO.Server\obj\Debug\CJRGaming.MMO.Server.dll
 C:\development\photon\CJRGaming.MMO\CJRGaming.MMO.Server\obj\Debug\CJRGaming.MMO.Server.pdb
+D:\Photon\deploy\AegisBorn\CJRGaming.MMO.Server.dll.config
+D:\Photon\deploy\AegisBorn\CJRGaming.MMO.Server.dll
+D:\Photon\deploy\AegisBorn\CJRGaming.MMO.Server.pdb
+D:\development\photon\CJRGaming.MMO\CJRGaming.MMO.Server\obj\Debug\ResolveAssemblyReference.cache
+D:\development\photon\CJRGaming.MMO\CJRGaming.MMO.Server\obj\Debug\CJRGaming.MMO.Server.dll
+D:\development\photon\CJRGaming.MMO\CJRGaming.MMO.Server\obj\Debug\CJRGaming.MMO.Server.pdb
+D:\Photon\deploy\AegisBorn\log4net.config

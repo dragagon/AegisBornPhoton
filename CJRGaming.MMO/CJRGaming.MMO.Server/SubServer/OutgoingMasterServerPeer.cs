@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using CJRGaming.MMO.Server.Server2Server.Operations;
 using ExitGames.Logging;
 using Photon.SocketServer;
 using Photon.SocketServer.ServerToServer;
@@ -35,8 +36,17 @@ namespace CJRGaming.MMO.Server.SubServer
         protected virtual void Register()
         {
             // We send a message to the Master Server and tell it what our information is, including type
+            SendOperationRequest((byte) OperationCode.RegisterGameServer,
+                                 new RegisterSubServer()
+                                     {
+                                         GameServerAddress = _application.PublicIpAddress.ToString(),
+                                         TcpPort = _application.GamingTcpPort,
+                                         UdpPort = _application.GamingUdpPort,
+                                         ServerId = SubServer.ServerId,
+                                         ServerType = (int) _application.ServerType
+                                     },
+                                 new SendParameters());
         }
-
 
         protected void StartUpdateLoop()
         {
@@ -87,7 +97,34 @@ namespace CJRGaming.MMO.Server.SubServer
         protected override void OnOperationResponse(OperationResponse operationResponse, SendParameters sendParameters)
         {
             // When we successfully register, start our update loop to keep the master server aware that we are still up and running.
-            throw new NotImplementedException();
+            switch ((OperationCode)operationResponse.OperationCode)
+            {
+                default:
+                    {
+                        if (Log.IsDebugEnabled)
+                        {
+                            Log.DebugFormat("Received unknown operation code {0}", operationResponse.OperationCode);
+                        }
+
+                        break;
+                    }
+
+                case OperationCode.RegisterGameServer:
+                    {
+                        if (operationResponse.ReturnCode != 0)
+                        {
+                            Log.WarnFormat("Failed to register at master: err={0}, msg={1}", operationResponse.ReturnCode, operationResponse.DebugMessage);
+                            this.Disconnect();
+                            return;
+                        }
+
+                        Log.Info("Successfully registered at master server");
+
+                        IsRegistered = true;
+                        StartUpdateLoop();
+                        break;
+                    }
+            }
         }
 
         #endregion
