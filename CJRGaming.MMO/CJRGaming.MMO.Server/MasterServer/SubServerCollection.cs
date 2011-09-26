@@ -91,6 +91,16 @@ namespace CJRGaming.MMO.Server.MasterServer
                     ChatServer = peer;
                 }
             }
+            // if the server is something other than a full chat server - find a full chat server if one exists.
+            if (LoginServer != null && LoginServer.Type != SubServerType.Login)
+            {
+                IncomingSubServerPeer peer =
+                    Values.Where(subServerPeer => subServerPeer.Type == SubServerType.Login).FirstOrDefault();
+                if (peer != null)
+                {
+                    LoginServer = peer;
+                }
+            }
             // We just removed a server, we need to see if it is a chat or login server, and if it was, we need to find a new one.
             if (ChatServer == null || ChatServer.ServerId == null)
             {
