@@ -20,3 +20,7 @@ D:\development\photon\CJRGaming.MMO\CJRGaming.MMO.Server\obj\Debug\ResolveAssemb
 D:\development\photon\CJRGaming.MMO\CJRGaming.MMO.Server\obj\Debug\CJRGaming.MMO.Server.dll
 D:\development\photon\CJRGaming.MMO\CJRGaming.MMO.Server\obj\Debug\CJRGaming.MMO.Server.pdb
 D:\Photon\deploy\AegisBorn\log4net.config
+C:\Photon\deploy\AegisBorn\bin\log4net.config
+C:\Photon\deploy\AegisBorn\bin\CJRGaming.MMO.Server.dll.config
+C:\Photon\deploy\AegisBorn\bin\CJRGaming.MMO.Server.dll
+C:\Photon\deploy\AegisBorn\bin\CJRGaming.MMO.Server.pdb

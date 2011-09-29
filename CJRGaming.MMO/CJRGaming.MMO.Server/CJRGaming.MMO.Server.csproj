@@ -17,7 +17,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\..\..\Photon\deploy\AegisBorn\</OutputPath>
+    <OutputPath>..\..\..\..\Photon\deploy\AegisBorn\bin\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -65,10 +65,15 @@
     </Compile>
     <Compile Include="MasterServer\SubServerCollection.cs" />
     <Compile Include="MasterServer\SubServerType.cs" />
+    <Compile Include="MasterServer\Unity3dPeer.cs" />
     <Compile Include="Operations\ErrorCode.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Server2Server\Operations\OperationCodes.cs" />
     <Compile Include="Server2Server\Operations\RegisterSubServer.cs" />
+    <Compile Include="SubServer\Types\ChatLoginRegionServer.cs" />
+    <Compile Include="SubServer\Types\ChatLoginServer.cs" />
+    <Compile Include="SubServer\Types\ChatServer.cs" />
+    <Compile Include="SubServer\Types\LoginServer.cs" />
     <Compile Include="SubServer\OutgoingMasterServerPeer.cs" />
     <Compile Include="SubServer\SubServer.cs" />
     <Compile Include="SubServer\SubServerSettings.Designer.cs">
@@ -76,8 +81,11 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>SubServerSettings.settings</DependentUpon>
     </Compile>
+    <Compile Include="SubServer\Types\RegionServer.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
     <None Include="log4net.config">
@@ -91,6 +99,12 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>SubServerSettings.Designer.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CJRGaming.MMO.Common\CJRGaming.MMO.Common.csproj">
+      <Project>{1A60EA07-3726-4EB3-A00C-D3C3BE36A6BC}</Project>
+      <Name>CJRGaming.MMO.Common</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -16,7 +16,7 @@ using LogManager = ExitGames.Logging.LogManager;
 
 namespace CJRGaming.MMO.Server.SubServer
 {
-    public class SubServer : ApplicationBase
+    public abstract class SubServer : ApplicationBase
     {
         #region Constants and Fields
 
@@ -75,6 +75,8 @@ namespace CJRGaming.MMO.Server.SubServer
         public IPAddress PublicIpAddress { get; protected set; }
 
         protected int ConnectRetryIntervalSeconds { get; set; }
+
+
 
         #endregion
 
@@ -146,7 +148,7 @@ namespace CJRGaming.MMO.Server.SubServer
 
         protected override void TearDown()
         {
-            throw new NotImplementedException();
+            
         }
 
         protected override void OnServerConnectionFailed(int errorCode, string errorMessage, object state)

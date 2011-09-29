@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using ExitGames.Logging;
 
 namespace CJRGaming.MMO.Server.MasterServer
 {
@@ -12,6 +13,7 @@ namespace CJRGaming.MMO.Server.MasterServer
 
         public IncomingSubServerPeer ChatServer { get; protected set; }
 
+        private static readonly ILogger Log = LogManager.GetCurrentClassLogger();
         #endregion
 
         #region Public Methods
@@ -117,7 +119,10 @@ namespace CJRGaming.MMO.Server.MasterServer
                     // If no full login server exists find one that supports the chat server.
                               Values.Where(subServerPeer => (subServerPeer.Type & SubServerType.Login) == SubServerType.Login).FirstOrDefault();
             }
-            
+            if(LoginServer != null)
+                Log.Debug("LoginServer: " + LoginServer.ConnectionId);
+            if(ChatServer != null)
+                Log.Debug("ChatServer: " + ChatServer.ConnectionId);
         }
 
         #endregion

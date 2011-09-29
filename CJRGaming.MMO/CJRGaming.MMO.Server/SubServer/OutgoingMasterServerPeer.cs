@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using CJRGaming.MMO.Common;
 using CJRGaming.MMO.Server.Server2Server.Operations;
 using ExitGames.Logging;
 using Photon.SocketServer;
 using Photon.SocketServer.ServerToServer;
 using PhotonHostRuntimeInterfaces;
+using OperationCode = CJRGaming.MMO.Server.Server2Server.Operations.OperationCode;
 
 namespace CJRGaming.MMO.Server.SubServer
 {
@@ -73,6 +75,8 @@ namespace CJRGaming.MMO.Server.SubServer
 
         protected override void OnOperationRequest(OperationRequest operationRequest, SendParameters sendParameters)
         {
+            Log.DebugFormat("Received operation request from master server: "+(Guid)operationRequest.Parameters[(byte)ParameterCode.UserId]);
+
             throw new NotImplementedException();
         }
 

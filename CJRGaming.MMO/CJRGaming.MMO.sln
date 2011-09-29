@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CJRGaming.MMO.Server", "CJRGaming.MMO.Server\CJRGaming.MMO.Server.csproj", "{1628E9EF-28A9-49FB-A17A-BF7163926189}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CJRGaming.MMO.Common", "CJRGaming.MMO.Common\CJRGaming.MMO.Common.csproj", "{1A60EA07-3726-4EB3-A00C-D3C3BE36A6BC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{1628E9EF-28A9-49FB-A17A-BF7163926189}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1628E9EF-28A9-49FB-A17A-BF7163926189}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1628E9EF-28A9-49FB-A17A-BF7163926189}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A60EA07-3726-4EB3-A00C-D3C3BE36A6BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A60EA07-3726-4EB3-A00C-D3C3BE36A6BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A60EA07-3726-4EB3-A00C-D3C3BE36A6BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A60EA07-3726-4EB3-A00C-D3C3BE36A6BC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

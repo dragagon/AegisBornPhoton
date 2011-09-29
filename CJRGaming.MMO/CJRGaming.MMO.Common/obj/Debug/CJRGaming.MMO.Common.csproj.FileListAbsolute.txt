@@ -1,0 +1,5 @@
+C:\Photon\deploy\AegisBorn\bin\CJRGaming.MMO.Common.dll
+C:\Photon\deploy\AegisBorn\bin\CJRGaming.MMO.Common.pdb
+C:\development\photon\CJRGaming.MMO\CJRGaming.MMO.Common\obj\Debug\ResolveAssemblyReference.cache
+C:\development\photon\CJRGaming.MMO\CJRGaming.MMO.Common\obj\Debug\CJRGaming.MMO.Common.dll
+C:\development\photon\CJRGaming.MMO\CJRGaming.MMO.Common\obj\Debug\CJRGaming.MMO.Common.pdb

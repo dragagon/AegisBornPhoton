@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using ExitGames.Logging.Log4Net;
 using log4net;
@@ -15,6 +16,7 @@ namespace CJRGaming.MMO.Server.MasterServer
     public class MasterServer : NodeResolverBase
     {
         public SubServerCollection SubServers { get; protected set; }
+        public Dictionary<Guid, Unity3dPeer> ConnectedClients { get; private set; }
 
         #region Constants and Fields
 
@@ -35,8 +37,8 @@ namespace CJRGaming.MMO.Server.MasterServer
 
                 return new IncomingSubServerPeer(initRequest, this);
             }
-            
-            throw new ArgumentException("This is not a sub server, probably a client. Fix later.");
+            Log.DebugFormat("Received init request from client");
+            return new Unity3dPeer(initRequest, this);
         }
 
         protected override void Setup()
@@ -82,6 +84,7 @@ namespace CJRGaming.MMO.Server.MasterServer
         public void Initialize()
         {
             SubServers = new SubServerCollection();
+            ConnectedClients = new Dictionary<Guid, Unity3dPeer>();
         }
 
         protected virtual bool IsGameServerPeer(InitRequest initRequest)

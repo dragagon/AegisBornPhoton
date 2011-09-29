@@ -1,3 +1,4 @@
 <Modules>
   <Module PersistentId="1628E9EF-28A9-49FB-A17A-BF7163926189" ModuleId="CJRGaming.MMO.Server" />
+  <Module PersistentId="1A60EA07-3726-4EB3-A00C-D3C3BE36A6BC" ModuleId="CJRGaming.MMO.Common" />
 </Modules>
