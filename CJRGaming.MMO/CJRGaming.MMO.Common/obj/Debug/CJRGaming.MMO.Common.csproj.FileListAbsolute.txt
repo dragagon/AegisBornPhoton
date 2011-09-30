@@ -3,3 +3,8 @@ C:\Photon\deploy\AegisBorn\bin\CJRGaming.MMO.Common.pdb
 C:\development\photon\CJRGaming.MMO\CJRGaming.MMO.Common\obj\Debug\ResolveAssemblyReference.cache
 C:\development\photon\CJRGaming.MMO\CJRGaming.MMO.Common\obj\Debug\CJRGaming.MMO.Common.dll
 C:\development\photon\CJRGaming.MMO\CJRGaming.MMO.Common\obj\Debug\CJRGaming.MMO.Common.pdb
+D:\Photon\deploy\AegisBorn\bin\CJRGaming.MMO.Common.dll
+D:\Photon\deploy\AegisBorn\bin\CJRGaming.MMO.Common.pdb
+D:\development\photon\CJRGaming.MMO\CJRGaming.MMO.Common\obj\Debug\ResolveAssemblyReference.cache
+D:\development\photon\CJRGaming.MMO\CJRGaming.MMO.Common\obj\Debug\CJRGaming.MMO.Common.dll
+D:\development\photon\CJRGaming.MMO\CJRGaming.MMO.Common\obj\Debug\CJRGaming.MMO.Common.pdb

@@ -24,3 +24,7 @@ C:\Photon\deploy\AegisBorn\bin\log4net.config
 C:\Photon\deploy\AegisBorn\bin\CJRGaming.MMO.Server.dll.config
 C:\Photon\deploy\AegisBorn\bin\CJRGaming.MMO.Server.dll
 C:\Photon\deploy\AegisBorn\bin\CJRGaming.MMO.Server.pdb
+D:\Photon\deploy\AegisBorn\bin\log4net.config
+D:\Photon\deploy\AegisBorn\bin\CJRGaming.MMO.Server.dll.config
+D:\Photon\deploy\AegisBorn\bin\CJRGaming.MMO.Server.dll
+D:\Photon\deploy\AegisBorn\bin\CJRGaming.MMO.Server.pdb
