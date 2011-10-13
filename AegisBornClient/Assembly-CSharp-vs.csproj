@@ -18,7 +18,7 @@
 	<DebugType>full</DebugType>
 	<Optimize>false</Optimize>
 	<OutputPath>Temp\bin\Debug\</OutputPath>
-	<DefineConstants>DEBUG;TRACE;UNITY_3_4_0;UNITY_3_4;UNITY_EDITOR;ENABLE_PROFILER;UNITY_STANDALONE_WIN;ENABLE_GENERICS;ENABLE_DUCK_TYPING;ENABLE_TERRAIN;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CLOTH;ENABLE_WWW</DefineConstants>
+	<DefineConstants>DEBUG;TRACE;UNITY_3_4_1;UNITY_3_4;UNITY_EDITOR;ENABLE_PROFILER;UNITY_STANDALONE_WIN;ENABLE_GENERICS;ENABLE_DUCK_TYPING;ENABLE_TERRAIN;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CLOTH;ENABLE_WWW</DefineConstants>
 	<ErrorReport>prompt</ErrorReport>
 	<WarningLevel>4</WarningLevel>
 	<NoWarn>0169</NoWarn>
@@ -44,18 +44,22 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\_Scripts\Controllers\IViewController.cs" />
-     <Compile Include="Assets\_Scripts\Controllers\LoginController.cs" />
-     <Compile Include="Assets\_Scripts\Controllers\ViewController.cs" />
-     <Compile Include="Assets\_Scripts\GameStates\Connected.cs" />
-     <Compile Include="Assets\_Scripts\GameStates\Disconnected.cs" />
-     <Compile Include="Assets\_Scripts\GameStates\GameState.cs" />
-     <Compile Include="Assets\_Scripts\GameStates\IGameState.cs" />
-     <Compile Include="Assets\_Scripts\GameStates\WaitingForConnection.cs" />
-     <Compile Include="Assets\_Scripts\Login.cs" />
-     <Compile Include="Assets\_Scripts\PhotonEngine.cs" />
-     <Compile Include="Assets\_Scripts\Views\IView.cs" />
-     <Compile Include="Assets\_Scripts\Views\View.cs" />
+     <Compile Include="Assets\PhotonEngine\_Scripts\PhotonEngine.cs" />
+     <Compile Include="Assets\PhotonEngine\_Scripts\_Controllers\IViewController.cs" />
+     <Compile Include="Assets\PhotonEngine\_Scripts\_Controllers\ViewController.cs" />
+     <Compile Include="Assets\PhotonEngine\_Scripts\_GameStates\Connected.cs" />
+     <Compile Include="Assets\PhotonEngine\_Scripts\_GameStates\Disconnected.cs" />
+     <Compile Include="Assets\PhotonEngine\_Scripts\_GameStates\GameState.cs" />
+     <Compile Include="Assets\PhotonEngine\_Scripts\_GameStates\IGameState.cs" />
+     <Compile Include="Assets\PhotonEngine\_Scripts\_GameStates\WaitingForConnection.cs" />
+     <Compile Include="Assets\PhotonEngine\_Scripts\_Handlers\IPhotonEventHandler.cs" />
+     <Compile Include="Assets\PhotonEngine\_Scripts\_Handlers\IPhotonOperationHandler.cs" />
+     <Compile Include="Assets\PhotonEngine\_Scripts\_Handlers\PhotonEventHandler.cs" />
+     <Compile Include="Assets\PhotonEngine\_Scripts\_Handlers\PhotonOperationHandler.cs" />
+     <Compile Include="Assets\PhotonEngine\_Scripts\_Views\IView.cs" />
+     <Compile Include="Assets\PhotonEngine\_Scripts\_Views\View.cs" />
+     <Compile Include="Assets\_Scripts\Login\Login.cs" />
+     <Compile Include="Assets\_Scripts\Login\LoginController.cs" />
  <Reference Include="CJRGaming.MMO.Common">
  <HintPath>Assets\_Plugins\CJRGaming.MMO.Common.dll</HintPath>
  </Reference>

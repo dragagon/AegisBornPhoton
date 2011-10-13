@@ -1,1 +1,11 @@
 D:\development\photon\AegisBornClient\obj\Debug\ResolveAssemblyReference.cache
+C:\development\photon\AegisBornClient\Temp\bin\Debug\Assembly-CSharp.dll
+C:\development\photon\AegisBornClient\Temp\bin\Debug\Assembly-CSharp.pdb
+C:\development\photon\AegisBornClient\Temp\bin\Debug\CJRGaming.MMO.Common.dll
+C:\development\photon\AegisBornClient\Temp\bin\Debug\Photon3Unity3D.dll
+C:\development\photon\AegisBornClient\Temp\bin\Debug\UnityEditor.dll
+C:\development\photon\AegisBornClient\Temp\bin\Debug\UnityEngine.dll
+C:\development\photon\AegisBornClient\Temp\bin\Debug\nunit.framework.dll
+C:\development\photon\AegisBornClient\obj\Debug\ResolveAssemblyReference.cache
+C:\development\photon\AegisBornClient\obj\Debug\Assembly-CSharp.dll
+C:\development\photon\AegisBornClient\obj\Debug\Assembly-CSharp.pdb
