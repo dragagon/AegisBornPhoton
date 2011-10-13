@@ -8,7 +8,6 @@
   </SettingsComponent>
   <RecentFiles>
     <RecentFiles>
-      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:SubServer/f:OutgoingMasterServerPeer.cs" caret="937" fromTop="22" />
       <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:SubServer/d:Types/f:LoginServer.cs" caret="180" fromTop="6" />
       <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:SubServer/d:Types/f:ChatServer.cs" caret="335" fromTop="14" />
       <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:SubServer/d:Types/f:RegionServer.cs" caret="323" fromTop="12" />
@@ -19,17 +18,18 @@
       <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:MasterServer/f:MasterServer.cs" caret="414" fromTop="16" />
       <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:MasterServer/f:SubServerType.cs" caret="228" fromTop="11" />
       <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:Server2Server/d:Operations/f:OperationCodes.cs" caret="0" fromTop="0" />
-      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:MasterServer/f:Unity3dPeer.cs" caret="906" fromTop="31" />
       <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:MasterServer/f:IncomingSubServerPeer.cs" caret="3582" fromTop="40" />
       <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:MasterServer/f:SubServerCollection.cs" caret="559" fromTop="18" />
       <File id="1A60EA07-3726-4EB3-A00C-D3C3BE36A6BC/f:ErrorCode.cs" caret="159" fromTop="7" />
       <File id="1A60EA07-3726-4EB3-A00C-D3C3BE36A6BC/f:EventCode.cs" caret="168" fromTop="9" />
       <File id="1A60EA07-3726-4EB3-A00C-D3C3BE36A6BC/f:ParameterCode.cs" caret="177" fromTop="9" />
-      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/f:log4net.config" caret="49" fromTop="1" />
       <File id="1A60EA07-3726-4EB3-A00C-D3C3BE36A6BC/f:OperationCode.cs" caret="190" fromTop="10" />
+      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:MasterServer/f:Unity3dPeer.cs" caret="0" fromTop="0" />
+      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:SubServer/f:OutgoingMasterServerPeer.cs" caret="2964" fromTop="35" />
+      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/f:log4net.config" caret="1856" fromTop="17" />
+      <File id="d:Miscellaneous Files/f:log4net.config/l:D!?Photon?src-server?Loadbalancing?LoadBalancing?log4net.config" caret="62" fromTop="1" />
     </RecentFiles>
     <RecentEdits>
-      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:MasterServer/f:SubServerCollection.cs" caret="3656" fromTop="34" />
       <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:SubServer/d:Types/f:LoginServer.cs" caret="320" fromTop="12" />
       <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:SubServer/d:Types/f:LoginServer.cs" caret="189" fromTop="6" />
       <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:SubServer/d:Types/f:ChatServer.cs" caret="247" fromTop="10" />
@@ -59,6 +59,7 @@
       <File id="1A60EA07-3726-4EB3-A00C-D3C3BE36A6BC/f:ParameterCode.cs" caret="163" fromTop="7" />
       <File id="1A60EA07-3726-4EB3-A00C-D3C3BE36A6BC/f:EventCode.cs" caret="168" fromTop="9" />
       <File id="1A60EA07-3726-4EB3-A00C-D3C3BE36A6BC/f:OperationCode.cs" caret="122" fromTop="5" />
+      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:SubServer/f:OutgoingMasterServerPeer.cs" caret="2964" fromTop="35" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>

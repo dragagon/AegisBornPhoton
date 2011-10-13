@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{9C13DD27-19D1-B2D6-8DE5-57D4BC30E01B}") = "AegisBornClient", "Assembly-CSharp-vs.csproj", "{B1B6D3B1-7E79-380D-88C2-8AF3A34FE93D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B1B6D3B1-7E79-380D-88C2-8AF3A34FE93D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1B6D3B1-7E79-380D-88C2-8AF3A34FE93D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1B6D3B1-7E79-380D-88C2-8AF3A34FE93D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1B6D3B1-7E79-380D-88C2-8AF3A34FE93D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	
+EndGlobal

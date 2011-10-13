@@ -75,7 +75,7 @@ namespace CJRGaming.MMO.Server.SubServer
 
         protected override void OnOperationRequest(OperationRequest operationRequest, SendParameters sendParameters)
         {
-            Log.DebugFormat("Received operation request from master server: "+(Guid)operationRequest.Parameters[(byte)ParameterCode.UserId]);
+            Log.DebugFormat("Received operation request from master server: "+operationRequest.Parameters[(byte)ParameterCode.UserId]);
 
             throw new NotImplementedException();
         }

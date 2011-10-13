@@ -1,0 +1,169 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="eventData" priority="3" />
+      <Item value="operationResponse" priority="3" />
+      <Item value="public" priority="23" />
+      <Item value="PhotonServer`0" priority="3" />
+      <Item value="return" priority="3" />
+      <Item value="_instance" priority="6" />
+      <Item value="new" priority="12" />
+      <Item value="PhotonServer" priority="0" />
+      <Item value="private" priority="3" />
+      <Item value="PhotonPeer`0" priority="2" />
+      <Item value="_peer" priority="2" />
+      <Item value="Dictionary" priority="6" />
+      <Item value="byte" priority="9" />
+      <Item value="response" priority="2" />
+      <Item value="void" priority="10" />
+      <Item value="StatusCode`0" priority="4" />
+      <Item value="statusCode" priority="2" />
+      <Item value="_gameView" priority="0" />
+      <Item value="this" priority="6" />
+      <Item value="object" priority="2" />
+      <Item value="PhotonPeer" priority="0" />
+      <Item value="value" priority="1" />
+      <Item value="_stateStrategy" priority="1" />
+      <Item value="GameView`0" priority="1" />
+      <Item value="_currentView" priority="1" />
+      <Item value="_engine" priority="2" />
+      <Item value="CurrentView" priority="1" />
+      <Item value="server" priority="5" />
+      <Item value="break" priority="2" />
+      <Item value="case" priority="2" />
+      <Item value="override" priority="2" />
+      <Item value="DictionaryBase`0" priority="1" />
+      <Item value="Instance" priority="1" />
+      <Item value="if" priority="2" />
+      <Item value="view" priority="0" />
+      <Item value="is" priority="0" />
+      <Item value="Application`0" priority="1" />
+      <Item value="false" priority="0" />
+      <Item value="GameState`0" priority="2" />
+      <Item value="State" priority="3" />
+      <Item value="Disconnected`0" priority="2" />
+      <Item value="PhotonEngine`0" priority="5" />
+      <Item value="operationCode" priority="0" />
+      <Item value="parameter" priority="0" />
+      <Item value="sendReliable" priority="0" />
+      <Item value="channelId" priority="0" />
+      <Item value="encrypt" priority="0" />
+      <Item value="WaitingForConnection`0" priority="0" />
+      <Item value="ViewController`0" priority="0" />
+      <Item value="Controller" priority="5" />
+      <Item value="level" priority="0" />
+      <Item value="Peer" priority="0" />
+      <Item value="_controlledView" priority="1" />
+      <Item value="string" priority="4" />
+      <Item value="String`0" priority="0" />
+      <Item value="PhotonEngine" priority="1" />
+      <Item value="LoginController`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ExitGames.Client.Photon.EventData">
+      <Item value="Code" priority="1" />
+      <Item value="Parameters" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ExitGames.Client.Photon.OperationResponse">
+      <Item value="OperationCode" priority="1" />
+      <Item value="ReturnCode" priority="3" />
+      <Item value="Parameters" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ExitGames.Client.Photon.PhotonPeer">
+      <Item value="EstablishEncryption`0" priority="2" />
+      <Item value="Service`0" priority="0" />
+      <Item value="OpCustom`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:GameView">
+      <Item value="active" priority="0" />
+      <Item value="LogError`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:PhotonServer">
+      <Item value="CurrentView" priority="2" />
+      <Item value="Peer" priority="0" />
+      <Item value="StateController" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@ExitGames.Client.Photon.StatusCode">
+      <Item value="EncryptionEstablished" priority="1" />
+      <Item value="Exception" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@UnityEngine.Application">
+      <Item value="LoadLevel`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:PhotonEngine">
+      <Item value="Peer" priority="1" />
+      <Item value="Disconnect`0" priority="0" />
+      <Item value="Initialize`0" priority="0" />
+      <Item value="Controller" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ViewController">
+      <Item value="DebugReturn`0" priority="0" />
+      <Item value="OnOperationResponse`0" priority="0" />
+      <Item value="OnEvent`0" priority="0" />
+      <Item value="OnStatusChanged`0" priority="0" />
+      <Item value="OnUnexpectedStatusCode`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.String">
+      <Item value="IsNullOrEmpty`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:IViewController">
+      <Item value="ApplicationQuit`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@PhotonEngine">
+      <Item value="Instance" priority="1" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="B1B6D3B1-7E79-380D-88C2-8AF3A34FE93D/d:Assets/d:_Scripts/d:Views/f:IView.cs" caret="0" fromTop="0" />
+      <File id="B1B6D3B1-7E79-380D-88C2-8AF3A34FE93D/d:Assets/d:_Scripts/d:Views/f:View.cs" caret="980" fromTop="31" />
+      <File id="B1B6D3B1-7E79-380D-88C2-8AF3A34FE93D/d:Assets/d:_Scripts/d:GameStates/f:WaitingForConnection.cs" caret="0" fromTop="0" />
+      <File id="B1B6D3B1-7E79-380D-88C2-8AF3A34FE93D/d:Assets/d:_Scripts/d:GameStates/f:GameState.cs" caret="547" fromTop="24" />
+      <File id="B1B6D3B1-7E79-380D-88C2-8AF3A34FE93D/d:Assets/d:_Scripts/d:GameStates/f:Disconnected.cs" caret="115" fromTop="4" />
+      <File id="B1B6D3B1-7E79-380D-88C2-8AF3A34FE93D/d:Assets/d:_Scripts/f:PhotonEngine.cs" caret="1741" fromTop="63" />
+      <File id="B1B6D3B1-7E79-380D-88C2-8AF3A34FE93D/d:Assets/d:_Scripts/f:Login.cs" caret="318" fromTop="14" />
+      <File id="B1B6D3B1-7E79-380D-88C2-8AF3A34FE93D/d:Assets/d:_Scripts/d:Controllers/f:LoginController.cs" caret="212" fromTop="7" />
+      <File id="B1B6D3B1-7E79-380D-88C2-8AF3A34FE93D/d:Assets/d:_Scripts/d:Controllers/f:IViewController.cs" caret="249" fromTop="8" />
+      <File id="B1B6D3B1-7E79-380D-88C2-8AF3A34FE93D/d:Assets/d:_Scripts/d:Controllers/f:ViewController.cs" caret="380" fromTop="15" />
+      <File id="d:Miscellaneous Files/f:PhotonServer.config/l:D!?Photon?deploy?bin_Win64?PhotonServer.config" caret="7889" fromTop="30" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="B1B6D3B1-7E79-380D-88C2-8AF3A34FE93D/d:Assets/d:_Scripts/f:PhotonEngine.cs" caret="1810" fromTop="20" />
+      <File id="B1B6D3B1-7E79-380D-88C2-8AF3A34FE93D/d:Assets/d:_Scripts/d:Controllers/f:ViewController.cs" caret="1482" fromTop="39" />
+      <File id="B1B6D3B1-7E79-380D-88C2-8AF3A34FE93D/d:Assets/d:_Scripts/d:Controllers/f:IViewController.cs" caret="549" fromTop="17" />
+      <File id="B1B6D3B1-7E79-380D-88C2-8AF3A34FE93D/d:Assets/d:_Scripts/d:Controllers/f:ViewController.cs" caret="1665" fromTop="20" />
+      <File id="B1B6D3B1-7E79-380D-88C2-8AF3A34FE93D/d:Assets/d:_Scripts/f:PhotonEngine.cs" caret="589" fromTop="21" />
+      <File id="B1B6D3B1-7E79-380D-88C2-8AF3A34FE93D/d:Assets/d:_Scripts/d:Views/f:View.cs" caret="980" fromTop="31" />
+      <File id="B1B6D3B1-7E79-380D-88C2-8AF3A34FE93D/d:Assets/d:_Scripts/f:Login.cs" caret="402" fromTop="15" />
+      <File id="B1B6D3B1-7E79-380D-88C2-8AF3A34FE93D/d:Assets/d:_Scripts/f:Login.cs" caret="325" fromTop="15" />
+      <File id="B1B6D3B1-7E79-380D-88C2-8AF3A34FE93D/d:Assets/d:_Scripts/f:Login.cs" caret="189" fromTop="8" />
+      <File id="B1B6D3B1-7E79-380D-88C2-8AF3A34FE93D/d:Assets/d:_Scripts/f:Login.cs" caret="954" fromTop="29" />
+      <File id="B1B6D3B1-7E79-380D-88C2-8AF3A34FE93D/d:Assets/d:_Scripts/f:PhotonEngine.cs" caret="737" fromTop="29" />
+      <File id="B1B6D3B1-7E79-380D-88C2-8AF3A34FE93D/d:Assets/d:_Scripts/d:Controllers/f:ViewController.cs" caret="373" fromTop="14" />
+      <File id="B1B6D3B1-7E79-380D-88C2-8AF3A34FE93D/d:Assets/d:_Scripts/f:PhotonEngine.cs" caret="467" fromTop="18" />
+      <File id="B1B6D3B1-7E79-380D-88C2-8AF3A34FE93D/d:Assets/d:_Scripts/f:Login.cs" caret="737" fromTop="22" />
+      <File id="B1B6D3B1-7E79-380D-88C2-8AF3A34FE93D/d:Assets/d:_Scripts/d:Controllers/f:ViewController.cs" caret="697" fromTop="16" />
+      <File id="B1B6D3B1-7E79-380D-88C2-8AF3A34FE93D/d:Assets/d:_Scripts/f:PhotonEngine.cs" caret="2124" fromTop="25" />
+      <File id="B1B6D3B1-7E79-380D-88C2-8AF3A34FE93D/d:Assets/d:_Scripts/d:Controllers/f:IViewController.cs" caret="249" fromTop="8" />
+      <File id="B1B6D3B1-7E79-380D-88C2-8AF3A34FE93D/d:Assets/d:_Scripts/f:PhotonEngine.cs" caret="2027" fromTop="22" />
+      <File id="B1B6D3B1-7E79-380D-88C2-8AF3A34FE93D/d:Assets/d:_Scripts/f:PhotonEngine.cs" caret="1675" fromTop="22" />
+    </RecentEdits>
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+</Configuration>
