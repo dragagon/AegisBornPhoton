@@ -5,6 +5,7 @@ using System.Linq;
 using System.Net;
 using System.Text;
 using System.Threading;
+using CJRGaming.MMO.Common;
 using CJRGaming.MMO.Server.MasterServer;
 using ExitGames.Logging;
 using ExitGames.Logging.Log4Net;
@@ -75,9 +76,7 @@ namespace CJRGaming.MMO.Server.SubServer
         public IPAddress PublicIpAddress { get; protected set; }
 
         protected int ConnectRetryIntervalSeconds { get; set; }
-
-
-
+        
         #endregion
 
         public SubServer()
@@ -143,6 +142,8 @@ namespace CJRGaming.MMO.Server.SubServer
 
             Protocol.AllowRawCustomValues = true;
 
+            AddHandlers();
+
             ConnectToMaster();
         }
 
@@ -171,7 +172,24 @@ namespace CJRGaming.MMO.Server.SubServer
             Thread.VolatileWrite(ref _isReconnecting, 0);
             return MasterPeer = CreateMasterPeer(initResponse);
         }
-        
+
+        public abstract void AddHandlers();
+
+        public void AddRequestHandler(OperationSubCode subCode, IPhotonRequestHandler handler)
+        {
+            MasterPeer.RequestHandlers.Add(subCode, handler);
+        }
+
+        public void AddEventHandler(EventCode eventCode, IPhotonEventHandler handler)
+        {
+            MasterPeer.EventHandlers.Add(eventCode, handler);
+        }
+
+        public void AddResponseHandler(OperationSubCode subCode, IPhotonResponseHandler handler)
+        {
+            MasterPeer.ResponseHandlers.Add(subCode, handler);
+        }
+
         #endregion
     }
 }

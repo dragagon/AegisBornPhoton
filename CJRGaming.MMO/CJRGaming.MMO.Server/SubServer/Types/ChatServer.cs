@@ -12,5 +12,14 @@ namespace CJRGaming.MMO.Server.SubServer.Types
         {
             ServerType = SubServerType.Chat;
         }
+
+        #region Overrides of SubServer
+
+        public override void AddHandlers()
+        {
+            
+        }
+
+        #endregion
     }
 }

@@ -2,22 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class View : MonoBehaviour, IView
+public abstract class View : MonoBehaviour, IView
 {
     #region Implementation of IView
 
-    private IViewController _controller;
-
-    void Awake()
+    public virtual void Awake()
     {
         Controller = new ViewController(this);
     }
 
-    public IViewController Controller
-    {
-        get { return _controller; }
-        protected set { _controller = value; }
-    }
+    public abstract IViewController Controller { get; protected set; }
 
     public virtual void LogDebug(string message)
     {

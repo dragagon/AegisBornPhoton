@@ -1,72 +1,71 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>10.0.20506</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{B1B6D3B1-7E79-380D-88C2-8AF3A34FE93D}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>
-    </RootNamespace>
-    <AssemblyName>Assembly-CSharp</AssemblyName>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
+	<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+	<ProductVersion>10.0.20506</ProductVersion>
+	<SchemaVersion>2.0</SchemaVersion>
+	<ProjectGuid>{B1B6D3B1-7E79-380D-88C2-8AF3A34FE93D}</ProjectGuid>
+	<OutputType>Library</OutputType>
+	<AppDesignerFolder>Properties</AppDesignerFolder>
+	<RootNamespace></RootNamespace>
+	<AssemblyName>Assembly-CSharp</AssemblyName>
+	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+	<FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>Temp\bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE;UNITY_3_4_0;UNITY_3_4;UNITY_EDITOR;ENABLE_PROFILER;UNITY_STANDALONE_WIN;ENABLE_GENERICS;ENABLE_DUCK_TYPING;ENABLE_TERRAIN;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CLOTH;ENABLE_WWW</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <NoWarn>0169</NoWarn>
+	<DebugSymbols>true</DebugSymbols>
+	<DebugType>full</DebugType>
+	<Optimize>false</Optimize>
+	<OutputPath>Temp\bin\Debug\</OutputPath>
+	<DefineConstants>DEBUG;TRACE;UNITY_3_4_1;UNITY_3_4;UNITY_EDITOR;ENABLE_PROFILER;UNITY_STANDALONE_WIN;ENABLE_GENERICS;ENABLE_DUCK_TYPING;ENABLE_TERRAIN;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CLOTH;ENABLE_WWW</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>Temp\bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <NoWarn>0169</NoWarn>
+	<DebugType>pdbonly</DebugType>
+	<Optimize>true</Optimize>
+	<OutputPath>Temp\bin\Release\</OutputPath>
+	<DefineConstants>TRACE</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System" />
+	<Reference Include="System" />
     <Reference Include="System.XML" />
-    <Reference Include="System.Core" />
-    <Reference Include="UnityEngine">
-      <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor">
-      <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
-    </Reference>
+	<Reference Include="System.Core" />
+	<Reference Include="UnityEngine">
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	</Reference>
+	<Reference Include="UnityEditor">
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	</Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\PhotonEngine\_Scripts\PhotonEngine.cs" />
-    <Compile Include="Assets\PhotonEngine\_Scripts\_Controllers\IViewController.cs" />
-    <Compile Include="Assets\PhotonEngine\_Scripts\_Controllers\ViewController.cs" />
-    <Compile Include="Assets\PhotonEngine\_Scripts\_GameStates\Connected.cs" />
-    <Compile Include="Assets\PhotonEngine\_Scripts\_GameStates\Disconnected.cs" />
-    <Compile Include="Assets\PhotonEngine\_Scripts\_GameStates\GameState.cs" />
-    <Compile Include="Assets\PhotonEngine\_Scripts\_GameStates\IGameState.cs" />
-    <Compile Include="Assets\PhotonEngine\_Scripts\_GameStates\WaitingForConnection.cs" />
-    <Compile Include="Assets\PhotonEngine\_Scripts\_Handlers\IPhotonEventHandler.cs" />
-    <Compile Include="Assets\PhotonEngine\_Scripts\_Handlers\IPhotonOperationHandler.cs" />
-    <Compile Include="Assets\PhotonEngine\_Scripts\_Handlers\PhotonEventHandler.cs" />
-    <Compile Include="Assets\PhotonEngine\_Scripts\_Handlers\PhotonOperationHandler.cs" />
-    <Compile Include="Assets\PhotonEngine\_Scripts\_Views\IView.cs" />
-    <Compile Include="Assets\PhotonEngine\_Scripts\_Views\View.cs" />
-    <Compile Include="Assets\_Scripts\Login\Login.cs" />
-    <Compile Include="Assets\_Scripts\Login\LoginController.cs" />
-    <Reference Include="CJRGaming.MMO.Common">
-      <HintPath>Assets\_Plugins\CJRGaming.MMO.Common.dll</HintPath>
-    </Reference>
-    <Reference Include="Photon3Unity3D">
-      <HintPath>Assets\_Plugins\Photon3Unity3D.dll</HintPath>
-    </Reference>
+     <Compile Include="Assets\PhotonEngine\_Scripts\PhotonEngine.cs" />
+     <Compile Include="Assets\PhotonEngine\_Scripts\_Controllers\IViewController.cs" />
+     <Compile Include="Assets\PhotonEngine\_Scripts\_Controllers\ViewController.cs" />
+     <Compile Include="Assets\PhotonEngine\_Scripts\_GameStates\Connected.cs" />
+     <Compile Include="Assets\PhotonEngine\_Scripts\_GameStates\Disconnected.cs" />
+     <Compile Include="Assets\PhotonEngine\_Scripts\_GameStates\GameState.cs" />
+     <Compile Include="Assets\PhotonEngine\_Scripts\_GameStates\IGameState.cs" />
+     <Compile Include="Assets\PhotonEngine\_Scripts\_GameStates\WaitingForConnection.cs" />
+     <Compile Include="Assets\PhotonEngine\_Scripts\_Handlers\IPhotonEventHandler.cs" />
+     <Compile Include="Assets\PhotonEngine\_Scripts\_Handlers\IPhotonOperationHandler.cs" />
+     <Compile Include="Assets\PhotonEngine\_Scripts\_Handlers\PhotonEventHandler.cs" />
+     <Compile Include="Assets\PhotonEngine\_Scripts\_Handlers\PhotonOperationHandler.cs" />
+     <Compile Include="Assets\PhotonEngine\_Scripts\_Views\IView.cs" />
+     <Compile Include="Assets\PhotonEngine\_Scripts\_Views\View.cs" />
+     <Compile Include="Assets\_Scripts\Login\Login.cs" />
+     <Compile Include="Assets\_Scripts\Login\LoginController.cs" />
+ <Reference Include="CJRGaming.MMO.Common">
+ <HintPath>Assets\_Plugins\CJRGaming.MMO.Common.dll</HintPath>
+ </Reference>
+ <Reference Include="Photon3Unity3D">
+ <HintPath>Assets\_Plugins\Photon3Unity3D.dll</HintPath>
+ </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
@@ -76,4 +75,6 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+  
 </Project>
+	

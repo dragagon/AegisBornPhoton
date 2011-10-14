@@ -16,6 +16,14 @@ public class Login : View
         Controller = new LoginController(this);
     }
 
+    private LoginController _controller; 
+
+    public override IViewController Controller
+    {
+        get { return _controller; }
+        protected set { _controller = value as LoginController; }
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -33,7 +41,7 @@ public class Login : View
         }
         if (GUI.Button(new Rect(210, 60, 100, 30), "Send login"))
         {
-            ((LoginController)Controller).SendLogin(_username, _password);
+            _controller.SendLogin(_username, _password);
         }
         GUI.Label(new Rect(10, 180, 100, 100), "" +PhotonEngine.Instance.State);
     }

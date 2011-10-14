@@ -28,6 +28,10 @@ namespace CJRGaming.MMO.Server.SubServer
             RequestFiber.Enqueue(Register);
         }
 
+        public Dictionary<OperationSubCode, IPhotonRequestHandler> RequestHandlers = new Dictionary<OperationSubCode, IPhotonRequestHandler>();
+        public Dictionary<EventCode, IPhotonEventHandler> EventHandlers = new Dictionary<EventCode, IPhotonEventHandler>();
+        public Dictionary<OperationSubCode, IPhotonResponseHandler> ResponseHandlers = new Dictionary<OperationSubCode, IPhotonResponseHandler>();
+
         #region Properties
 
         protected bool IsRegistered { get; set; }
@@ -75,9 +79,17 @@ namespace CJRGaming.MMO.Server.SubServer
 
         protected override void OnOperationRequest(OperationRequest operationRequest, SendParameters sendParameters)
         {
-            Log.DebugFormat("Received operation request from master server: "+new Guid((Byte[])operationRequest.Parameters[(byte)ParameterCode.UserId]));
+            IPhotonRequestHandler handler;
 
-            throw new NotImplementedException();
+            if (operationRequest.Parameters.ContainsKey((byte)ParameterCode.SubOperationCode) && RequestHandlers.TryGetValue((OperationSubCode)operationRequest.Parameters[(byte)ParameterCode.SubOperationCode], out handler))
+            {
+                handler.HandleRequest(operationRequest);
+            }
+            else
+            {
+                Log.DebugFormat("Received operation request from master server: " +
+                                new Guid((Byte[]) operationRequest.Parameters[(byte) ParameterCode.UserId]));
+            }
         }
 
         protected override void OnDisconnect()

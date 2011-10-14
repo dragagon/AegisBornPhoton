@@ -70,6 +70,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Server2Server\Operations\OperationCodes.cs" />
     <Compile Include="Server2Server\Operations\RegisterSubServer.cs" />
+    <Compile Include="SubServer\Handlers\IPhotonEventHandler.cs" />
+    <Compile Include="SubServer\Handlers\PhotonEventHandler.cs" />
+    <Compile Include="SubServer\Handlers\IPhotonResponseHandler.cs" />
+    <Compile Include="SubServer\Handlers\PhotonResponseHandler.cs" />
+    <Compile Include="SubServer\Handlers\IPhotonRequestHandler.cs" />
+    <Compile Include="SubServer\Handlers\PhotonRequestHandler.cs" />
     <Compile Include="SubServer\Types\ChatLoginRegionServer.cs" />
     <Compile Include="SubServer\Types\ChatLoginServer.cs" />
     <Compile Include="SubServer\Types\ChatServer.cs" />
