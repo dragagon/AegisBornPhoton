@@ -7,5 +7,6 @@ namespace CJRGaming.MMO.Common
 {
     public enum OperationSubCode
     {
+        Login
     }
 }

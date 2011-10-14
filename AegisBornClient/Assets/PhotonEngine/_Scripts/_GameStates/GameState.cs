@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using CJRGaming.MMO.Common;
+﻿using ExitGames.Client.Photon;
 
 public abstract class GameState : IGameState
 {
@@ -19,7 +18,7 @@ public abstract class GameState : IGameState
     }
 
     // Do nothing
-    public virtual void SendOperation(OperationCode operationCode, Dictionary<byte, object> parameters, bool sendReliable, byte channelId, bool encrypt)
+    public virtual void SendOperation(OperationRequest request, bool sendReliable, byte channelId, bool encrypt)
     {
     }
 

@@ -104,9 +104,9 @@ public class PhotonEngine : MonoBehaviour, IPhotonPeerListener
         State.OnUpdate();
     }
 
-    public void SendOp(OperationCode operationCode, Dictionary<byte, object> parameters, bool sendReliable, byte channelId, bool encrypt)
+    public void SendOp(OperationRequest request, bool sendReliable, byte channelId, bool encrypt)
     {
-        State.SendOperation(operationCode, parameters, sendReliable, channelId, encrypt);
+        State.SendOperation(request, sendReliable, channelId, encrypt);
     }
 
 }

@@ -33,6 +33,7 @@ public class Login : View
         }
         if (GUI.Button(new Rect(210, 60, 100, 30), "Send login"))
         {
+            ((LoginController)Controller).SendLogin(_username, _password);
         }
         GUI.Label(new Rect(10, 180, 100, 100), "" +PhotonEngine.Instance.State);
     }

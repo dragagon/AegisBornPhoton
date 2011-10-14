@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using CJRGaming.MMO.Common;
+using ExitGames.Client.Photon;
 
 class WaitingForConnection : GameState
 {
@@ -12,8 +13,8 @@ class WaitingForConnection : GameState
         _engine.Peer.Service();
     }
 
-    public override void SendOperation(OperationCode operationCode, Dictionary<byte, object> parameters, bool sendReliable, byte channelId, bool encrypt)
+    public override void SendOperation(OperationRequest request, bool sendReliable, byte channelId, bool encrypt)
     {
-        _engine.Peer.OpCustom((byte) operationCode, parameters, sendReliable, channelId, encrypt);
+        _engine.Peer.OpCustom(request, sendReliable, channelId, encrypt);
     }
 }

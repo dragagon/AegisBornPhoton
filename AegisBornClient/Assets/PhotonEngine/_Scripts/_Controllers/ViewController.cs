@@ -2,12 +2,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using CJRGaming.MMO.Common;
 using ExitGames.Client.Photon;
 
 public class ViewController : IViewController
 {
 
     private IView _controlledView;
+    private readonly Dictionary<OperationCode, IPhotonOperationHandler> _operationHandlers = new Dictionary<OperationCode, IPhotonOperationHandler>();
+    private readonly Dictionary<EventCode, IPhotonEventHandler> _eventHandlers = new Dictionary<EventCode, IPhotonEventHandler>();
 
     public ViewController(IView controlledView)
     {
@@ -15,16 +18,41 @@ public class ViewController : IViewController
         PhotonEngine.Instance.Controller = this;
     }
 
+    public Dictionary<OperationCode, IPhotonOperationHandler> OperationHandlers
+    {
+        get { return _operationHandlers; }
+    }
+
+    public Dictionary<EventCode, IPhotonEventHandler> EventHandlers
+    {
+        get { return _eventHandlers; }
+    }
     #region Implementation of IViewController
 
     public void OnEvent(EventData eventData)
     {
-        OnUnexpectedEvent(eventData);
+        IPhotonEventHandler handler;
+        if (EventHandlers.TryGetValue((EventCode)eventData.Code, out handler))
+        {
+            handler.HandleEvent(eventData);
+        }
+        else
+        {
+            OnUnexpectedEvent(eventData);
+        }
     }
 
     public void OnOperationResponse(OperationResponse operationResponse)
     {
-        OnUnexpectedOperationResponse(operationResponse);
+        IPhotonOperationHandler handler;
+        if (OperationHandlers.TryGetValue((OperationCode)operationResponse.OperationCode, out handler))
+        {
+            handler.HandleResponse(operationResponse);
+        }
+        else
+        {
+            OnUnexpectedOperationResponse(operationResponse);
+        }
     }
 
     public void DebugReturn(DebugLevel level, string message)
@@ -69,5 +97,10 @@ public class ViewController : IViewController
         {
             PhotonEngine.Instance.Initialize();
         }
+    }
+
+    public void SendOperation(OperationRequest request, bool sendReliable, byte channelId, bool encrypt)
+    {
+        PhotonEngine.Instance.SendOp(request, sendReliable, channelId, encrypt);
     }
 }

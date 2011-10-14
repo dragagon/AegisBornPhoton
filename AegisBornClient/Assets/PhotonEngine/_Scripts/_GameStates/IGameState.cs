@@ -1,8 +1,7 @@
-﻿using System.Collections.Generic;
-using CJRGaming.MMO.Common;
+﻿using ExitGames.Client.Photon;
 
 public interface IGameState
 {
     void OnUpdate();
-    void SendOperation(OperationCode operationCode, Dictionary<byte, object> parameters, bool sendReliable, byte channelId, bool encrypt);
+    void SendOperation(OperationRequest request, bool sendReliable, byte channelId, bool encrypt);
 }

@@ -24,13 +24,12 @@
       <File id="1A60EA07-3726-4EB3-A00C-D3C3BE36A6BC/f:EventCode.cs" caret="168" fromTop="9" />
       <File id="1A60EA07-3726-4EB3-A00C-D3C3BE36A6BC/f:ParameterCode.cs" caret="177" fromTop="9" />
       <File id="1A60EA07-3726-4EB3-A00C-D3C3BE36A6BC/f:OperationCode.cs" caret="190" fromTop="10" />
-      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:MasterServer/f:Unity3dPeer.cs" caret="0" fromTop="0" />
-      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:SubServer/f:OutgoingMasterServerPeer.cs" caret="2964" fromTop="35" />
       <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/f:log4net.config" caret="1856" fromTop="17" />
-      <File id="d:Miscellaneous Files/f:log4net.config/l:D!?Photon?src-server?Loadbalancing?LoadBalancing?log4net.config" caret="62" fromTop="1" />
+      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:MasterServer/f:Unity3dPeer.cs" caret="575" fromTop="0" />
+      <File id="1A60EA07-3726-4EB3-A00C-D3C3BE36A6BC/f:OperationSubCode.cs" caret="193" fromTop="12" />
+      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:SubServer/f:OutgoingMasterServerPeer.cs" caret="2981" fromTop="35" />
     </RecentFiles>
     <RecentEdits>
-      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:SubServer/d:Types/f:LoginServer.cs" caret="320" fromTop="12" />
       <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:SubServer/d:Types/f:LoginServer.cs" caret="189" fromTop="6" />
       <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:SubServer/d:Types/f:ChatServer.cs" caret="247" fromTop="10" />
       <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:SubServer/d:Types/f:ChatServer.cs" caret="344" fromTop="14" />
@@ -59,7 +58,8 @@
       <File id="1A60EA07-3726-4EB3-A00C-D3C3BE36A6BC/f:ParameterCode.cs" caret="163" fromTop="7" />
       <File id="1A60EA07-3726-4EB3-A00C-D3C3BE36A6BC/f:EventCode.cs" caret="168" fromTop="9" />
       <File id="1A60EA07-3726-4EB3-A00C-D3C3BE36A6BC/f:OperationCode.cs" caret="122" fromTop="5" />
-      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:SubServer/f:OutgoingMasterServerPeer.cs" caret="2964" fromTop="35" />
+      <File id="1A60EA07-3726-4EB3-A00C-D3C3BE36A6BC/f:OperationSubCode.cs" caret="181" fromTop="9" />
+      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:SubServer/f:OutgoingMasterServerPeer.cs" caret="2981" fromTop="17" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>
