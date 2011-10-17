@@ -8,7 +8,6 @@ using ExitGames.Logging;
 using Photon.SocketServer;
 using Photon.SocketServer.ServerToServer;
 using PhotonHostRuntimeInterfaces;
-using OperationCode = CJRGaming.MMO.Server.Server2Server.Operations.OperationCode;
 
 namespace CJRGaming.MMO.Server.SubServer
 {
@@ -29,7 +28,7 @@ namespace CJRGaming.MMO.Server.SubServer
         }
 
         public Dictionary<OperationSubCode, IPhotonRequestHandler> RequestHandlers = new Dictionary<OperationSubCode, IPhotonRequestHandler>();
-        public Dictionary<EventCode, IPhotonEventHandler> EventHandlers = new Dictionary<EventCode, IPhotonEventHandler>();
+        public Dictionary<Common.EventCode, IPhotonEventHandler> EventHandlers = new Dictionary<Common.EventCode, IPhotonEventHandler>();
         public Dictionary<OperationSubCode, IPhotonResponseHandler> ResponseHandlers = new Dictionary<OperationSubCode, IPhotonResponseHandler>();
 
         #region Properties
@@ -42,7 +41,7 @@ namespace CJRGaming.MMO.Server.SubServer
         protected virtual void Register()
         {
             // We send a message to the Master Server and tell it what our information is, including type
-            SendOperationRequest((byte) OperationCode.RegisterGameServer,
+            SendOperationRequest((byte) Server2Server.Operations.OperationCode.RegisterGameServer,
                                  new RegisterSubServer()
                                      {
                                          GameServerAddress = _application.PublicIpAddress.ToString(),
@@ -113,7 +112,7 @@ namespace CJRGaming.MMO.Server.SubServer
         protected override void OnOperationResponse(OperationResponse operationResponse, SendParameters sendParameters)
         {
             // When we successfully register, start our update loop to keep the master server aware that we are still up and running.
-            switch ((OperationCode)operationResponse.OperationCode)
+            switch ((Server2Server.Operations.OperationCode)operationResponse.OperationCode)
             {
                 default:
                     {
@@ -125,7 +124,7 @@ namespace CJRGaming.MMO.Server.SubServer
                         break;
                     }
 
-                case OperationCode.RegisterGameServer:
+                case Server2Server.Operations.OperationCode.RegisterGameServer:
                     {
                         if (operationResponse.ReturnCode != 0)
                         {

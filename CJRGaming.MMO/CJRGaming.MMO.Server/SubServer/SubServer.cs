@@ -23,7 +23,7 @@ namespace CJRGaming.MMO.Server.SubServer
 
         public static readonly Guid ServerId = Guid.NewGuid();
 
-        private static readonly ILogger Log = LogManager.GetCurrentClassLogger();
+        protected static readonly ILogger Log = LogManager.GetCurrentClassLogger();
 
         private static SubServer _instance;
 
@@ -76,6 +76,11 @@ namespace CJRGaming.MMO.Server.SubServer
         public IPAddress PublicIpAddress { get; protected set; }
 
         protected int ConnectRetryIntervalSeconds { get; set; }
+
+        protected bool _acceptsSubServerConnections;
+        protected Dictionary<Server2Server.Operations.OperationCode, IPhotonRequestHandler> SubServerRequestHandlers = new Dictionary<Server2Server.Operations.OperationCode, IPhotonRequestHandler>();
+        protected Dictionary<Server2Server.Operations.EventCode, IPhotonEventHandler> SubServerEventHandlers = new Dictionary<Server2Server.Operations.EventCode, IPhotonEventHandler>();
+        protected Dictionary<Server2Server.Operations.OperationCode, IPhotonResponseHandler> SubServerResponseHandlers = new Dictionary<Server2Server.Operations.OperationCode, IPhotonResponseHandler>();
         
         #endregion
 
@@ -125,16 +130,6 @@ namespace CJRGaming.MMO.Server.SubServer
 
         #region Overrides of ApplicationBase
 
-        protected override PeerBase CreatePeer(InitRequest initRequest)
-        {
-            if (Log.IsDebugEnabled)
-            {
-                Log.DebugFormat("CreatePeer for {0}", initRequest.ApplicationId);
-            }
-
-            throw new NotImplementedException();
-        }
-
         protected override void Setup()
         {
             Instance = this;
@@ -142,9 +137,8 @@ namespace CJRGaming.MMO.Server.SubServer
 
             Protocol.AllowRawCustomValues = true;
 
-            AddHandlers();
-
             ConnectToMaster();
+            AddHandlers();
         }
 
         protected override void TearDown()
@@ -173,6 +167,10 @@ namespace CJRGaming.MMO.Server.SubServer
             return MasterPeer = CreateMasterPeer(initResponse);
         }
 
+        #endregion
+
+        #region Handlers
+
         public abstract void AddHandlers();
 
         public void AddRequestHandler(OperationSubCode subCode, IPhotonRequestHandler handler)
@@ -190,6 +188,58 @@ namespace CJRGaming.MMO.Server.SubServer
             MasterPeer.ResponseHandlers.Add(subCode, handler);
         }
 
+        public void AddSubServerRequestHandler(Server2Server.Operations.OperationCode subCode, IPhotonRequestHandler handler)
+        {
+            SubServerRequestHandlers.Add(subCode, handler);
+        }
+
+        public void AddSubServerEventHandler(Server2Server.Operations.EventCode eventCode, IPhotonEventHandler handler)
+        {
+            SubServerEventHandlers.Add(eventCode, handler);
+        }
+
+        public void AddSubServerResponseHandler(Server2Server.Operations.OperationCode subCode, IPhotonResponseHandler handler)
+        {
+            SubServerResponseHandlers.Add(subCode, handler);
+        }
+
         #endregion
+
+        #region Overrides of ApplicationBase
+
+        protected override PeerBase CreatePeer(InitRequest initRequest)
+        {
+            if(_acceptsSubServerConnections)
+            {
+                if (IsSubServerPeer(initRequest))
+                {
+                    if (Log.IsDebugEnabled)
+                    {
+                        Log.DebugFormat("Received init request from sub server");
+                    }
+
+                    var subserver = new IncomingSubServerToSubServerPeer(initRequest, this)
+                                        {
+                                            SubServerRequestHandlers = SubServerRequestHandlers,
+                                            SubServerResponseHandlers = SubServerResponseHandlers,
+                                            SubServerEventHandlers = SubServerEventHandlers
+                                        };
+                    return subserver;
+                }
+            }
+            if (Log.IsDebugEnabled)
+            {
+                Log.DebugFormat("Connection Rejected from {0}:{1}", initRequest.RemoteIP, initRequest.RemotePort);
+            }
+            return null;
+        }
+
+        protected virtual bool IsSubServerPeer(InitRequest initRequest)
+        {
+            return false;
+        }
+
+        #endregion
+
     }
 }

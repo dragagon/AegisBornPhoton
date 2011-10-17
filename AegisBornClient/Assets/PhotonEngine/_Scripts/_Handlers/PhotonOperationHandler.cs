@@ -6,22 +6,22 @@ using ExitGames.Client.Photon;
 
 public abstract class PhotonOperationHandler : IPhotonOperationHandler
 {
-    delegate void BeforeResponseRecieved();
-    BeforeResponseRecieved beforeResponseRecieved;
+    delegate void BeforeResponseReceived();
+    BeforeResponseReceived beforeResponseReceived;
 
-    delegate void AfterResponseRecieved();
-    AfterResponseRecieved afterResponseRecieved;
+    delegate void AfterResponseReceived();
+    AfterResponseReceived afterResponseReceived;
 
     public void HandleResponse(OperationResponse response)
     {
-        if (beforeResponseRecieved != null)
+        if (beforeResponseReceived != null)
         {
-            beforeResponseRecieved();
+            beforeResponseReceived();
         }
         OnHandleResponse(response);
-        if (afterResponseRecieved != null)
+        if (afterResponseReceived != null)
         {
-            afterResponseRecieved();
+            afterResponseReceived();
         }
     }
 

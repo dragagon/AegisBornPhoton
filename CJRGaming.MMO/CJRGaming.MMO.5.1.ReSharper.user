@@ -8,17 +8,8 @@
   </SettingsComponent>
   <RecentFiles>
     <RecentFiles>
-      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:SubServer/d:Types/f:LoginServer.cs" caret="180" fromTop="6" />
-      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:SubServer/d:Types/f:ChatServer.cs" caret="335" fromTop="14" />
-      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:SubServer/d:Types/f:RegionServer.cs" caret="323" fromTop="12" />
-      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:SubServer/d:Types/f:ChatLoginServer.cs" caret="306" fromTop="12" />
-      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:SubServer/d:Types/f:ChatLoginRegionServer.cs" caret="407" fromTop="16" />
-      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:SubServer/f:SubServer.cs" caret="1986" fromTop="3" />
       <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:Server2Server/d:Operations/f:RegisterSubServer.cs" caret="207" fromTop="8" />
-      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:MasterServer/f:MasterServer.cs" caret="414" fromTop="16" />
       <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:MasterServer/f:SubServerType.cs" caret="228" fromTop="11" />
-      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:Server2Server/d:Operations/f:OperationCodes.cs" caret="0" fromTop="0" />
-      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:MasterServer/f:IncomingSubServerPeer.cs" caret="3582" fromTop="40" />
       <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:MasterServer/f:SubServerCollection.cs" caret="559" fromTop="18" />
       <File id="1A60EA07-3726-4EB3-A00C-D3C3BE36A6BC/f:ErrorCode.cs" caret="159" fromTop="7" />
       <File id="1A60EA07-3726-4EB3-A00C-D3C3BE36A6BC/f:EventCode.cs" caret="168" fromTop="9" />
@@ -27,39 +18,49 @@
       <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/f:log4net.config" caret="1856" fromTop="17" />
       <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:MasterServer/f:Unity3dPeer.cs" caret="575" fromTop="0" />
       <File id="1A60EA07-3726-4EB3-A00C-D3C3BE36A6BC/f:OperationSubCode.cs" caret="193" fromTop="12" />
-      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:SubServer/f:OutgoingMasterServerPeer.cs" caret="2981" fromTop="35" />
+      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:Server2Server/d:Operations/f:OperationCodes.cs" caret="0" fromTop="0" />
+      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:SubServer/f:OutgoingMasterServerPeer.cs" caret="1329" fromTop="31" />
+      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:SubServer/d:Types/f:LoginServer.cs" caret="788" fromTop="36" />
+      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:SubServer/d:Types/f:ChatServer.cs" caret="686" fromTop="24" />
+      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:SubServer/d:Types/f:ChatLoginServer.cs" caret="719" fromTop="24" />
+      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:SubServer/f:SubServer.cs" caret="676" fromTop="19" />
+      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:MasterServer/f:MasterServer.cs" caret="2915" fromTop="33" />
+      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:SubServer/f:IncomingRegionServerPeer.cs" caret="1031" fromTop="31" />
+      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:MasterServer/f:IncomingSubServerPeer.cs" caret="3190" fromTop="11" />
+      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:SubServer/d:Types/f:ChatLoginRegionServer.cs" caret="619" fromTop="21" />
+      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:SubServer/d:Types/f:RegionServer.cs" caret="960" fromTop="29" />
     </RecentFiles>
     <RecentEdits>
-      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:SubServer/d:Types/f:LoginServer.cs" caret="189" fromTop="6" />
-      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:SubServer/d:Types/f:ChatServer.cs" caret="247" fromTop="10" />
-      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:SubServer/d:Types/f:ChatServer.cs" caret="344" fromTop="14" />
-      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:SubServer/d:Types/f:RegionServer.cs" caret="332" fromTop="12" />
-      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:SubServer/d:Types/f:ChatLoginServer.cs" caret="315" fromTop="12" />
-      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:SubServer/d:Types/f:ChatLoginRegionServer.cs" caret="384" fromTop="12" />
-      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:SubServer/f:SubServer.cs" caret="481" fromTop="18" />
-      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:SubServer/f:SubServer.cs" caret="4491" fromTop="22" />
-      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:SubServer/f:SubServer.cs" caret="1986" fromTop="33" />
-      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/f:log4net.config" caret="1938" fromTop="25" />
-      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/f:log4net.config" caret="1793" fromTop="20" />
-      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/f:log4net.config" caret="61" fromTop="1" />
-      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:MasterServer/f:IncomingSubServerPeer.cs" caret="2266" fromTop="41" />
-      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:MasterServer/f:Unity3dPeer.cs" caret="691" fromTop="18" />
-      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:MasterServer/f:MasterServer.cs" caret="1094" fromTop="26" />
-      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:MasterServer/f:SubServerCollection.cs" caret="505" fromTop="15" />
-      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:MasterServer/f:SubServerCollection.cs" caret="5032" fromTop="29" />
-      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/f:log4net.config" caret="2003" fromTop="29" />
-      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:MasterServer/f:Unity3dPeer.cs" caret="335" fromTop="12" />
-      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:MasterServer/f:Unity3dPeer.cs" caret="561" fromTop="17" />
-      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:MasterServer/f:Unity3dPeer.cs" caret="915" fromTop="31" />
-      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:MasterServer/f:SubServerCollection.cs" caret="1275" fromTop="37" />
-      <File id="1A60EA07-3726-4EB3-A00C-D3C3BE36A6BC/f:ParameterCode.cs" caret="0" fromTop="0" />
-      <File id="1A60EA07-3726-4EB3-A00C-D3C3BE36A6BC/f:EventCode.cs" caret="0" fromTop="0" />
-      <File id="1A60EA07-3726-4EB3-A00C-D3C3BE36A6BC/f:ErrorCode.cs" caret="159" fromTop="7" />
-      <File id="1A60EA07-3726-4EB3-A00C-D3C3BE36A6BC/f:ParameterCode.cs" caret="163" fromTop="7" />
-      <File id="1A60EA07-3726-4EB3-A00C-D3C3BE36A6BC/f:EventCode.cs" caret="168" fromTop="9" />
-      <File id="1A60EA07-3726-4EB3-A00C-D3C3BE36A6BC/f:OperationCode.cs" caret="122" fromTop="5" />
-      <File id="1A60EA07-3726-4EB3-A00C-D3C3BE36A6BC/f:OperationSubCode.cs" caret="181" fromTop="9" />
-      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:SubServer/f:OutgoingMasterServerPeer.cs" caret="2981" fromTop="17" />
+      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:SubServer/f:OutgoingMasterServerPeer.cs" caret="4858" fromTop="24" />
+      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:SubServer/f:SubServer.cs" caret="5139" fromTop="23" />
+      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:SubServer/f:SubServer.cs" caret="5453" fromTop="25" />
+      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:SubServer/f:SubServer.cs" caret="5418" fromTop="24" />
+      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:SubServer/f:SubServer.cs" caret="5606" fromTop="29" />
+      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:SubServer/f:OutgoingMasterServerPeer.cs" caret="1329" fromTop="31" />
+      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:SubServer/d:Types/f:ChatServer.cs" caret="469" fromTop="19" />
+      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:SubServer/d:Types/f:RegionServer.cs" caret="400" fromTop="19" />
+      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:SubServer/d:Types/f:ChatLoginServer.cs" caret="502" fromTop="19" />
+      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:SubServer/d:Types/f:ChatLoginRegionServer.cs" caret="536" fromTop="19" />
+      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:SubServer/d:Types/f:LoginServer.cs" caret="460" fromTop="19" />
+      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:SubServer/f:SubServer.cs" caret="4114" fromTop="29" />
+      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:SubServer/f:SubServer.cs" caret="531" fromTop="19" />
+      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:SubServer/f:SubServer.cs" caret="5672" fromTop="12" />
+      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:SubServer/f:SubServer.cs" caret="3949" fromTop="18" />
+      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:SubServer/d:Types/f:LoginServer.cs" caret="247" fromTop="9" />
+      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:SubServer/d:Types/f:ChatServer.cs" caret="248" fromTop="9" />
+      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:SubServer/d:Types/f:ChatLoginServer.cs" caret="250" fromTop="9" />
+      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:SubServer/d:Types/f:RegionServer.cs" caret="173" fromTop="9" />
+      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:SubServer/d:Types/f:RegionServer.cs" caret="1245" fromTop="37" />
+      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:SubServer/f:SubServer.cs" caret="676" fromTop="19" />
+      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:SubServer/d:Types/f:RegionServer.cs" caret="590" fromTop="26" />
+      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:SubServer/d:Types/f:RegionServer.cs" caret="1725" fromTop="47" />
+      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:SubServer/d:Types/f:RegionServer.cs" caret="1569" fromTop="43" />
+      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:SubServer/d:Types/f:RegionServer.cs" caret="15" fromTop="1" />
+      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:SubServer/f:IncomingRegionServerPeer.cs" caret="816" fromTop="17" />
+      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:SubServer/f:IncomingRegionServerPeer.cs" caret="486" fromTop="18" />
+      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:SubServer/f:IncomingRegionServerPeer.cs" caret="258" fromTop="10" />
+      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:SubServer/d:Types/f:ChatLoginRegionServer.cs" caret="239" fromTop="9" />
+      <File id="1628E9EF-28A9-49FB-A17A-BF7163926189/d:SubServer/d:Types/f:RegionServer.cs" caret="832" fromTop="24" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>
@@ -75,14 +76,14 @@
   </UnitTestRunnerNUnit>
   <CompletionStatisticsManager>
     <ItemStatistics item="Default">
-      <Item value="NodeResolverBase`0" priority="0" />
+      <Item value="NodeResolverBase`0" priority="1" />
       <Item value="if" priority="3" />
       <Item value="id" priority="1" />
       <Item value="ChatServer" priority="3" />
       <Item value="null" priority="2" />
       <Item value="LoginServer" priority="3" />
-      <Item value="public" priority="10" />
-      <Item value="void" priority="0" />
+      <Item value="public" priority="16" />
+      <Item value="void" priority="5" />
       <Item value="ResetServers`0" priority="0" />
       <Item value="SubServerCollection`0" priority="0" />
       <Item value="IncomingSubServerPeer`0" priority="0" />
@@ -104,7 +105,7 @@
       <Item value="protocol" priority="1" />
       <Item value="base" priority="0" />
       <Item value="return" priority="0" />
-      <Item value="new" priority="1" />
+      <Item value="new" priority="3" />
       <Item value="initRequest" priority="1" />
       <Item value="private" priority="1" />
       <Item value="MasterServer`0" priority="0" />
@@ -116,6 +117,24 @@
       <Item value="LogManager`0" priority="0" />
       <Item value="Guid`0" priority="1" />
       <Item value="UserId" priority="0" />
+      <Item value="abstract" priority="0" />
+      <Item value="AddHandlers`0" priority="0" />
+      <Item value="Dictionary" priority="0" />
+      <Item value="OperationSubCode`0" priority="2" />
+      <Item value="PhotonRequestHandler`0" priority="0" />
+      <Item value="Dictionary&lt;OperationSubCode,PhotonRequestHandler&gt;" priority="0" />
+      <Item value="IPhotonRequestHandler`0" priority="2" />
+      <Item value="RequestHandlers" priority="0" />
+      <Item value="operationResponse" priority="0" />
+      <Item value="byte" priority="0" />
+      <Item value="ParameterCode`0" priority="0" />
+      <Item value="MasterPeer" priority="0" />
+      <Item value="subCode" priority="0" />
+      <Item value="EventCode`0" priority="1" />
+      <Item value="eventCode" priority="0" />
+      <Item value="EventData`0" priority="2" />
+      <Item value="throw" priority="0" />
+      <Item value="NotImplementedException" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:CJRGaming.MMO.Server.MasterServer.IncomingSubServerPeer">
       <Item value="ServerId" priority="1" />
@@ -139,6 +158,19 @@
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.Guid">
       <Item value="NewGuid`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Photon.SocketServer.OperationResponse">
+      <Item value="Parameters" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.Dictionary`2">
+      <Item value="ContainsKey`0" priority="0" />
+      <Item value="Add`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@CJRGaming.MMO.Common.ParameterCode">
+      <Item value="SubOperationCode" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CJRGaming.MMO.Server.SubServer.OutgoingMasterServerPeer">
+      <Item value="RequestHandlers" priority="0" />
     </ItemStatistics>
   </CompletionStatisticsManager>
 </Configuration>

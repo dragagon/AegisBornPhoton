@@ -6,22 +6,22 @@ using ExitGames.Client.Photon;
 
 public abstract class PhotonEventHandler : IPhotonEventHandler
 {
-    delegate void BeforeEventRecieved();
-    BeforeEventRecieved beforeEventRecieved;
+    delegate void BeforeEventReceived();
+    BeforeEventReceived beforeEventReceived;
 
-    delegate void AfterEventRecieved();
-    AfterEventRecieved afterEventRecieved;
+    delegate void AfterEventReceived();
+    AfterEventReceived afterEventReceived;
 
     public void HandleEvent(EventData eventData)
     {
-        if (beforeEventRecieved != null)
+        if (beforeEventReceived != null)
         {
-            beforeEventRecieved();
+            beforeEventReceived();
         }
         OnHandleEvent(eventData);
-        if (afterEventRecieved != null)
+        if (afterEventReceived != null)
         {
-            afterEventRecieved();
+            afterEventReceived();
         }
     }
 
