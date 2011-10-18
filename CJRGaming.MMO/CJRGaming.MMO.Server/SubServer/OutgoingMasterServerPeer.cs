@@ -27,9 +27,9 @@ namespace CJRGaming.MMO.Server.SubServer
             RequestFiber.Enqueue(Register);
         }
 
-        public Dictionary<OperationSubCode, IPhotonRequestHandler> RequestHandlers = new Dictionary<OperationSubCode, IPhotonRequestHandler>();
-        public Dictionary<Common.EventCode, IPhotonEventHandler> EventHandlers = new Dictionary<Common.EventCode, IPhotonEventHandler>();
-        public Dictionary<OperationSubCode, IPhotonResponseHandler> ResponseHandlers = new Dictionary<OperationSubCode, IPhotonResponseHandler>();
+        public Dictionary<byte, IPhotonRequestHandler> RequestHandlers = new Dictionary<byte, IPhotonRequestHandler>();
+        public Dictionary<byte, IPhotonEventHandler> EventHandlers = new Dictionary<byte, IPhotonEventHandler>();
+        public Dictionary<byte, IPhotonResponseHandler> ResponseHandlers = new Dictionary<byte, IPhotonResponseHandler>();
 
         #region Properties
 
@@ -60,7 +60,6 @@ namespace CJRGaming.MMO.Server.SubServer
                 Log.Error("Update Loop already started! Duplicate RegisterGameServer response?");
                 _updateLoop.Dispose();
             }
-
             // We want the master server to know that we are still alive, so poke it every second.
             //_updateLoop = RequestFiber.ScheduleOnInterval(UpdateServerState, 1000, 1000);
         }
@@ -80,13 +79,15 @@ namespace CJRGaming.MMO.Server.SubServer
         {
             IPhotonRequestHandler handler;
 
-            if (operationRequest.Parameters.ContainsKey((byte)ParameterCode.SubOperationCode) && RequestHandlers.TryGetValue((OperationSubCode)operationRequest.Parameters[(byte)ParameterCode.SubOperationCode], out handler))
+            if (operationRequest.Parameters.ContainsKey((byte)ParameterCode.SubOperationCode) && RequestHandlers.TryGetValue(Convert.ToByte(operationRequest.Parameters[(byte)ParameterCode.SubOperationCode]), out handler))
             {
+                Log.DebugFormat("Received operation request {0} from user {1} with Handler", operationRequest.Parameters[(byte)ParameterCode.SubOperationCode],
+                                new Guid((Byte[])operationRequest.Parameters[(byte)ParameterCode.UserId]));
                 handler.HandleRequest(operationRequest);
             }
             else
             {
-                Log.DebugFormat("Received operation request from master server: " +
+                Log.DebugFormat("Received operation request {0} from user {1}", operationRequest.Parameters[(byte)ParameterCode.SubOperationCode], 
                                 new Guid((Byte[]) operationRequest.Parameters[(byte) ParameterCode.UserId]));
             }
         }

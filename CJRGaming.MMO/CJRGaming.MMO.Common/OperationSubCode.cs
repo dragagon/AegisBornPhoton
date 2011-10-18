@@ -7,6 +7,13 @@ namespace CJRGaming.MMO.Common
 {
     public enum OperationSubCode
     {
-        Login
+        // Login Server Sub Codes
+        Register,
+        Login,
+        ListCharacters,
+        CreateChatacter,
+        SelectCharacter,
+
+        // Chat Server Sub Codes
     }
 }

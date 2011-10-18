@@ -68,11 +68,11 @@ namespace CJRGaming.MMO.Server.MasterServer
                 {
                     Remove(id);
                     // We just removed a server, we need to see if it is a chat or login server, and if it was, null it out.
-                    if (id == ChatServer.ServerId)
+                    if (ChatServer != null && id == ChatServer.ServerId)
                     {
                         ChatServer = null;
                     }
-                    if (id == LoginServer.ServerId)
+                    if (LoginServer != null && id == LoginServer.ServerId)
                     {
                         LoginServer = null;
                     }

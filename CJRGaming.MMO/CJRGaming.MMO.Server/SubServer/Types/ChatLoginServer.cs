@@ -16,18 +16,14 @@ namespace CJRGaming.MMO.Server.SubServer.Types
 
         #region Overrides of SubServer
 
-        public override void AddHandlers()
+        protected override void AddHanders()
         {
             
         }
 
-        #endregion
-
-        #region Overrides of ApplicationBase
-
-        protected override PeerBase CreatePeer(InitRequest initRequest)
+        protected override void AddSubServerHandlers(IncomingSubServerToSubServerPeer SubServerPeer)
         {
-            throw new NotImplementedException();
+            
         }
 
         #endregion

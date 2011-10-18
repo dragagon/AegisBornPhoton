@@ -6,24 +6,24 @@ namespace CJRGaming.MMO.Server.SubServer.Types
 {
     public class RegionServer : SubServer
     {
-        private static int IncomingPort = 4521;
         public RegionServer()
         {
             ServerType = SubServerType.Region;
-            _acceptsSubServerConnections = true;
         }
 
-        #region Overrides of SubServer
-
-        public override void AddHandlers()
+        protected override void AddHanders()
         {
+            
         }
 
-        #endregion
+        protected override void AddSubServerHandlers(IncomingSubServerToSubServerPeer SubServerPeer)
+        {
+            
+        }
 
         protected override bool IsSubServerPeer(InitRequest initRequest)
         {
-            return initRequest.LocalPort == IncomingPort;
+            return initRequest.LocalPort == 4531;
         }
 
     }

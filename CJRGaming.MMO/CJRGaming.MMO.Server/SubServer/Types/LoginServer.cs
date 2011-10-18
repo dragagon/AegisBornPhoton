@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using CJRGaming.MMO.Common;
 using CJRGaming.MMO.Server.MasterServer;
+using CJRGaming.MMO.Server.SubServer.Handlers;
 using Photon.SocketServer;
 
 namespace CJRGaming.MMO.Server.SubServer.Types
@@ -16,18 +18,16 @@ namespace CJRGaming.MMO.Server.SubServer.Types
 
         #region Overrides of SubServer
 
-        public override void AddHandlers()
+        // Add handlers for the MasterPeer here.
+        protected override void AddHanders()
         {
-
+            MasterPeer.RequestHandlers.Add((byte)OperationSubCode.Login, new SubServerLoginHandler(MasterPeer));
         }
 
-        #endregion
-
-        #region Overrides of ApplicationBase
-
-        protected override PeerBase CreatePeer(InitRequest initRequest)
+        // Add handlers for communication between sub servers - not used yet.
+        protected override void AddSubServerHandlers(IncomingSubServerToSubServerPeer SubServerPeer)
         {
-            throw new NotImplementedException();
+            
         }
 
         #endregion

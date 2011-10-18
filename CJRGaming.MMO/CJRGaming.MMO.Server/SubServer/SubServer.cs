@@ -76,11 +76,6 @@ namespace CJRGaming.MMO.Server.SubServer
         public IPAddress PublicIpAddress { get; protected set; }
 
         protected int ConnectRetryIntervalSeconds { get; set; }
-
-        protected bool _acceptsSubServerConnections;
-        protected Dictionary<Server2Server.Operations.OperationCode, IPhotonRequestHandler> SubServerRequestHandlers = new Dictionary<Server2Server.Operations.OperationCode, IPhotonRequestHandler>();
-        protected Dictionary<Server2Server.Operations.EventCode, IPhotonEventHandler> SubServerEventHandlers = new Dictionary<Server2Server.Operations.EventCode, IPhotonEventHandler>();
-        protected Dictionary<Server2Server.Operations.OperationCode, IPhotonResponseHandler> SubServerResponseHandlers = new Dictionary<Server2Server.Operations.OperationCode, IPhotonResponseHandler>();
         
         #endregion
 
@@ -138,7 +133,6 @@ namespace CJRGaming.MMO.Server.SubServer
             Protocol.AllowRawCustomValues = true;
 
             ConnectToMaster();
-            AddHandlers();
         }
 
         protected override void TearDown()
@@ -164,44 +158,13 @@ namespace CJRGaming.MMO.Server.SubServer
         {
             // master
             Thread.VolatileWrite(ref _isReconnecting, 0);
-            return MasterPeer = CreateMasterPeer(initResponse);
+            MasterPeer = CreateMasterPeer(initResponse);
+            AddHanders();
+            return MasterPeer;
         }
 
-        #endregion
-
-        #region Handlers
-
-        public abstract void AddHandlers();
-
-        public void AddRequestHandler(OperationSubCode subCode, IPhotonRequestHandler handler)
-        {
-            MasterPeer.RequestHandlers.Add(subCode, handler);
-        }
-
-        public void AddEventHandler(EventCode eventCode, IPhotonEventHandler handler)
-        {
-            MasterPeer.EventHandlers.Add(eventCode, handler);
-        }
-
-        public void AddResponseHandler(OperationSubCode subCode, IPhotonResponseHandler handler)
-        {
-            MasterPeer.ResponseHandlers.Add(subCode, handler);
-        }
-
-        public void AddSubServerRequestHandler(Server2Server.Operations.OperationCode subCode, IPhotonRequestHandler handler)
-        {
-            SubServerRequestHandlers.Add(subCode, handler);
-        }
-
-        public void AddSubServerEventHandler(Server2Server.Operations.EventCode eventCode, IPhotonEventHandler handler)
-        {
-            SubServerEventHandlers.Add(eventCode, handler);
-        }
-
-        public void AddSubServerResponseHandler(Server2Server.Operations.OperationCode subCode, IPhotonResponseHandler handler)
-        {
-            SubServerResponseHandlers.Add(subCode, handler);
-        }
+        protected abstract void AddHanders();
+        protected abstract void AddSubServerHandlers(IncomingSubServerToSubServerPeer SubServerPeer);
 
         #endregion
 
@@ -209,23 +172,18 @@ namespace CJRGaming.MMO.Server.SubServer
 
         protected override PeerBase CreatePeer(InitRequest initRequest)
         {
-            if(_acceptsSubServerConnections)
+            if (IsSubServerPeer(initRequest))
             {
-                if (IsSubServerPeer(initRequest))
+                if (Log.IsDebugEnabled)
                 {
-                    if (Log.IsDebugEnabled)
-                    {
-                        Log.DebugFormat("Received init request from sub server");
-                    }
-
-                    var subserver = new IncomingSubServerToSubServerPeer(initRequest, this)
-                                        {
-                                            SubServerRequestHandlers = SubServerRequestHandlers,
-                                            SubServerResponseHandlers = SubServerResponseHandlers,
-                                            SubServerEventHandlers = SubServerEventHandlers
-                                        };
-                    return subserver;
+                    Log.DebugFormat("Received init request from sub server");
                 }
+
+                var SubServerPeer = new IncomingSubServerToSubServerPeer(initRequest, this);
+
+                AddSubServerHandlers(SubServerPeer);
+
+                return SubServerPeer;
             }
             if (Log.IsDebugEnabled)
             {

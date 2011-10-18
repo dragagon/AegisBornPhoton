@@ -1,19 +1,20 @@
 ﻿using System;
-using CJRGaming.MMO.Server.Operations;
+using CJRGaming.MMO.Common;
 using CJRGaming.MMO.Server.Server2Server.Operations;
 using ExitGames.Logging;
 using Photon.SocketServer;
 using Photon.SocketServer.ServerToServer;
+using ErrorCode = CJRGaming.MMO.Server.Operations.ErrorCode;
+using OperationCode = CJRGaming.MMO.Server.Server2Server.Operations.OperationCode;
 
 namespace CJRGaming.MMO.Server.MasterServer
 {
     public class IncomingSubServerPeer : ServerPeerBase
     {
-        private readonly MasterServer _server;
-
         #region Constants and Fields
 
         private static readonly ILogger Log = LogManager.GetCurrentClassLogger();
+        private readonly MasterServer _server;
 
         #endregion
 
@@ -80,6 +81,7 @@ namespace CJRGaming.MMO.Server.MasterServer
 
         #region Overrides of ServerPeerBase
 
+        // Forward Events back tot he client that initially sent it.
         protected override void OnEvent(IEventData eventData, SendParameters sendParameters)
         {
             if (!ServerId.HasValue)
@@ -87,11 +89,40 @@ namespace CJRGaming.MMO.Server.MasterServer
                 Log.Warn("received game server event but server is not registered");
                 return;
             }
+            // Check for a userid
+            if(eventData.Parameters.ContainsKey((byte)ParameterCode.UserId))
+            {
+                Unity3dPeer peer;
+                // make sure a peer exists with that user id
+                _server.ConnectedClients.TryGetValue(new Guid((Byte[])eventData.Parameters[(byte) ParameterCode.UserId]), out peer);
+                if(peer != null)
+                {
+                    // Remove the user id
+                    eventData.Parameters.Remove((byte) ParameterCode.UserId);
+                    // Send the event to the client
+                    peer.SendEvent(eventData, sendParameters);
+                }
+            }
         }
 
+        // Forward responses back to the client that initially sent it.
         protected override void OnOperationResponse(OperationResponse operationResponse, SendParameters sendParameters)
         {
-            throw new NotImplementedException();
+            // Check for a userid
+            if (operationResponse.Parameters.ContainsKey((byte)ParameterCode.UserId))
+            {
+                Unity3dPeer peer;
+                // make sure a peer exists with that user id
+                _server.ConnectedClients.TryGetValue(new Guid((Byte[])operationResponse.Parameters[(byte)ParameterCode.UserId]), out peer);
+                if (peer != null)
+                {
+                    Log.DebugFormat("Found user {0}, returning response {1}", new Guid((Byte[])operationResponse.Parameters[(byte)ParameterCode.UserId]), operationResponse.OperationCode);
+                    // Remove the user id
+                    operationResponse.Parameters.Remove((byte)ParameterCode.UserId);
+                    // Send the event to the client
+                    peer.SendOperationResponse(operationResponse, sendParameters);
+                }
+            }
         }
 
         #endregion

@@ -1,8 +1,16 @@
 ﻿
 using Photon.SocketServer;
+using Photon.SocketServer.ServerToServer;
 
 public abstract class PhotonEventHandler : IPhotonEventHandler
 {
+    protected readonly ServerPeerBase _peer;
+
+    protected PhotonEventHandler(ServerPeerBase peer)
+    {
+        _peer = peer;
+    }
+
     delegate void BeforeEventRecieved();
     BeforeEventRecieved beforeEventRecieved;
 

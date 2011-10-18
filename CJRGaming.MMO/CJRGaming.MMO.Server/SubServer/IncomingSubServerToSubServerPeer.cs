@@ -9,7 +9,7 @@ using Photon.SocketServer.ServerToServer;
 
 namespace CJRGaming.MMO.Server.SubServer
 {
-    class IncomingSubServerToSubServerPeer : ServerPeerBase
+    public class IncomingSubServerToSubServerPeer : ServerPeerBase
     {
         private readonly SubServer _server;
 
@@ -17,9 +17,9 @@ namespace CJRGaming.MMO.Server.SubServer
 
         private static readonly ILogger Log = LogManager.GetCurrentClassLogger();
 
-        public Dictionary<Server2Server.Operations.OperationCode, IPhotonRequestHandler> SubServerRequestHandlers = new Dictionary<Server2Server.Operations.OperationCode, IPhotonRequestHandler>();
-        public Dictionary<Server2Server.Operations.EventCode, IPhotonEventHandler> SubServerEventHandlers = new Dictionary<Server2Server.Operations.EventCode, IPhotonEventHandler>();
-        public Dictionary<Server2Server.Operations.OperationCode, IPhotonResponseHandler> SubServerResponseHandlers = new Dictionary<Server2Server.Operations.OperationCode, IPhotonResponseHandler>();
+        public Dictionary<byte, IPhotonRequestHandler> RequestHandlers = new Dictionary<byte, IPhotonRequestHandler>();
+        public Dictionary<byte, IPhotonEventHandler> EventHandlers = new Dictionary<byte, IPhotonEventHandler>();
+        public Dictionary<byte, IPhotonResponseHandler> ResponseHandlers = new Dictionary<byte, IPhotonResponseHandler>();
 
         #endregion
 
@@ -36,12 +36,9 @@ namespace CJRGaming.MMO.Server.SubServer
         {
             IPhotonRequestHandler handler;
 
-            if (SubServerRequestHandlers.TryGetValue((Server2Server.Operations.OperationCode)operationRequest.OperationCode, out handler))
+            if (RequestHandlers.TryGetValue(operationRequest.OperationCode, out handler))
             {
                 handler.HandleRequest(operationRequest);
-            }
-            else
-            {
             }
         }
 
@@ -57,12 +54,9 @@ namespace CJRGaming.MMO.Server.SubServer
         {
             IPhotonEventHandler handler;
 
-            if (SubServerEventHandlers.TryGetValue((Server2Server.Operations.EventCode)eventData.Code, out handler))
+            if (EventHandlers.TryGetValue(eventData.Code, out handler))
             {
                 handler.HandleEvent(eventData as EventData);
-            }
-            else
-            {
             }
         }
 
@@ -70,12 +64,9 @@ namespace CJRGaming.MMO.Server.SubServer
         {
             IPhotonResponseHandler handler;
 
-            if (SubServerResponseHandlers.TryGetValue((Server2Server.Operations.OperationCode)operationResponse.OperationCode, out handler))
+            if (ResponseHandlers.TryGetValue(operationResponse.OperationCode, out handler))
             {
                 handler.HandleResponse(operationResponse);
-            }
-            else
-            {
             }
         }
 
